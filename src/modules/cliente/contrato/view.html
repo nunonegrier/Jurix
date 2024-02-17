@@ -1,0 +1,241 @@
+<div class="container-fluid" style="padding-top:90px;">
+    <div class="row">
+        <div class="col-lg-12">
+            <form id="formContrato" class="needs-validation" novalidate>
+                <div class="row">
+                    <div class="col-lg-2 mb-2">
+                        <label for="contratoCliente">Cliente</label>
+                        <input ng-model="contrato.cliente.nome" class="form-control formCadastro" disabled id="contratoCliente" placeholder="Número do cliente(AUTO)" type="text">
+                    </div>
+                    <div class="col-lg-6 mb-2">
+                        <label for="contratoDescricao">Breve descrição do contrato</label>
+                        <input ng-model="contrato.descricao" class="form-control formCadastro" id="contratoDescricao" placeholder="Breve descrição do contrato" required="" type="text" ng-disabled="visualizacao">
+                        <div class="invalid-feedback">
+                            Faça uma breve descrição do contrato. Será mais fácil encontrar o que procura no futuro.
+                        </div>
+                    </div>
+                    <div class="col-lg-2 mb-2">
+                        <label for="contratoIndex">Centro de Custos</label>
+                        <select ng-model="contrato.centroCusto.id" class="custom-select d-block w-100" id="contratoCentroCustos" required ng-disabled="visualizacao" >
+                            <option value="" selected="selected">Selecione...</option>
+                            <option ng-value="centroCusto.id" ng-repeat="centroCusto in centrosCusto">{{centroCusto.descricao}}</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Escolha uma opção.
+                        </div>
+                    </div>
+                    <div class="col-lg-2 mb-2">
+                        <label for="contratoTipo">Tipo</label>
+                        <select ng-model="contrato.tipoContrato" class="custom-select d-block w-100" id="contratoTipo" required ng-disabled="visualizacao" >
+                            <option value="" selected="selected"></option>
+                            <option ng-value="tipoContrato.id" ng-repeat="tipoContrato in tiposContrato">{{tipoContrato.nome}}</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Escolha uma opção.
+                        </div>
+                    </div>
+                    
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="row">
+                            <div class="col-md-2 mb-2">
+                                <label for="contratoIndex">Indexador</label>
+                                <select ng-model="contrato.indexador" class="custom-select d-block w-100" id="contratoIndex" required ng-disabled="visualizacao">
+                                    <option value="" selected="selected"></option>
+                                    <option ng-value="indexador.id" ng-repeat="indexador in indexadores">{{indexador.nome}}</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Escolha uma opção.
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-2">
+                                <label for="clienteRg">Quantidade/Valor</label>
+                                <input ng-model="contrato.quantidade" class="form-control formCadastro" id="contratoQuant" placeholder="Quantidade/Valor" required="" type="number" min="0" step="0.01" ng-disabled="visualizacao">
+                                <div class="invalid-feedback">
+                                    Indique a quantidade ou valor.
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <label for="contratoForo">Foro</label>
+                                <input ng-model="contrato.foro" class="form-control formCadastro" id="contratoForo" placeholder="Foro" required="" type="text" ng-disabled="visualizacao">
+                                <div class="invalid-feedback">
+                                    Indique o Foro
+                                </div>
+                            </div>
+							<div class="col-lg-2 mb-2">
+            	  <label for="contratoInicio">Data de início</label>
+            	  <input ui-date="dateOptions" ng-model="contrato.dataInicio" class="form-control" id="contratoInicio" placeholder="dd/mm/aaaa" type="text" required ng-disabled="visualizacao" >
+            	    <div class="invalid-feedback">
+              		  Insira a data de início do contrato
+            		</div>
+          		</div>
+				<div class="col-lg-3" style="padding-top: 2.5rem; text-align: right;">
+                    <label>Informar data vencimento</label>
+				  <input type="checkbox" id="vencimento" name="ativaVencimento" ng-model="contrato.informarDataVencimento">
+				</div>
+				<div class="col-lg-3 mb-2" ng-show="contrato.informarDataVencimento">
+            	  <label for="contratoVencimento">Vencimento</label>	
+            	  <input ui-date="dateOptions" ng-model="contrato.dataVencimento" class="form-control" id="contratoVencimento" placeholder="dd/mm/aaaa" type="text" ng-required="contrato.informarDataVencimento" ng-disabled="visualizacao" >
+            	    <div class="invalid-feedback">
+              		  Insira a data de vencimentoe do contrato
+            		</div>
+          		</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="clienteObs">Observações</label>
+                                <textarea ng-model="contrato.observacoes" ng-disabled="visualizacao" class="form-control mb-2" rows="4" id="clienteObs"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row anexarRow">
+                    <div class="col-lg-12 mb-4 anexarDiv">
+                        <jurix-arquivos repository="filesRespository" form-id="'formContrato'" is-visualizacao="visualizacao" ></jurix-arquivos>
+                    </div>
+                </div>
+
+                <div class="row anexarRow float-right" style="width:100%; text-align:right;" >
+                    <div class="col-lg-12">
+                        <alert-msg message="message"></alert-msg>
+                    </div>
+
+                    <div class="row container-fluid" style="width:100%; margin:0rem;" ng-show="visualizacao">
+                        <div class="col-lg-12" style="padding:0;" ng-hide="">
+                            <div class="row">
+                                <div class="col-lg-8" jurix-permissoes="Cliente.Contrato.Editar" >
+                                    <a ui-sref="layout.clienteContratoEditar({clienteId: contrato.cliente.id, id: contrato.id})" class="btn btn-gravar btn-lg btn-block" ng-click="">Editar</a>
+                                </div>
+                                <div class="col-lg-4" jurix-permissoes="Processo.Cadastrar">
+                                    <a ui-sref="layout.processoNovo({contratoClienteId: contrato.cliente.id, contratoId: contrato.id})" class="btn btn-finalizarEvento btn-lg botaoGravarClientes btn-block" role="button" ng-click=""><i class="fa fa-plus fa-1x" aria-hidden="true"></i> Novo processo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12" style="padding:0;"  ng-hide="contrato.id" >
+                        <button class="btn btn-gravar btn-lg btn-block" type="button" ng-click="salvarContrato()">Gravar</button>
+                    </div>
+
+                    <div class="col-lg-8 botaoGravarClientesDiv" style="padding:0.5rem;" ng-hide="!contrato.id || visualizacao" >
+                        <button class="btn btn-gravar btn-lg btn-block mb-2 botaoGravarClientes" type="button" ng-click="salvarContrato()">Gravar alterações</button>
+                    </div>
+                    <div class="col-lg-2 botaoGravarClientesDiv" style="padding:0.5rem;" ng-hide="!contrato.id || visualizacao || !contrato.ativo" >
+                        <button class="btn btn-gravarEvento btn-lg btn-block mb-2 botaoGravarClientes" type="button" ng-click="" data-toggle="modal" data-target="#apagarContratoModal">Apagar</button>
+                    </div>
+					<div class="col-lg-2 botaoGravarClientesDiv" style="padding:0.5rem;" ng-hide="!contrato.id || visualizacao || !contrato.ativo" >
+                        <button class="btn btn-finalizarEvento btn-lg btn-block mb-2 botaoGravarClientes" type="button" ng-click="iniciarEncerrar()" >Encerrar</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal" id="apagarContratoModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content" >
+            <div class="modal-header" style="background-color:#013358; border-radius:0rem;">
+                <div class="row">
+                    <h4 class="modal-title" style="padding-left:1rem; color:#FFFFFF;">Apagar</h4>
+                </div>
+            </div>
+            <div class="modal-body" style="margin:auto; padding-top:3rem; padding-bottom:3rem;">
+                <form method="post" name="Login_Form" class="form-signin rounded loginForm">
+                    <label for="userEmail">Confirme a exclusão deste contrato</label><br>
+                    <div style="text-align:center;">
+                        <button class="btn btn-lg btn-gravar mb-3"  name="Submit" value="" type="Button" style="min-width:6rem;" ng-click="excluir()">Sim</button>
+                        <button class="btn btn-lg btn-gravar mb-3"  name="Submit" value="" type="Button" data-dismiss="modal" style="min-width:6rem;">Não</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal" id="encerrarContratoModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content" >
+            <div class="modal-header" style="background-color:#013358; border-radius:0rem;  padding: 0.5rem !important; padding-left: 1rem !important;">
+                <div class="row">
+                    <h4 class="modal-title" style="padding-left:1rem; color:#FFFFFF;">Encerrar</h4>
+                </div>
+            </div>
+            <div class="modal-body mb-1" style="margin:auto; padding-top:3rem; padding-bottom:3rem; padding-left: 0rem; padding-right: 0rem;">
+				<div class="mb-3" style="text-align: justify; padding-left:2rem; padding-right:2rem; padding-top: 1rem; background-color: #B7FFBF; margin-bottom: 0rem !important;" ng-show="possuiContaAtiva">
+					<a>
+						Existe um pagamento a receber agendado, deseja eliminar o agendamento?
+					</a>
+				</div>
+
+				<div class="mb-5" style="width: 100%; text-align: center; background-color: #B7FFBF;" ng-show="possuiContaAtiva" >
+					<br>
+					<div style="width: 100%; text-align: center;">
+
+						<label class="" for="ApagarAgendamento">SIM</label>
+                		<input ng-model="opcaoEncerrar" class="" type="radio" name="apagarAgendamento" id="ApagarAgendamento" value="SIM" >
+						<label class="" for="manterAgendamento">NÃO</label>
+						<input ng-model="opcaoEncerrar" class="" type="radio" name="manterAgendamento" id="manterAgendamento" value="NAO">
+
+					</div>
+
+					<div class="custom-control custom-radio">
+
+					</div>
+
+
+                </div>
+				
+				
+                <form method="post" name="Login_Form" class="form-signin rounded loginForm">
+					<div class="mb-2" style="width: 100%; text-align: center;">
+						<a>
+							Encerrar e arquivar o contrato
+						</a>
+					</div>
+                    <div style="text-align:center;">
+                        <button class="btn btn-lg btn-gravar mb-3" type="Button" style="min-width:6rem;" ng-click="encerrar()">Encerrar o contrato</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="apagarArquivoModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header" style="background-color:#013358; border-radius:0rem;">
+                <div class="row">
+                    <h4 class="modal-title" style="padding-left:1rem; color:#FFFFFF;">Apagar</h4>
+                </div>
+            </div>
+            <div class="modal-body" style="margin:auto; padding-top:3rem; padding-bottom:3rem;">
+                <form method="post" name="Login_Form" class="form-signin rounded loginForm">
+                    <label for="userEmail">Confirme a exclusão deste arquivo</label><br>
+                    <!--<input type="text2" class="form-control mb-2" name="userEmail" placeholder="Email" required="" autofocus />-->
+                    <div style="text-align:center;">
+                        <button class="btn btn-lg btn-gravar mb-3"  name="Submit" value="" type="Button" style="min-width:6rem;" ng-click="removerArquivo()" >Sim</button>
+                        <button class="btn btn-lg btn-gravar mb-3"  name="Submit" value="" type="Button" data-dismiss="modal" style="min-width:6rem;">Não</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

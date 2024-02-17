@@ -1,0 +1,16 @@
+<div class="nav-item" style="vertical-align:central; height:100%">
+    <a class="tituloMenu navbar-brand" style="color:#FFFFFF; height:100%; vertical-align:central; padding-top:15px;">COLABORADORES</a>
+</div>
+<div class="nav-item" ng-show="!colaborador.id" >
+    <a class="nav-linkClientes" style="color:#FFFFFF; font-weight:normal !important;"><i class="fa fa-pencil-alt fa-1x" aria-hidden="true"></i> CADASTRAR</a>
+</div>
+<div class="nav-item" ng-show="colaborador.id && acao=='visualizar'" >
+    <a class="nav-linkClientes" style="color:#FFFFFF;"><i class="fa fa-search fa-1x" aria-hidden="true"></i> Visualizar</a>
+</div>
+<div class="nav-item" ng-show="colaborador.id && acao=='editar'" >
+    <a class="nav-linkClientes" style="color:#FFFFFF;"><i class="fa fa-pencil-alt fa-1x" aria-hidden="true"></i> Editar</a>
+</div>
+<li class="nav-item" ng-show="colaborador.id && acao=='visualizar'" jurix-permissoes="Colaborador.Editar" > <a class="nav-linkClientes" ui-sref="layout.colaboradorEditar({id: colaborador.id})"><em class="fa fa-pencil-alt fa-1x" aria-hidden="true"></em> EDITAR</a> </li>
+<li class="nav-item">
+    <button class="btn btn-link nav-linkVoltar" ng-click="goBack()" role="link" style="height:100%;">Voltar</button>
+</li>

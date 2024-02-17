@@ -1,0 +1,227 @@
+<div id="centroCustosSuspenso" class="container-fluid" style="padding: 0rem; padding-top: 70px !important;">
+	<div class="row" style="padding: 0rem; margin: 0rem; background-color: #E4E4EC;">	
+		<div class="col-xl-2 col-lg-2 col-md-1 col-sm-0 azulGradFinanceiroEsq">
+		</div>
+		<div class="col-xl-4 col-lg-4 col-md-8 col-sm-12" style="color: #FFFFFF; text-align: right; margin-auto; padding-right: 0rem; padding-left: 0rem;">
+			<div class="selCentroCustos" style="padding-right: 0.5rem;">
+				<a style=" display: inline !important; vertical-align: bottom;">Centro de Custos</a>
+				<select ng-model="centroCusto.id" class="custom-select selectCentroDeCustos" id="centroCustos" style="text-align: center!important; max-height: 1.5rem; width: 50%; display: inline !important;"  ng-change="onChangeCentroCusto()">
+					<option ng-value="centroCustoOption.id" ng-repeat="centroCustoOption in centrosCusto">{{centroCustoOption.descricao}}</option>
+				</select>
+				
+				<!-- <button class="btn btn-gravar btn-sm" type="button" data-toggle="modal" data-target="#novoCentroDeCustos" style="margin-left:auto; padding: 0.1rem 0.37rem !important;"><i class="fa fa-plus fa-1x" aria-hidden="true"></i></button> -->
+				
+			</div>	  
+		</div>
+		
+		<div class="col-xl-4 col-lg-4 col-md-5 col-sm-12" style="color: #FFFFFF; text-align: left; margin-auto: true; padding-right: 0rem; padding-left: 0rem;">
+			<div class="selCentroCustos" style="padding-left: 0.5rem;">
+				<a style=" display: inline !important; vertical-align: bottom;">Exibir</a>
+				<select id="tipoContasExibir" class="custom-select selectCentroDeCustos" style="text-align: center!important; max-height: 1.5rem; width: 50%; max-width: 180px; display: inline !important;"  ng-model="tipoCompartilhado" ng-change="onChangeTipoCompartilhado()" >
+					<option ng-value="tipoCompartilhadoOption.id" ng-repeat="tipoCompartilhadoOption in tiposCompartilhado">
+                        {{tipoCompartilhadoOption.nome}}
+                    </option>
+				</select>
+				
+				<!-- <button class="btn btn-gravar btn-sm" type="button" data-toggle="modal" data-target="#novoCentroDeCustos" style="margin-left:auto; padding: 0.1rem 0.37rem !important;"><i class="fa fa-plus fa-1x" aria-hidden="true"></i></button> -->
+			</div>	  
+		</div>
+		
+		<div class="col-xl-2 col-lg-2 col-md-1 col-sm-0 azulGradFinanceiroDir">
+		</div>
+	</div>			
+</div>
+
+<style ng-if="dateOptionsMes.showOnlyMonthPick">
+    .ui-datepicker-calendar {
+        display: none;
+    }
+</style>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 col-lg-12 col-xl-6" style="padding:0rem; padding-right:0.3; height:100%;">
+
+      <div class="row" style="width:100%; padding:0rem; margin:0rem; background-color:#CB2D59;">
+        <table class="" style="width:100%; height:100%; padding:0rem; margin:0rem;">
+          <tr>
+            <td style="border-style:none !important; vertical-align:middle; text-align:left; width:32px !important; max-width: 32px !important;">
+              <a href="#" ng-click="$event.preventDefault(); irMesAnterior()" class="btn-contasSetas" style="font-size:1.5rem; color:#FFFFFF;" title="Ir para o mês anterior"><em class="fa fa-angle-double-left" aria-hidden="true"></em></a>
+			</td>
+			<td style="border-style:none !important; vertical-align:middle; text-align:center; width:160px !important; max-width: 160px !important">
+              <a style="color:#FFFFFF; font-size:1.5rem;"><strong>{{mapaMeses[mesAtual]}}</strong></a>
+			</td>
+			<td style="border-style:none !important; vertical-align:middle; text-align:right; width:32px !important; max-width: 32px !important;">
+              <a href="#" ng-if="podeIrProximoMes()" ng-click="$event.preventDefault(); irProximoMes()" class="btn-contasSetas" style="font-size:1.5rem; color:#FFFFFF;" title="Ir para o mês seguinte"><em class="fa fa-angle-double-right" aria-hidden="true"></em></a>
+			</td>
+			  
+			<td style="border-style:none !important; vertical-align:middle; text-align:left; width:32px !important; max-width: 32px !important;">
+              <a href="#" ng-click="$event.preventDefault(); voltarAoMesInicial()" class="btn-contasSetas" style="color:#FFFFFF;" title="Retornar ao mês corrente"><em class="fa fa-undo-alt fa-lg" aria-hidden="true"></em></a>
+
+            </td>  
+
+			<td style="border-style:none !important; vertical-align:middle; text-align:left; width:32px !important; max-width: 32px !important;">
+              <input ui-date="dateOptionsPagar" ng-model="datasFiltro.dataPagar" type="hidden" >
+            </td>
+			  
+            <td style="border-style:none !important; vertical-align:middle; text-align:right; width:auto;">
+              <a style="color:#FFFFFF; padding:0.5rem; line-height:3rem;">CONTAS A PAGAR</a>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <contas-pagar-grid contas-pagar="financeiroDTO.contasPagar" centro-custo="centroCusto" centros-custo="centrosCusto" mes="mesAtual" ano="anoAtual"></contas-pagar-grid>
+
+    </div>
+    <div class="clearfix"></div>
+    <div class="col-md-12 col-lg-12 col-xl-6" style="padding:0rem; padding-left:0.3rem;">
+      <div class="row" style="width:100%; padding:0rem; margin:0rem; background-color:#2C908B;">
+        <table class="financeiroTable" style="width:100%; height:100%; padding:0rem; margin:0rem;">
+          <tr>
+            <td style="border-style:none !important; vertical-align:middle; text-align:left; width: auto;">
+              <a style="color:#FFFFFF; padding:0.5rem; line-height:3rem;">CONTAS A RECEBER</a>
+            </td>
+			  
+			<td style="border-style:none !important; vertical-align:middle; text-align:right; width:32px !important; min-width: 32px !important;">
+                <input ui-date="dateOptionsReceber" ng-model="datasFiltro.dataReceber" type="hidden" >
+            </td>
+			  
+            <td style="border-style:none !important; vertical-align:middle; text-align:right; width:32px !important; max-width: 32px !important; min-width: 32px !important;">
+              <a href="#" ng-click="$event.preventDefault(); voltarAoMesInicial()" class="btn-contasSetasVerdes" style="color:#FFFFFF;" title="Retornar ao mês corrente"><em class="fa fa-undo-alt fa-lg" aria-hidden="true"></em></a>
+			</td>
+			<td style="border-style:none !important; vertical-align:middle; text-align:right; width:32px !important; max-width: 32px !important; min-width: 32px !important;">  
+              <a href="#" ng-click="$event.preventDefault(); irMesAnterior()" class="btn-contasSetasVerdes" style="font-size:1.5rem; color:#FFFFFF;" title="Ir para o mês anterior"><em class="fa fa-angle-double-left" aria-hidden="true"></em></a>
+			</td>
+			<td style="border-style:none !important; vertical-align:middle; text-align:center; width:160px !important; max-width: 160px !important; min-width: 160px !important;">
+              <a style="color:#FFFFFF; font-size:1.5rem;"><strong>{{mapaMeses[mesAtual]}}</strong></a>
+			</td>
+			<td style="border-style:none !important; vertical-align:middle; text-align:right; width: 32px !important; max-width: 32px !important; min-width: 32px !important;">
+              <a href="#" ng-if="podeIrProximoMes()" ng-click="$event.preventDefault(); irProximoMes()" class="btn-contasSetasVerdes" style="font-size:1.5rem; color:#FFFFFF;" title="Ir para o mês seguinte"><em class="fa fa-angle-double-right" aria-hidden="true"></em></a>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <contas-receber-grid contas-receber="financeiroDTO.contasReceber" centro-custo="centroCusto" centros-custo="centrosCusto" mes="mesAtual" ano="anoAtual" ></contas-receber-grid>
+
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-6" style="padding:0.4rem;">
+      <div style="padding:0.5rem; border-bottom-left-radius:0.3rem; border-bottom-right-radius:0.3rem;">
+        <a style="padding:0.5rem">RESUMO - <span style="font-size:0.9rem;"><b>{{centroCusto.descricao}}</b></span></a>
+        <div class="float-right" style="font-size:0.8rem;">
+          <a><i><b>{{mapaMeses[mesAtual]}} </b></i></a>
+          <a> de </a>
+          <a><i><b> {{anoAtual}}</b></i></a>
+        </div>
+        <table class="table-striped table-hover mb-1" style="width:100%;">
+          <tr style="text-align:center;">
+            <th></th>
+            <th style="width:30%;"></th>
+          </tr>
+          <tr>
+            <td style="text-align:left;"><a href="#">Despesas Fixas</a></td>
+            <!--<td style="text-align:center;"></td>-->
+            <td style="border-left:1px solid #CED4DA; text-align:center;">{{financeiroDTO.totalDespesasFixas | number:2}}</td>
+          </tr>
+          <tr>
+            <td style="text-align:left;"><a href="#">Despesas Variáveis</a></td>
+            <td style="border-left:1px solid #CED4DA; text-align:center;">{{financeiroDTO.totalDespesaVariaveis | number:2}}</td>
+          </tr>
+          <tr>
+            <td style="text-align:left;"><a href="#">Multas e juros por atraso</a></td>
+            <td style="border-left:1px solid #CED4DA; text-align:center;">{{financeiroDTO.totalJurosEMultasDespesas | number:2}}</td>
+          </tr>
+        </table>
+      </div>
+      <div style="padding:0.5rem; border-bottom-left-radius:0.3rem; border-bottom-right-radius:0.3rem;">
+        <table class="table-striped table-hover mb-3" style="width:100%;">
+          <tr style="text-align:center; background-color:#F2F2F2;">
+            <th></th>
+            <th style="width:30%;"></th>
+          </tr>
+          <tr style="background-color:#F2F2F2;">
+            <td style="text-align:right;"><b style="color:#B5B5B5; padding-right:0.5rem;">TOTAL CONTAS A PAGAR</b></td>
+            <td style="border-left:1px solid #CED4DA; text-align:center;"><b style="color:#DB4C59; font-size:1.5rem; width:20%;">{{getInteger(financeiroDTO.totalContasPagar)}},<a style="font-size:1.2rem;">{{getDecimals(financeiroDTO.totalContasPagar)}}</a></b></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="col-lg-6" style="padding:0.4rem;">
+      <div style="padding:0.5rem; border-bottom-left-radius:0.3rem; border-bottom-right-radius:0.3rem;">
+        <a style="padding:0.5rem">RESUMO - <span style="font-size:0.9rem;"><b>{{centroCusto.descricao}}</b></span></a>
+        <div class="float-right" style="font-size:0.8rem;">
+          <a><i><b>{{mapaMeses[mesAtual]}} </b></i></a>
+          <a> de </a>
+          <a><i><b> {{anoAtual}}</b></i></a>
+        </div>
+		  
+		<table class="table-striped table-hover mb-1" style="width:100%;">
+          <tr style="text-align:center;">
+            <th></th>
+            <th style="width:30%;"></th>
+          </tr>
+          <tr>
+            <td style="text-align:left;"><a href="#">Contratos Mensais</a></td>
+            <td style="border-left:1px solid #CED4DA; text-align:center;">{{financeiroDTO.totalContratosMensais | number:2}}</td>
+          </tr>
+          <tr>
+            <td style="text-align:left;"><a href="#">Pagamentos Parcelados</a></td>
+            <td style="border-left:1px solid #CED4DA; text-align:center;">{{financeiroDTO.totalPagamentosParcelados | number:2}}</td>
+          </tr>
+          <tr>
+            <td style="text-align:left;"><a href="#">Pagamentos Extraordinários</a></td>
+            <td style="border-left:1px solid #CED4DA; text-align:center;">{{financeiroDTO.totalPagamentosExtraordinarios | number:2}}</td>
+          </tr>
+        </table>  
+		  
+        
+      </div>
+      <div style="padding:0.5rem; border-bottom-left-radius:0.3rem; border-bottom-right-radius:0.3rem; padding-bottom:60px;">
+		  
+		<table class="table-striped table-hover mb-3" style="width:100%;">
+          <tr style="text-align:center; background-color:#F2F2F2;">
+            <th></th>
+            <th style="width:30%;"></th>
+          </tr>
+          <tr style="background-color:#F2F2F2;">
+            <td style="text-align:right;"><b style="color:#B5B5B5; padding-right:0.5rem;">TOTAL CONTAS A RECEBER</b></td>
+            <td style="border-left:1px solid #CED4DA; text-align:center;"><strong style="color:#30966E; font-size:1.5rem">{{financeiroDTO.totalContasReceber| number:0}},<a style="font-size:1.2rem;">{{getDecimals(financeiroDTO.totalContasReceber)}}</a></strong></td>
+          </tr>
+        </table>  
+		  
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Editar ou remover despesa-->
+<div class="modal fade" id="despesaApagar" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content" style="border:0rem !important;">
+      <div class="modal-header" style="border-radius:0rem; padding:1rem;">
+        <div class="row">
+          <h4 class="modal-title" style="padding-left:1rem; padding-top:0rem; margin:0rem;">Apagar</h4>
+        </div>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body" style="margin:auto; padding-top:3rem; padding-bottom:3rem;">
+        <form method="post" name="Login_Form" class="form-signin rounded loginForm">
+          <label for="userEmail">Confirme a exclusão deste item</label><br>
+          <div style="text-align:center;">
+            <button class="btn btn-lg btn-gravar mb-3"  name="Submit" value="" type="Button" ng-click="confirmarRemoverConta()" style="min-width:6rem;">Sim</button>
+            <button class="btn btn-lg btn-gravar mb-3"  name="Submit" value="" type="Button" data-dismiss="modal" style="min-width:6rem;">Não</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

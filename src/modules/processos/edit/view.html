@@ -1,0 +1,212 @@
+<div class="container-fluid" style="padding-top:90px;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 order-md-1 cadastrar cadastrarCol">
+                <form id="formProcesso" class="needs-validation" novalidate >
+                    <div class="row tabTopo">
+                        <div class="col-lg-4 mb-2" style="background-color:#E3EFF8; padding-bottom:0.8rem; border-radius:0.4rem;">
+
+                            <label for="cliente" class="required-label">Cliente</label>
+
+                            <input type="text"
+                                   ng-model="clienteNome"
+                                   placeholder="Digite o nome do cliente"
+                                   class="form-control formCadastro"
+                                   auto-complete="autoCompleteOptions" required="" ng-disabled="desabilitarCliente"/>
+
+                            <div class="invalid-feedback">
+                                Digite aqui o nome do cliente.
+                            </div>
+                        </div>
+                        <div class="col-lg-2 mb-2">
+                                <label for="processoContrato">Contrato</label>
+                                <select class="custom-select d-block w-100" id="processoContrato" required ng-model="processoDto.processo.contrato.id" ng-disabled="desabilitarContrato">
+                                    <option value="" selected="selected">Selecione...</option>
+                                    <option ng-repeat="contrato in contratos"
+                                            ng-value="contrato.id">{{contrato.descricao}}
+                                    </option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Escolha uma opção.
+                                </div>
+                        </div>
+                        <div class="col-lg-6 mb-2">
+                            <label for="processoDescricao">Descrição</label>
+                            <input class="form-control formCadastro" id="processoDescricao" placeholder="Descrição do processo" required="" type="text" ng-model="processoDto.processo.descricao">
+                            <div class="invalid-feedback">
+                                Faça uma breve descrição do processo.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-2 mb-2">
+                            <label for="processoTipo">Tipo</label>
+                            <select ng-model="processoDto.processo.tipo" class="custom-select d-block w-100" id="processoTipo" required >
+                                <option value="" selected="selected">Selecione...</option>
+                                <option ng-value="tipoProcesso.id" ng-repeat="tipoProcesso in tiposProcesso">{{tipoProcesso.nome}}</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Escolha uma opção.
+                            </div>
+                        </div>
+                        <div class="col-lg-3 mb-2">
+                            <label for="numeroProcesso" class="required-label">Número</label>
+                            <input class="form-control formCadastro" id="numeroProcesso" placeholder="Número do processo" type="text" ng-model="processoDto.processo.numero">
+                            <div class="invalid-feedback">
+                                Indique aqui o número do processo.
+                            </div>
+                        </div>
+                        <div class="col-lg-2 mb-2">
+                            <label for="processoArea">Área</label>
+                            <select ng-model="processoDto.processo.area" class="custom-select d-block w-100" id="processoArea" required>
+                                <option value="" selected="selected">Selecione...</option>
+                                <option ng-value="areaProcesso.id" ng-repeat="areaProcesso in areasProcesso">{{areaProcesso.nome}}</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Escolha uma opção.
+                            </div>
+                        </div>
+                        <div class="col-lg-3 mb-2">
+                            <div class="row" style="background-color:#E3EFF8; padding-bottom:0.8rem; border-radius:0.4rem; padding-right:0.5rem;">
+                                <div class="col-lg-10">
+                                    <label for="processoTipoAcao">Tipo da Ação</label>
+                                    <select ng-model="processoDto.processo.tipoAcao.id" class="custom-select d-block w-100" id="processoTipoAcao" required="" >
+                                        <option value="" selected="selected">Selecione...</option>
+                                        <option ng-value="tipoAcao.id" ng-repeat="tipoAcao in tiposAcao">{{tipoAcao.descricao}}</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Escolha uma opção.
+                                    </div>
+                                </div>
+                                <div class="col-lg-2" style="text-align:center;">
+                                    <br>
+                                    <button class="btn btn-finalizarEvento btn-lg" type="button" ng-click="addTipoAcao()" data-placement="top" title="Adicionar novo tipo de ação" style="width:3rem; height:3rem; padding-left:0.5rem; padding-right:0.5rem; padding-top:0.2rem; padding-bottom:0.2rem;">
+                                        <i class="fa fa-plus fa-1x" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 mb-2">
+                            <label for="processoDistribuicao" class="required-label">Data da distribuição</label>
+                            <input ui-date="dateOptions" class="form-control" id="processoDistribuicao" placeholder="dd/mm/aaaa" type="text" required ng-model="processoDto.processo.dataDistribuicao"  >
+                            <div class="invalid-feedback">
+                                Indique a data da distribuição
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-lg-2 mb-2">
+                            <label for="processoForo" class="required-label">Foro</label>
+                            <input class="form-control formCadastro" id="processoForo" placeholder="Foro" required="" type="text" ng-model="processoDto.processo.foro">
+                            <div class="invalid-feedback">
+                                Indique o Foro.
+                            </div>
+                        </div>
+                        <div class="col-lg-3 mb-2">
+                            <label for="processoVara">Vara</label>
+                            <input class="form-control formCadastro" id="processoVara" placeholder="Vara" type="text" required ng-model="processoDto.processo.vara">
+                        </div>
+                        <div class="col-lg-2 mb-3">
+                            <label for="processoInstancia">Instância</label>
+                            <select ng-model="processoDto.processo.instancia" class="custom-select d-block w-100" id="processoInstancia" required>
+                                <option value="" selected="selected">Selecione...</option>
+                                <option ng-value="instanciaProcesso.id" ng-repeat="instanciaProcesso in instanciasProcesso">{{instanciaProcesso.nome}}</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Escolha uma opção.
+                            </div>
+                        </div>
+                        <div class="col-lg-2 mb-3">
+                            <label for="processoValorAcao">Valor da ação</label>
+                            <input class="form-control formCadastro" id="processoValorAcao" placeholder="Valor da ação" type="text"  currency-formatter required ng-model="processoDto.processo.valorAcao">
+                        </div>
+                        <div class="col-lg-3 mb-3">
+                            <label for="processoCentroCustos">Centro de Custos</label>
+                            <select ng-model="processoDto.processo.centroCusto.id" class="custom-select d-block w-100" id="processoCentroCustos" required>
+                                <option value="" selected="selected">Selecione...</option>
+                                <option ng-value="centroCusto.id" ng-repeat="centroCusto in centrosCusto">{{centroCusto.descricao}}</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Escolha uma opção.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-lg-2 mb-1">
+                            <label for="processoEstado" class="required-label">Estado</label>
+                            <select class="custom-select d-block w-100" id="processoEstado" required ng-model="estadoSelecionado" ng-change="selecionarEstado()">
+                                <option value="" selected="selected">Selecione...</option>
+                                <option ng-repeat="estado in estados" ng-value="estado.id" >{{estado.nome}}</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Escolha uma opção.
+                            </div>
+                        </div>
+                        <div class="col-lg-2 mb-3">
+                            <label for="processoComarca">Comarca</label>
+                            <select ng-model="processoDto.processo.comarca.id" class="custom-select d-block w-100" id="processoComarca" required>
+                                <option value="" selected="selected">Selecione...</option>
+                                <option ng-value="comarca.id" ng-repeat="comarca in comarcas" >{{comarca.descricao}}</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Escolha uma opção.
+                            </div>
+                        </div>
+                        <div class="col-lg-2 mb-4">
+                            <br>
+                            <button class="btn btn-finalizarEvento btn-lg" type="button" ng-click="vincularProcesso()" style="width:100%;"><i class="fa fa-link fa-1x" aria-hidden="true"></i><span> Vincular processo</span></button>
+                        </div>
+                        <div class="col-lg-2 mb-4">
+                            <label for="processoVinculoNumero">Vínculo</label>
+                            <input  class="form-control formCadastro" style="font-size:0.8rem; text-align:center;" id="processoVinculoNumero" type="text" value="{{processoDto.processo.processoVinculado.numero}}" disabled>
+                        </div>
+                        <div class="col-lg-4 mb-4">
+                            <label for="processoVinculoDescricao">Descrição</label>
+                            <input class="form-control formCadastro" id="processoVinculodescricao" type="text" disabled style="font-size:0.9rem;" value="{{processoDto.processo.processoVinculado.descricao}}" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-2">
+                            <label for="processoResumo">Resumo da Ação</label>
+                            <textarea class="form-control mb-1" rows="2" id="processoResumo" required ng-model="processoDto.processo.resumo"></textarea>
+                        </div>
+                        <div class="col-md-6 mb-2">
+                            <label for="processoObs">Observações</label>
+                            <textarea class="form-control mb-1" rows="2" id="processoObs" ng-model="processoDto.processo.observacoes"></textarea>
+                        </div>
+                    </div>
+                    <div class="row" style="padding:0rem;">
+                        <div class="col-lg-12"  style="width:100%; text-align:center;">
+                            <b>PARTES</b>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 mb-2" style="padding:0.8rem; padding-top:0rem;">
+                            <a>CLIENTE</a>
+                            <partes-processo partes="processoDto.partesCliente" partes-remover="processoDto.partesRemover"></partes-processo>
+                        </div>
+                        <div class="col-lg-6 mb-2" style="padding:0.8rem; padding-top:0rem;">
+                            <div style="text-align:right;">
+                                <a>PARTE CONTRÁRIA</a>
+                            </div>
+                            <partes-processo partes="processoDto.partesContraria" partes-remover="processoDto.partesRemover" ></partes-processo>
+                        </div>
+                    </div>
+                    <div class="row float-right">
+                        <alert-msg message="message"> </alert-msg>
+                    </div>
+                    <div class="botaoGravarClientesDiv">
+                        <button class="btn btn-gravar btn-lg btn-block botaoGravarClientes" type="button" ng-click="salvarProcesso()" >Gravar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<vincular-processo></vincular-processo>
+
+<add-tipo-acao></add-tipo-acao>

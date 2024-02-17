@@ -1,0 +1,59 @@
+<header>
+    <nav class="navbar navclientes navbar-expand-lg navbar-light fixed-top menuTop navTop">
+        <button class="navbar-toggler dropdown-menu-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+            <img class="logoCliente" src="../../assets/img/cliente00001_50px_inv.png" alt="Muritiba & Niuton Jr.">
+        </a>
+        <div class="collapse navbar-collapse height100" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto azulEscuroFundo height100" ui-view="menu-superior">
+            </ul>
+            <div class="pull-right navbar-right navbarUsuario">
+                <ul class="nav pull-right collapse navbar-collapse">
+                    <li class="dropdown"><a href="#" class="dropdown-toggle corBranca" style="margin-right: 4rem;" data-toggle="dropdown">{{usuarioAtual.nome}} <strong class="caret"></strong></a>
+                        <ul class="dropdown-menu float-left dropUsuario">
+                            <table class="table-striped table-hover width100">
+                                <tr jurix-permissoes="Colaborador.Visualizar" >
+                                    <td>        
+                                        <li><a ui-sref="layout.colaboradorList" class="removeUnderline"><i class="icon-off"></i> Colaboradores</a>
+                                        </li>
+                                    </td>    
+                                </tr>
+                                <tr jurix-permissoes="Configuracoes.Visualizar" > 
+                                    <td>        
+                                        <li><a class="removeUnderline" ui-sref="layout.configuracoes" >Configurações</a>
+                                        </li>
+                                    </td>    
+                                </tr>
+                                <tr>
+                                    <td class="meuPerfil">
+                                        <button ng-click="irPerfilUsuario()" class="btn btn-link removeUnderline meuPerfil">Meu perfil</button>
+                                    </td>    
+                                </tr>
+                                <tr>
+                                    <td>  
+                                        <li>
+                                            <a class="removeUnderline" href="/logout">Sair</a>
+                                        </li>
+                                    </td>    
+                                </tr>      
+                            </table>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="height100" id="content" ui-view="content"></div>
+
+<footer class="footer">
+    <div class="container col-12 footerJurix">
+        <div style="margin: auto; width: auto; height: 40px!important; padding: 0rem;">
+	      <a href="http://jurix.com/" target="_blank" ><img class="" src="../../assets/img/jurixCinzaPeq.png" alt="Jurix"></a>	
+	    </div>
+    </div>
+</footer>

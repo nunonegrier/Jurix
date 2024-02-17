@@ -1,0 +1,18 @@
+<a  ng-if="!$ctrl.contaReceber.isAtrasado && $ctrl.contaReceber.situacao === 'PENDENTE'" style="text-decoration:none !important;"  >
+    <button class="btn" ng-class="$ctrl.getClassPendente()" type="button" ng-click="$ctrl.pagamentoContaReceber($ctrl.contaReceber)" >
+        <i class="-alt far fa-calendar-alt"></i> Pendente</button>
+</a>
+
+<a ng-if="$ctrl.contaReceber.isAtrasado && $ctrl.contaReceber.situacao === 'PENDENTE'" style="text-decoration:none !important;" >
+    <button class="btn btn-despesaAtrasada" type="button" style="line-height:0.4rem; padding:0.3rem;" ng-click="$ctrl.pagamentoContaReceber($ctrl.contaReceber)">
+        <i class="far fa-times-circle" style="font-size:0.9rem;"></i>
+        Atrasada
+    </button>
+</a>
+
+<a ng-if="$ctrl.contaReceber.situacao === 'RECEBIDO'" style="text-decoration:none !important;">
+    <button class="btn btn-pagamentoVerde" type="button"  ng-click="$ctrl.visulizarContaReceber($ctrl.contaReceber)">
+        <i class="-alt fa  fa-check fa-fw" style=""></i>
+        Paga
+    </button>
+</a>

@@ -1,0 +1,84 @@
+<!-- Tabela de Clientes -->
+<main role="main" class="containerMain" style="padding-top: 5.5rem;">
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 well">
+			    	<div class="float-left">
+                    	<form class="form-inline mt-2 mt-md-0">
+                            <input id="campoBusca" class="form-control mr-sm-2" type="text" placeholder="Digite aqui" aria-label="Digite aqui" ng-model="filtro.nome" ng-keyup="pesquisar()"/>
+                            <button class="btn btn-pesquisa my-2 my-sm-0" type="button" ng-click="pesquisar()">Pesquisar</button>
+
+                        </form>
+		      		</div>
+			  		<div class="float-right">
+                		<form class="form-inline mt-2 mt-md-0">
+			      			<a>Grupo </a>
+				  			<select class="custom-select" style="width: auto; min-width:200px;  margin-left: 0.5rem; color: #94989B" id="clientesGrupos" ng-model="filtro.grupo" ng-change="pesquisar()">
+                    			<option value="" selected="selected">Selecione...</option>
+                                <option ng-repeat="grupo in grupos"
+                                        ng-value="grupo.id">{{grupo.nome}}
+                                </option>
+                            </select>
+
+				  			<button class="btn btn-finalizarEvento" title="Limpar seleção" style="margin-left: 0.5rem;" ng-click="limparGrupo()">
+                    			<i class="-alt fa  fa-sync fa-fw"></i>
+				  			</button>
+                		</form>
+		        	</div>
+            	</div>
+            </div>
+        </div>
+    </div>
+    <div class="section" style="padding-top: 0.5rem;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 table-responsive">
+                    <table class="table table-hover table-striped">
+                        <tbody>
+                        <tr ng-repeat="cliente in clientes">
+                            <td>
+                                <b>{{cliente.id}}</b>
+                            </td>
+                            <td>
+                                <a style="font-size:1.2rem;"><b>{{cliente.nome}}</b></a><br>
+                                <a href="mailto:{{getEmailCliente(cliente)}}"> {{getEmailCliente(cliente)}}</a><br>
+                                <a style="font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, sans-serif; font-weight:normal; font-size:1.2rem;"> {{cliente.telefone}}</a><br>
+                                <b>{{cliente.endereco}}</b> CEP: <b>{{cliente.cep}}</b>
+                            </td>
+                            <td style="vertical-align:middle;">
+                                <div class="btn fa-pull-right">
+                                    <a ui-sref="layout.clienteFisicoVisualizar({id : cliente.id})" ng-show="cliente.clienteFisico" style="text-decoration:none !important;">
+                                        <button class="btn btn-gravar" type="submit">
+                                            <i class="-alt fa  fa-eye fa-fw"></i> Ver</button>
+                                    </a>
+                                    <a ui-sref="layout.clienteJuridicoVisualizar({id : cliente.id})" ng-show="cliente.clienteJuridico" style="text-decoration:none !important;">
+                                        <button class="btn btn-gravar" type="submit">
+                                            <i class="-alt fa  fa-eye fa-fw"></i> Ver</button>
+                                    </a>
+
+                                    <!-- Mostra o elemento quando o cliente possui contrato -->
+                                    <!-- ng-show="cliente.possuiContrato" -->
+
+                                    <!-- Mostra o elemento quando o cliente não possui contrato -->
+                                    <!-- ng-show="!cliente.possuiContrato" -->
+
+                                    <a class="disabled" ui-sref="layout.clienteContratoNovo({clienteId: cliente.id})" jurix-permissoes="Cliente.Contrato.Cadastrar" style="text-decoration:none !important;" >
+                                        <button class="btn btn-novoContrato" type="submit" >
+                                            <i class="-alt fa  fa-plus fa-fw"></i> Novo contrato</button>
+                                    </a>
+
+                                    <a ui-sref="layout.processoNovo({clienteId: cliente.id})" jurix-permissoes="Processo.Cadastrar" >
+                                        <button class="btn btn-finalizarEvento" type="submit">
+                                            <i class="-alt fa  fa-plus fa-fw"></i> Novo processo</button>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

@@ -1,0 +1,323 @@
+<div class="container-fluid barraEvento">
+    <alert-msg message="message"></alert-msg>
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+        </div>
+    </div>
+    <div class="panel-heading" role="tab" id="heading-1" jurix-permissoes="Pauta.Criar">
+        <h5 class="panel-title headerNovoEvento headerH5Eventos">
+            <a id="novoEventoButton" ng-click="novoEvento()" class="collapsed headerConsultas" role="button" data-toggle="collapse"
+               data-parent="#accordion"
+               href="#collapse-1" aria-expanded="false" aria-controls="collapse-1" id="novoEvento">
+                <span class="fa fa-plus fa-1x barraSpan" aria-hidden="true"></span>
+                ADICIONAR NOVO EVENTO
+            </a>
+        </h5>
+    </div>
+    <div id="collapse-1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-1">
+        <div class="panel-body">
+            <div class="col-lg-12 novoEventoDocsCol">
+                <div class="novoEvento">
+                    <form id="formularioPautaEvento" class="needs-validation" novalidate  autocomplete="off" >
+                        <div class="row">
+                            <div class="col-lg-1 mb-1 bordersTudoEvento">
+                                <label for="tipoEvento">Tipo</label>
+                                <select ng-model="pautaEvento.tipo" class="custom-select d-block w-100" id="tipoEvento" required >
+                                    <option value="PRAZO" selected>Prazo</option>
+                                    <option value="TAREFA">Tarefa</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Insira o tipo
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mb-1">
+                                <label for="nomeColaborador">Responsável</label>
+                                <select ng-model="pautaEvento.colaborador.id" class="custom-select d-block w-100" id="nomeColaborador" required >
+                                    <option ng-repeat="colaborador in colaboradores" value="{{colaborador.id}}" >
+                                        {{colaborador.usuario.nome}}
+                                    </option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Insira o responsável
+                                </div>
+                            </div>
+                            <div class="col-lg-3 mb-2">
+                                <label for="numeroProcesso">Nº do processo</label>
+                                <input id="vincularNumeroProcesso" type="text"
+                                       ng-model="numeroProcessoBusca"
+                                       placeholder="Número do processo"
+                                       class="form-control formCadastro"
+                                       auto-complete="autoCompleteProcessoOptions" />
+                            </div>
+                            <div class="col-lg-2 mb-2">
+                                <label for="dataPublicacao" class="required-label">Publicação</label>
+                                <input ui-date="dateOptions" ng-model="pautaEvento.dataPublicacao" class="form-control"
+                                       id="dataPublicacao" placeholder="dd/mm/aaaa" type="text" required>
+                                <div class="invalid-feedback">
+                                    Insira a data de publicação
+                                </div>
+                            </div>
+                            <div class="col-lg-2 bordersTudoEvento mb-1">
+                                <label for="dataLimite" class="required-label">Data limite</label>
+                                <input ui-date="dateOptions" ng-model="pautaEvento.dataLimite" class="form-control"
+                                       id="dataLimite" placeholder="dd/mm/aaaa" type="text" required>
+                                <div class="invalid-feedback">
+                                    Insira a data de limite
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 mb-1">
+                                <label for="eventoDescricao">Descrição</label>
+                                <textarea ng-model="pautaEvento.descricao" class="form-control mb-3" rows="2" id="eventoDescricao" type="text" required ></textarea>
+                                <div class="invalid-feedback">
+                                    Insira a descrição
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-1">
+                                <label for="eventoObservacao">Observações</label>
+                                <textarea ng-model="pautaEvento.observacaoCriacao" class="form-control mb-3" rows="2"
+                                          id="eventoObservacao"></textarea>
+                            </div>
+                            <div class="row anexarRow" style="padding-left: 1rem; padding-right: 1rem;">
+                                <jurix-arquivos ng-if="novoEventoOpened" repository="filesRespository" form-id="'formularioPautaEvento'" ></jurix-arquivos>
+                            </div>
+                            <button ng-click="salvar()" class="btn btn-gravarEvento btn-lg btn-block" type="submit">
+                                Gravar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="panel panel-default">
+
+        <a style="height:100%; color:#9E9E9E; font-size:1rem; padding:1rem; padding-right:1rem; margin:0rem; min-width:70px; padding-top:1.4rem !important; padding-bottom:0rem;"><i>Filtros</i></a>
+        <div class="container-fluid barraFiltros">
+            <div class="row barraFiltrosPauta ">
+
+                <div class="col-xl-11 col-lg-10 col-md-9 col-sm-8 paddingBarraFiltros" style="height:100%; vertical-align:middle;">
+
+                    <button class="btn btn-finalizarEvento btn-sm mb-1" type="button" title="Limpar filtragem" ng-click="carregarFiltroPadrao()">
+                        <i class="fa fa-sync fa-1x" aria-hidden="true"></i>
+                    </button>
+
+                    <button ng-click="carregarFiltroPrincipal(filtroUsuario)" class="btn btn-barraFiltros" type="button" ng-repeat="filtroUsuario in filtrosUsuario" >
+                        {{filtroUsuario.nome}}
+                    </button>
+
+                </div>
+
+                <div class="col-xl-1 col-lg-2 col-md-3 col-sm-4 paddingBarraFiltros">
+                    <button ng-click="abrirFiltro()" class="btn btn-consultarEvento btn-block btn-sm" >Avançado</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div ng-hide="isFiltroPadrao()" class="container-fluid" style="padding-top: 1rem !important;">
+            <div style="width: 100%; text-align: center;">
+
+                <a style="background-color: #FFB962; padding: 0.4rem;"><b style="color: white;"> Atenção! Filtro ativo. Para voltar a ver todas as informações sem filtragem,</b><a style="background-color: #EB9832; padding: 0.4rem;cursor: pointer;" ng-click="carregarFiltroPadrao()" ><b style="color: white; text-decoration:none !important;">CLIQUE AQUI</b></a> </a>
+
+            </div>
+        </div>
+
+        <div class="container-fluid listaEventos" style="padding-top: 0rem !important;" >
+
+            <div class="row eventosListaRow" ng-show="pautaEventos.length == 0">
+                <div class="col-12 semResultados">
+                    <a>Não foram encontrados eventos compatíveis com os critérios desta pesquisa.</a>
+                </div>
+            </div>
+
+            <div class="table-responsive" style="padding: 1rem; margin: 0rem; width: 100% !important;">
+
+                <pauta-ordenacao update-sort-fn="ordenarEventoPorDirecaoData" ordenacao="filtros.direction" ></pauta-ordenacao>
+
+                <div class="float-left" style="">
+                    <table style="width: auto; height: 100%;margin-top: 1rem !important; margin-left: 0.5rem;">
+                        <tr style="height: 100%;">
+                            <td style="height: 100%; vertical-align: bottom;">
+                                <a>Mostrar finalizados</a>
+
+                                <input type="checkbox" style="margin-bottom: 0rem; padding-bottom: 0rem;" name="finalizadosMostrar" id="mostrarFinalizados" ng-model="filtros.exibirFinalizados" ng-change="exibirFinalizadosCheckBox.pesquisar()" >
+
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="float-right" style=" background-color: #E3E3E3; padding: 0.4rem; margin-bottom: 0.2rem;">
+                    <a href="" class="btn-tipoPauta" style="padding: 0.2rem; padding-right: 0rem;" ng-click="setModoVisualizacaoEventos('table')" title="Tabela" >
+                        <i class="fa fa-align-justify fa-2x" aria-hidden="true"></i>
+                    </a>
+                    <a href="" class="btn-tipoPauta" style="padding: 0.2rem;" ng-click="setModoVisualizacaoEventos('list')" title="Lista">
+                        <i class="fas fa-th-list fa-2x" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <div ng-repeat="pautaEvento in pautaEventos" class="row eventosListaRow" ng-show="pautaEventos.length > 0 && modoVisualizacaoEventos == 'list'" >
+                    <div class="col-lg-2 prazoData">
+                        <table class="eventosListaTable">
+                            <tr class="eventosTableTr">
+                                <th>
+                                    <div class="prazoDataDiv"><a class="prazoDataTitulo">PRAZO</a><br>
+                                        <a class="prazoDataDia"><strong>{{pautaEvento.dataLimite | date: 'dd'}}</strong></a><br>
+                                        <a class="prazoDataMes">{{getNomeMesDoAno(pautaEvento.dataLimite)}}</a><br>
+                                        <a class="prazoDataAno">{{pautaEvento.dataLimite |
+                                            date:'yyyy'}}</a></div>
+                                </th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-lg-10 eventosBarraTextos">
+                        <div class="row prazoInfo">
+                            <div class="col-lg-5 eventoCol1">
+                                <a class="eventosDescricao"><b>{{pautaEvento.descricao}}</b></a><br>
+                                <a class="eventosResponsavel"><b>{{pautaEvento.colaborador.usuario.nome}}</b></a><br>
+                                <a class="eventosNumero"><b>{{pautaEvento.processo.numero}}</b></a><br>
+                                <a class="eventosNumero"><b>{{pautaEvento.processo.descricao}}</b></a><br>
+                                <br ng-show="pautaEvento.finalizadoAutomaticamente"><a class="eventosFalha" ng-show="pautaEvento.finalizadoAutomaticamente" ><b>EVENTO FINALIZADO PELO SISTEMA EM {{pautaEvento.dataFinalizacao | date: "dd/MM/yyyy"}}</b></a><br ng-show="pautaEvento.finalizadoAutomaticamente" >
+                                <br ng-show="exibirDataFinalizacao(pautaEvento)" ><a class="eventosNumero" style="padding-bottom:1rem;" ng-show="exibirDataFinalizacao(pautaEvento)" >Finalizado em: <b>{{pautaEvento.dataFinalizacao | date : "dd/MM/yyyy"}}</b></a><br ng-show="exibirDataFinalizacao(pautaEvento)" >
+                            </div>
+                            <div class="col-lg-5 mb-2 eventosCol2">
+                                <a class="eventosCol2Titulo">PUBLICAÇÃO</a><br>
+                                <a><b>{{pautaEvento.dataPublicacao | date: 'dd/MM/yyyy'}} - </b></a><a><b>{{pautaEvento.usuarioCriacao.nome}}</b></a><br>
+
+                                <a class="eventosCol2Titulo">OBSERVAÇÕES</a><br>
+                                <a class="eventosObservacoes"><b>{{pautaEvento.observacaoCriacao}}</b></a>
+                                <br><br><br><a class="eventosNumero" style="padding-bottom:1rem;" >Criado em: <b>{{pautaEvento.dataCriacao | date : "dd/MM/yyyy"}}</b></a>
+                            </div>
+                            <div ng-class="pautaEvento.propriedadesTela.divClass">
+                                <table class="eventosCol3Table">
+                                    <tr class="eventosCol3TableTr">
+                                        <div class="row eventosCol3TableRow">
+                                            <div class="container-fluid float-right tituloStatus"><a
+                                                    class="eventosCol3Status"><b>STATUS</b></a></div>
+                                        </div>
+                                    </tr>
+                                    <tr class="eventosStatusCol">
+                                        <div class="eventosStatusDiv"><a class="eventosStatusPrazo"><b>{{pautaEvento.tipo}}</b></a></div>
+                                        <div class="eventosEstadoDiv">
+                                            <a ng-class="pautaEvento.propriedadesTela.textoClass">
+                                                <strong>{{pautaEvento.situacao == 'PENDENTE' && pautaEvento.atrasado ? 'ATRASADO' : pautaEvento.situacao}}</strong>
+                                            </a>
+                                        </div>
+                                        <div class="eventosButton" ng-class="pautaEvento.podeProrrogar || (pautaEvento.situacao == 'FINALIZADO' && pautaEvento.isUsuarioCriacaoIgualUsuarioLogado) ? 'btn-group': ''" style="width:100%;">
+                                            <button ng-class="pautaEvento.propriedadesTela.botaoClass" type="button"
+                                                    ng-click="getAcao(pautaEvento)" style="{{pautaEvento.podeProrrogar || pautaEvento.situacao == 'FINALIZADO' ? 'width: 70%' : ''}}" >
+                                                {{pautaEvento.situacao === 'PENDENTE' ? getLabelEventoPendente(pautaEvento)
+                                                : getLabelEventoFinalizado(pautaEvento)}}
+                                            </button>
+                                            <button ng-show="pautaEvento.podeProrrogar" ng-class="pautaEvento.propriedadesTela.botaoProrrogacaoClass" class="btn btn-lg" type="button" ng-click="prorrogarPrazo(pautaEvento.id)" title="ALTERAR PRAZO" style="width:30%"><i class="fa fa-calendar-alt fa-1x"></i></button>
+                                            <button ng-show="pautaEvento.situacao == 'FINALIZADO' && pautaEvento.isUsuarioCriacaoIgualUsuarioLogado" class="btn btn-finalizarNovaDataEvento btn-lg" type="button" ng-click="repautarEvento(pautaEvento.id)" title="REPAUTAR" style="width:30%"><i class="fa fa-recycle fa-1x"></i></button>
+                                        </div>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <table class="table table-hover table-striped" style="width: 100% !important;" ng-show="pautaEventos.length > 0 && modoVisualizacaoEventos == 'table'" >
+                    <thead class="" style="width: 100% !important; background-color: #24242B; color: #ffffff;">
+                    <tr style="width: 100% !important;">
+                        <th scope="col">Prazo</th>
+                        <th scope="col">Responsável</th>
+                        <th scope="col">Informações</th>
+                        <th scope="col" style="min-width: 100px!important; text-align: center; background-color: #3A3A43">Ações</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <tr ng-repeat="pautaEvento in pautaEventos">
+
+                        <td style="padding-top: 0.1rem; padding-bottom: 0.2rem; vertical-align: middle; {{pautaEvento.propriedadesTela.colorList}} !important; font-size: 1.2rem;">
+                            <a><b>{{pautaEvento.dataLimite | date: 'dd/MM/yyyy'}}</b></a>
+                        </td>
+
+                        <td style="padding-top: 0.1rem; padding-bottom: 0.2rem; vertical-align: middle;">
+                            <div class="">
+                                <a class="eventosResponsavelLista"><b>{{pautaEvento.colaborador.usuario.nome}}</b></a><br>
+                                <a class="eventosNumeroLista">{{pautaEvento.processo.numero}}</a><br>
+                            </div>
+                        </td>
+
+                        <td style="padding-top: 0.1rem; padding-bottom: 0.2rem; vertical-align: middle;">
+                            <div class="">
+                                <a class="eventosCol2Titulo">PUBLICAÇÃO - Criado por</a><br>
+                                <a style="font-size: 0.9rem;"><b>{{pautaEvento.dataPublicacao | date: 'dd/MM/yyyy'}} - </b></a><a><b>{{pautaEvento.usuarioCriacao.nome}}</b></a><br>
+                                <a class="eventosCol2Titulo">OBSERVAÇÕES</a><br>
+                                <a class="eventosObservacoes">
+                                    <b>{{pautaEvento.observacaoCriacao}}</b>
+                                </a>
+                            </div>
+                        </td>
+
+                        <td style="width: 100px; padding-top: 0.1rem; padding-bottom: 0.2rem; vertical-align: middle; {{pautaEvento.propriedadesTela.backgroundList}}">
+                            <div class="eventosStatusDiv" style="text-align: center;"> <a class="eventosStatusPrazo">{{pautaEvento.tipo}}</a> </div>
+                            <div class="eventosEstadoDiv" style="text-align: center;"> <a ng-class="pautaEvento.propriedadesTela.textoClassLista"><b>{{pautaEvento.situacao == 'PENDENTE' && pautaEvento.atrasado ? 'ATRASADO' : pautaEvento.situacao}}</b></a> </div>
+                            <div class="eventosButton" ng-class="pautaEvento.podeProrrogar || (pautaEvento.situacao == 'FINALIZADO' && pautaEvento.isUsuarioCriacaoIgualUsuarioLogado) ? 'btn-group': ''" style="width:100%;" >
+
+                                <button ng-class="pautaEvento.propriedadesTela.botaoListClass"  type="button" ng-click="getAcao(pautaEvento)" style="{{pautaEvento.podeProrrogar || pautaEvento.situacao == 'FINALIZADO' ? 'width: 70%' : ''}}" >
+                                    {{pautaEvento.situacao === 'PENDENTE' ? getLabelEventoPendente(pautaEvento)
+                                    : getLabelEventoFinalizado(pautaEvento)}}
+                                </button>
+                                <button ng-show="pautaEvento.podeProrrogar" ng-class="pautaEvento.propriedadesTela.botaoProrrogacaoClassList" type="button" title="ALTERAR PRAZO" style="width:30%" ng-click="prorrogarPrazo(pautaEvento.id)" ><i class="fa fa-calendar-alt fa-1x"></i></button>
+                                <button ng-show="pautaEvento.situacao == 'FINALIZADO' && pautaEvento.isUsuarioCriacaoIgualUsuarioLogado" class="btn btn-finalizarNovaDataEvento btn-sm" type="button" ng-click="repautarEvento(pautaEvento.id)" title="REPAUTAR" style="width:30%"><i class="fa fa-recycle fa-1x"></i></button>
+                            </div>
+                        </td>
+
+                    </tr>
+
+
+                    </tbody>
+                </table>
+
+            </div>
+
+
+            <jurix-paginacao page-object="pautaEventosPage" pages-size="pagesSize" page-filters="filtros" update-pagination-fn="updatePagination" ></jurix-paginacao>
+
+
+        </div >
+
+    </div>
+</div>
+
+<modal-pauta-evento></modal-pauta-evento>
+
+<moda-filtro-pauta></moda-filtro-pauta>
+
+<modal-prorrogar-evento></modal-prorrogar-evento>
+
+<modal-repautar-evento></modal-repautar-evento>
+
+
+<!-- Modal -->
+<div class="modal fade" id="apagarEventoModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header" style="background-color:#013358; border-radius:0rem;">
+                <div class="row">
+                    <h4 class="modal-title" style="padding-left:1rem; color:#FFFFFF;">Apagar</h4>
+                </div>
+            </div>
+            <div class="modal-body" style="margin:auto; padding-top:3rem; padding-bottom:3rem;">
+                <form method="post" name="Login_Form" class="form-signin rounded loginForm">
+                    <label >Confirme a exclusão deste evento</label><br>
+                    <div style="text-align:center;">
+                        <button class="btn btn-lg btn-gravar mb-3"  type="Button" style="min-width:6rem;" ng-click="apagar()">Sim</button>
+                        <button class="btn btn-lg btn-gravar mb-3"  type="Button" data-dismiss="modal" style="min-width:6rem;">Não</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

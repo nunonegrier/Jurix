@@ -1,0 +1,73 @@
+<ul class="nav nav-tabs selectPessoa" id="myTab" role="tablist">
+    <li class="nav-item" ng-show="!cliente.id || cliente.clienteFisico.id">
+        <a class="nav-link active textFisica" ng-click="setCurrentTab('fisica')" ng-class="{ 'active' : !cliente.id || cliente.clienteFisico.id }"
+           id="fisica-tab" data-toggle="tab" href="#fisica" role="tab" aria-controls="fisica" aria-selected="true">Pessoa
+            Física</a>
+    </li>
+    <li class="nav-item" ng-show="!cliente.id || cliente.clienteJuridico.id">
+        <a class="nav-link textJuridica" ng-click="setCurrentTab('juridica')" ng-class="{ 'active' : cliente.clienteJuridico.id }" id="juridica-tab"
+           data-toggle="tab" href="#juridica" role="tab" aria-controls="juridica" aria-selected="false">Pessoa
+            Jurídica</a>
+    </li>
+</ul>
+<div class="tab-content container-fluid" id="myTabContent">
+    <div ng-show="!cliente.id || cliente.clienteFisico.id" class="tab-pane fade"
+         ng-class="{ 'show active' : !cliente.id || cliente.clienteFisico.id }" id="fisica" role="tabpanel"
+         aria-labelledby="fisica-tab">
+        <form-fisico></form-fisico>
+    </div>
+    <div ng-show="!cliente.id || cliente.clienteJuridico.id" class="tab-pane fade"
+         ng-class="{ 'show active' : cliente.clienteJuridico.id }" id="juridica" role="tabpanel"
+         aria-labelledby="juridica-tab">
+        <form-juridico></form-juridico>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="apagarArquivoModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header" style="background-color:#013358; border-radius:0rem;">
+                <div class="row">
+                    <h4 class="modal-title" style="padding-left:1rem; color:#FFFFFF;">Apagar</h4>
+                </div>
+            </div>
+            <div class="modal-body" style="margin:auto; padding-top:3rem; padding-bottom:3rem;">
+                <form method="post" name="Login_Form" class="form-signin rounded loginForm">
+                    <label for="userEmail">Confirme a exclusão deste arquivo</label><br>
+                    <!--<input type="text2" class="form-control mb-2" name="userEmail" placeholder="Email" required="" autofocus />-->
+                    <div style="text-align:center;">
+                        <button class="btn btn-lg btn-gravar mb-3"  type="Button" style="min-width:6rem;" ng-click="removerArquivo()">Sim</button>
+                        <button class="btn btn-lg btn-gravar mb-3"  type="Button" data-dismiss="modal" style="min-width:6rem;">Não</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal" id="apagarClienteModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header" style="background-color:#013358; border-radius:0rem;">
+                <div class="row">
+                    <h4 class="modal-title" style="padding-left:1rem; color:#FFFFFF;">Apagar</h4>
+                </div>
+            </div>
+            <div class="modal-body" style="margin:auto; padding-top:3rem; padding-bottom:3rem;">
+                <form method="post" name="Login_Form" class="form-signin rounded loginForm">
+                    <label for="userEmail">Confirme a exclusão deste cliente</label><br>
+                    <div style="text-align:center;">
+                        <button class="btn btn-lg btn-gravar mb-3"  name="Submit" value="" type="Button" data-dismiss="modal" style="min-width:6rem;" ng-click="excluir()" >Sim</button>
+                        <button class="btn btn-lg btn-gravar mb-3"  name="Submit" value="" type="Button" data-dismiss="modal" style="min-width:6rem;">Não</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<modal-grupo-cliente></modal-grupo-cliente>

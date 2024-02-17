@@ -1,0 +1,91 @@
+<div class="container-fluid" style="padding-top:70px; margin:0rem;">
+	<div class="row" id="centroIndexadorConfig" >
+		<div class="col-sm-12 mb-3" style="width:100%; padding:0rem; margin:0rem;">
+			<div style="background-color:#3176AA;color:#FFFFFF; font-size:1.5rem; width:100%; padding-left:1rem;">
+				<a>INDEXADORES</a>
+			</div>
+		</div>
+		<configuracoes-indexador parametro-indexador="parametroIndexador"></configuracoes-indexador>
+
+	</div>
+
+	<div class="row" id="centroCustosConfig" ng-if="false">
+		<div class="col-sm-12 mb-3" style="width:100%; padding:0rem; margin:0rem;">
+			<div style="background-color:#3176AA;color:#FFFFFF; font-size:1.5rem; width:100%; padding-left:1rem;">
+				<a>CENTROS DE CUSTO</a>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="row mb-3" id="centroCustosLinha" style="padding-top: 30px;" ng-if="false" >
+		<div class="col-sm-12 mb-3">
+			<table style="border: none;">
+				<tr>
+					<th style="padding-right: 2rem; padding-left: 0.5rem;">
+						<a>Centro de Custo</a>
+					</th>
+					<th style="padding-left: 0.5rem; padding-right: 1rem;">
+						<a>Atualizar</a>
+					</th>
+					<th style="padding-left: 0.5rem; padding-right: 1rem;">
+						<a>Permissões</a>
+					</th>
+					<th style="padding-left: 0.5rem; padding-right: 1rem;">
+						<a>Novo</a>
+					</th>
+					<th id="desativarCentroDeCustos" style="padding-left: 0.3rem; padding-right: 0.2rem;">
+						<a>Desativar</a>
+					</th>
+					<th id="ativarCentroDeCustos" style="padding-left: 1.1rem; padding-right: 0.2rem;">
+						<a>Ativar</a>
+					</th>
+					<th id="apagarCentroDeCustos" style="padding-left: 0.6rem; padding-right: 0.5rem;">
+						<a>Apagar</a>
+					</th>
+				</tr>
+				<tr>
+					<td>
+						<select class="custom-select d-block w-100" id="centroCustoPadrao">
+							<!--<option value="Nome 1" selected="selected"></option>-->
+							<option>Nome 1</option>
+							<option>Nome 2</option>
+							<option>Nome 3</option>
+							<option>Nome 4</option>
+						</select>
+					</td>
+					<td>
+						<button class="btn btn-gravar btn-md" type="button" data-toggle="modal" data-target="#vincularProcessoModal"  style="width:100%;"><span>Gravar</span></button>
+					</td>
+					<td>
+						<button class="btn btn-usersAmarelo btn-md" type="button" data-toggle="modal" data-target="#vincularProcessoModal"  style="width:100%;"><span><i class="fa fa-users fa-1x" aria-hidden="true"></i></span></button>
+					</td>
+					<td>
+						<button class="btn btn-finalizarEvento btn-md" type="button" data-toggle="modal" data-target="#vincularProcessoModal"  style="width:100%;"><span><i class="fa fa-plus fa-1x" aria-hidden="true"></i></span></button>
+					</td>
+					<td>
+						<button class="btn btn-gravarEvento btn-md" type="button" data-toggle="modal" data-target="#vincularProcessoModal"  style="width:80px; padding-top: 0rem; padding-bottom: 0rem;"><span><i class="fa fa-toggle-off fa-2x" aria-hidden="true"></i></span></button>
+					</td>
+					<td>
+						<button class="btn btn-centroCustoOn btn-md" type="button" data-toggle="modal" data-target="#vincularProcessoModal"  style="width:80px; padding-top: 0rem; padding-bottom: 0rem;"><span><i class="fa fa-toggle-on fa-2x" aria-hidden="true"></i></span></button>
+					</td>
+					<td>
+						<button class="btn btn-apagarCentroCusto btn-md" type="button" data-toggle="modal" data-target="#vincularProcessoModal"  style="width:100%; font-size: 1.3rem; padding: 0.1rem; margin: 0rem;"><span><i class="fa fa-trash-alt " aria-hidden="true"></i></span></button>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<div class="row mb-3" id="autorizacoes" style="">
+		<div class="col-sm-12 mb-3" style="width:100%; padding:0rem; margin:0rem;">
+			<div style="background-color:#3176AA;color:#FFFFFF; font-size:1.5rem; width:100%; padding-left:1rem;">
+				<a>AUTORIZAÇÕES</a>
+			</div>
+		</div>
+	</div>
+
+	<configuracoes-perfil perfis="perfis" permissoes="permissoes"></configuracoes-perfil>
+
+
+</div>

@@ -1,0 +1,31 @@
+<div class="row anexarRow float-left" style="width:100%;" >
+    <div class="col-lg-4">
+        <alert-msg message="$ctrl.message"></alert-msg>
+    </div>
+</div>
+<div class="col-sm-12 mb-3">
+    <table style="border: none;">
+        <tr>
+            <th style="padding-right: 2rem; padding-left: 0.5rem;">
+                <a>Indexador</a>
+            </th>
+            <th style="padding-left: 0.5rem;">
+                <a>Valor</a>
+            </th>
+            <th style="padding-left: 0.5rem;">
+                <a>Atualizar</a>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <input  class="form-control formCadastro" id="processoForo" placeholder="Sal. Mínimo" disabled type="text">
+            </td>
+            <td>
+                <input  class="form-control formCadastro" id="valorIndex1" ng-model="$ctrl.parametroIndexador.valor" currency-formatter placeholder="1045,00" type="text">
+            </td>
+            <td>
+                <button class="btn btn-gravar btn-md" type="button" ng-click="$ctrl.salvarIndexador()"  style="width:100%;"><span>Gravar</span></button>
+            </td>
+        </tr>
+    </table>
+</div>

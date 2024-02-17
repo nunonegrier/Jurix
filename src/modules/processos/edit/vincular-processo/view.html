@@ -1,0 +1,98 @@
+<!-- Modal Vincular -->
+<div id="vincularProcessoModal" class="modal fade eventoModal" role="dialog">
+    <div class="modal-dialog modalAlterar">
+        <!-- Conteúdo -->
+        <div class="modal-content" style="padding:1rem; padding-bottom:2rem; border:none;">
+            <div class="modal-header">
+                <div class="float-left">
+                    <h4 class="modalH4">VÍNCULO PROCESSUAL</h4>
+                </div>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="col-lg-12 novoEventoDocsCol">
+                <div class="alterarEvento">
+                    <form class="modalForm">
+                        <div class="row">
+                            <div class="col-lg-4 mb-4">
+                                <label for="vincularNumeroProcesso">Nº do processo</label>
+                                <input id="vincularNumeroProcesso" type="text"
+                                       ng-model="camposBusca.numeroProcessoAutoComplete"
+                                       placeholder="Número do processo"
+                                       class="form-control formCadastro"
+                                       auto-complete="autoCompleteVincularOptions" required="" />
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 mb-2">
+                                <button class="btn btn-gravar btn-lg btn-block botaoGravarClientes" ng-click="vincularSelecionado()">Vincular</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="container-fluid" style="padding:0rem;">
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                        </div>
+                    </div>
+                    <div class="panel-heading" role="tab" id="heading-1" style="padding:0rem;">
+                        <h5 class="panel-title headerBuscaProcesso headerH5Eventos">
+                            <a class="collapsed headerConsultas" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
+                                PESQUISA AVANÇADA
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="collapse-1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-1">
+                        <div class="panel-body">
+                            <div class="col-lg-12 novoEventoDocsCol">
+                                <div class="novoEvento">
+                                    <form>
+                                        <div class="row mb-4">
+                                            <div class="col-lg-3">
+                                                <label for="numeroProcessoPesquisa">Nº do processo</label>
+                                                <input class="form-control formCadastro" id="numeroProcessoPesquisa" placeholder="Nº do processo" type="text" ng-model="camposBusca.numeroProcesso" ng-keydown="($event.which === 13 && pesquisar())" >
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <label for="nomeParte">Nome da Parte</label>
+                                                <input class="form-control formCadastro" id="nomeParte" placeholder="Nome da parte" type="text" ng-model="camposBusca.nomeParte" ng-keydown="($event.which === 13 && pesquisar())" >
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3" style="padding-bottom:0rem; border-bottom: 1px solid #e9ecef;">
+                                            <button class="btn btn-gravar btn-lg btn-block mb-4" type="submit" style="max-width:95%; margin:auto;" ng-click="pesquisar()"><span class="fa fa-search fa-1x " aria-hidden="true"></span> Pesquisar</button>
+                                        </div>
+                                    </form>
+                                    <div class="row" style="width:100%; padding:0rem; margin:0rem;">
+                                        <div class="col-lg-12" style="text-align:right; padding:0rem;">
+                                            <a># resultados</a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <table class="table-striped table-hover" style="width:100%;">
+                                            <tr ng-repeat="processo in processos">
+                                                <td style="max-width:3rem;">
+                                                    <b>{{processo.numero}}</b>
+                                                </td>
+                                                <td>
+                                                    {{processo.descricao}}
+                                                </td>
+                                                <td style="max-width:1rem;">
+                                                    <button class="btn btn-gravar btn-lg float-right" type="button" ng-click="selecionarProcessoVinculo(processo)" style="max-height:2rem; padding-top:0.1rem; pa:0.1rem; padding-left:0.5rem; padding-right:0.5rem; font-size:1.1rem;">
+                                                        Vincular
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

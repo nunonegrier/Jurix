@@ -1,0 +1,30 @@
+<button class="btn" ng-if="!$ctrl.contasPagar.isAtrasado && $ctrl.contasPagar.situacao === 'PENDENTE'" ng-class="$ctrl.getClassPendente()" type="button" style="padding:0rem !important;" ng-click="$ctrl.pagamentoContaPagar($ctrl.contasPagar)" >
+    <div class="row" style="padding:0rem; margin:0rem;">
+        <table style="width:100%; padding:0rem; margin:0rem;">
+            <tr style="background-color:transparent;">
+                <td style="border:none !important; padding:0.3rem; margin:0rem; padding-right:0.25rem; border-right:1px solid #CED4DA !important; width:40px !important;">
+                    <i class="fas fa-calendar-alt fa-1x" style="vertical-align:middle;"></i>
+                </td>
+                <td style="border:none !important; padding:0.3rem; margin:0rem; padding-left:0.25rem; width:60px;">
+                    <a> Pendente</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</button>
+
+<a ng-if="$ctrl.contasPagar.isAtrasado && $ctrl.contasPagar.situacao === 'PENDENTE'" style="text-decoration:none !important;" >
+    <button class="btn btn-despesaAtrasada" type="button" style="line-height:0.4rem; padding:0.3rem;" ng-click="$ctrl.pagamentoContaPagar($ctrl.contasPagar)">
+        <i class="far fa-times-circle" style="font-size:0.9rem;"></i>
+        <!--<a style="font-size:0.9rem;"> Atrasada</a>-->
+        Atrasada
+    </button>
+</a>
+
+<a ng-if="$ctrl.contasPagar.situacao === 'PAGA'" style="text-decoration:none !important;">
+    <button class="btn btn-pagamentoVerde" type="button"  ng-click="$ctrl.visulizarContaPagar($ctrl.contasPagar)">
+        <i class="-alt fa  fa-check fa-fw" style=""></i>
+        <!--<a> Paga</a>-->
+        Paga
+    </button>
+</a>

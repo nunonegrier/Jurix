@@ -1,0 +1,45 @@
+<!-- Modal Prorrogar Tarefa -->
+<div id="eventoProrrogarModal" class="modal fade eventoModal" role="dialog">
+    <div class="modal-dialog modalProrrogar">
+        <!-- Conteúdo -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="float-left">
+                    <h4 class="modalH4">Prorrogar prazo do evento</h4>
+                </div>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="col-lg-12 novoEventoDocsCol">
+                <div class="alterarEvento">
+                    <form class="modalForm" autocomplete="off" >
+                        <div class="row">
+                            <div class="col-lg-12 mb-5">
+                                <table style="max-width:250px !important; margin:auto;">
+                                    <tr>
+                                        <td style="padding-bottom:0rem;">
+                                            <label for="dataPrazoConsulta">Número de dias corridos</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-top:0rem; text-align:center;">
+                                            <!--<button class="btn btn-finalizarEvento mb-2" data-dismiss="modal" type="submit" style="display:inline;"><i class="fa fa-minus fa-1x"></i></button>-->
+                                            <input class="form-control formCadastro" id="diasPrazoProrrogar" value="5" type="number" style="max-width:80px !important; min-width:50px !important; margin:auto; display:inline; vertical-align:middle;" ng-model="diasAdicionar">
+                                            <!--<button class="btn btn-finalizarEvento mb-2" data-dismiss="modal" type="submit" style="display:inline;"><i class="fa fa-plus fa-1x"></i></button>-->
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="row modalGravarAlt">
+                                <div class="col-sm-12 col-lg-12">
+                                    <button class="btn btn-finalizarEvento btn-lg btn-block mb-2" type="button" ng-click="adicionarDias()">Gravar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

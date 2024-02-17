@@ -1,0 +1,220 @@
+
+<!-- Modal Andamento -->
+<div id="processoNovoAndamento" class="modal fade eventoModal" role="dialog" style=" overflow:auto !important;">
+    <div class="modal-dialog modalAlterar">
+        <!-- Conteúdo -->
+        <div class="modal-content" style="padding:1rem; padding-bottom:2rem; border:none; margin:auto;">
+            <div class="modal-header">
+                <div class="float-left">
+                    <h4 class="modalH4">ANDAMENTO</h4>
+                </div>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="col-lg-12 novoEventoDocsCol">
+                <div class="alterarEvento" style="padding:0.2rem;">
+                    <form id="processoEventoForm" class="modalForm needs-validation" novalidate >
+                        <div class="row">
+                            <div class="col-lg-2 col-md-12 mb-1">
+                                <label for="andamentoData" class="required-label">Data</label>
+                                <input  class="form-control" id="andamentoData" placeholder="dd/mm/aaaa" type="text" disabled style="text-align: center; padding-left:0.1rem; padding-right:0.1rem; width:60%;" value="{{andamentoProcesso.data | date : 'dd/MM/yyyy'}}">
+                            </div>
+                            <div class="col-lg-2 col-md-12 mb-1" style="text-align:center;">
+                                <label for="andamentoHora" class="required-label" style="text-align:left; width:100%"  >Hora</label>
+                                <input  class="form-control" id="andamentoHora" placeholder="hh:mm" type="text" disabled style="width:60%;" value="{{andamentoProcesso.data | date : 'HH:mm'}}" >
+                            </div>
+                            <div class="col-lg-4 mb-1">
+                                <label for="andamentoTipo">Tipo*</label>
+                                <select class="custom-select d-block w-100" id="andamentoTipo"  required ng-model="andamentoProcesso.tipoAndamento.id" ng-disabled="visualizacao" >
+                                    <option value="" selected="selected">Selecione...</option>
+                                    <option ng-repeat="tipoAndamento in tiposAndamento"
+                                            ng-value="tipoAndamento.id">{{tipoAndamento.descricao}}
+                                    </option>
+                                </select>
+                                <div class="invalid-feedback">
+                                  Escolha ou adicione uma opção.
+                                </div>
+                            </div>
+                            <div class="col-lg-1 mb-1">
+                                <br>
+                                <button class="btn btn-finalizarEvento btn-lg" type="button" data-placement="top" title="Adicionar novo tipo de andamento" style="width:3rem; height:3rem; padding-left:0.5rem; padding-right:0.5rem; padding-top:0.2rem; padding-bottom:0.2rem;" ng-show="!visualizacao" ng-click="novoTipoAndamento()"><i class="fa fa-plus fa-1x" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 mb-1">
+                                <label for="andamentoDescricao">Descrição*</label>
+                                <textarea ng-model="andamentoProcesso.descricao" class="form-control mb-1" rows="4" id="andamentoDescricao" required ng-disabled="visualizacao" ></textarea>
+                            </div>
+                            <div class="invalid-feedback">
+                              Descreva os detalhes do andamento.
+                            </div>
+                        </div>
+
+                        <div class="row anexarRow">
+                            <jurix-arquivos ng-if="exibirArquivos" repository="filesRespository" form-id="'processoEventoForm'" is-visualizacao="visualizacao"></jurix-arquivos>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-8 mb-2">
+                                <div class="form-check">
+                                    <form action="">
+                                        <table>
+                                            <tr style="vertical-align:bottom;">
+                                                <td style="min-width:18rem; font-size:1.6rem; padding-bottom:0.1rem;">
+                                                    Criar evento na Pauta
+                                                </td>
+                                                <td style="min-width:4rem;">
+                                                    <input type="radio" ng-model="andamentoProcesso.criaEventoPauta" name="andamentoCriarEvento" id="andamentoCriarEventoSim" data-ng-value="true" ng-disabled="(andamentoProcesso.id && andamentoProcesso.criaEventoPauta) || !possuiPermissaoCriarPauta" > Sim<br>
+                                                </td>
+                                                <td style="min-width:4rem;">
+                                                    <input type="radio" ng-model="andamentoProcesso.criaEventoPauta" name="andamentoCriarEvento" id="andamentoCriarEventoNao" data-ng-value="false" ng-disabled="(andamentoProcesso.id && andamentoProcesso.criaEventoPauta) || !possuiPermissaoCriarPauta" > Não<br>
+                                                </td>
+                                                <td>
+                                                    <div class="invalid-feedback">
+                                                        Escolha uma opção
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mb-2">
+                                <button class="btn btn-gravar btn-lg btn-block botaoGravarClientes" ng-show="!visualizacao && !andamentoProcesso.criaEventoPauta"  ng-click="salvarAndamento()" >Gravar</button>
+                            </div>
+                            <div class="col-lg-12" style="padding-left:3rem;" ng-show="andamentoProcesso.id && andamentoProcesso.pautaEvento.id && (andamentoProcesso.pautaEvento.usuarioCriacao.id == usuarioAtual.id)">
+                              <button class="btn btn-link" ng-click="irPautaEvento()"><i class="fa fa-angle-double-right fa-1x" aria-hidden="true"></i> Ir para o evento na Pauta.1</button>
+                            </div>
+                            <div class="col-lg-12" style="padding-left:3rem;" ng-show="andamentoProcesso.id && andamentoProcesso.pautaEvento.id && (andamentoProcesso.pautaEvento.colaborador.usuario.id == usuarioAtual.id )">
+                                <button class="btn btn-link" ng-click="irPautaEvento()"><i class="fa fa-angle-double-right fa-1x" aria-hidden="true"></i> Ir para o evento na Pauta.</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-12" ng-show="andamentoProcesso.criaEventoPauta">
+                <div class="container-fluid" style="padding:0rem;">
+                    <div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                        </div>
+                    </div>
+                    <div class="panel-heading active" role="tab" id="heading-4" style="padding:0rem;">
+                        <h5 class="panel-title headerBuscaProcesso headerH5Eventos">
+                            <a class="collapsed headerConsultas" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapse-4" aria-expanded="false" aria-controls="collapse-4">
+                                CRIAR EVENTO NA PAUTA
+                            </a>
+                        </h5>
+                    </div>
+                    
+                    <div id="collapse-4" class="panel-collapse" role="tabpanel" aria-labelledby="heading-4">
+                        <div class="panel-body">
+                            <div class="col-lg-12 novoEventoDocsCol">
+                                <div class="novoEvento">
+                                    <form id="formAndamentoPautaEvento" class="needs-validation" novalidate autocomplete="off" >
+                                        <div class="row">
+                                            <div class="col-lg-1 mb-1">
+                                                <label for="tipoEvento">Tipo*</label>
+                                                <select ng-model="andamentoProcesso.pautaEvento.tipo" class="custom-select d-block w-100" id="tipoEvento" required ng-disabled="andamentoProcesso.pautaEvento.id">
+                                                    <option value="PRAZO" selected>Prazo</option>
+                                                    <option value="TAREFA">Tarefa</option>
+                                                </select>
+                                                <div class="invalid-feedback">
+                                                  Escolha uma opção.
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 mb-1">
+                                                <label for="nomeColaborador">Responsável*</label>
+                                                <select ng-model="andamentoProcesso.pautaEvento.colaborador.id" class="custom-select d-block w-100" id="nomeColaborador" required ng-disabled="andamentoProcesso.pautaEvento.id || !podeCriarEventoColaboradores" >
+                                                    <option value="" selected="selected">Selecione...</option>
+                                                    <option ng-repeat="colaborador in colaboradores" ng-value="colaborador.id">{{colaborador.usuario.nome}}
+                                                    </option>
+                                                </select>
+                                                <div class="invalid-feedback">
+                                                  Escolha um responsável.
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 mb-2">
+                                                <label for="numeroProcessoAndamento">Nº do processo</label>
+                                                <input class="form-control formCadastro" id="numeroProcessoAndamento" value="{{andamentoProcesso.processo.numero}}" type="text" disabled>
+                                            </div>
+                                            <div class="col-lg-2 mb-2">
+                                                <label for="dataPublicacao">Publicação</label>
+                                                <input ui-date="dateOptions" ng-model="andamentoProcesso.pautaEvento.dataPublicacao" class="form-control"
+                                                       id="dataPublicacao" placeholder="dd/mm/aaaa" type="text" ng-disabled="andamentoProcesso.pautaEvento.id" >
+                                            </div>
+                                            <div class="col-lg-2 bordersTudoEvento mb-1">
+                                                <label for="dataPrazo">Data limite*</label>
+                                                <input ui-date="dateOptions" ng-model="andamentoProcesso.pautaEvento.dataLimite" class="form-control"
+                                                       id="dataLimite" placeholder="dd/mm/aaaa" type="text" required ng-disabled="andamentoProcesso.pautaEvento.id" >
+                                                <div class="invalid-feedback">
+                                                  Escolha uma opção.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 mb-1">
+                                                <label for="eventoDescricao">Descrição*</label>
+                                                <input ng-model="andamentoProcesso.pautaEvento.descricao" class="form-control formCadastro"
+                                                       id="eventoDescrição"
+                                                       value="Descrição do evento" type="text" ng-disabled="andamentoProcesso.pautaEvento.id" required>
+                                                <div class="invalid-feedback">
+                                                  Faça uma descrição.
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 mb-1">
+                                                <label for="eventoObservacao">Observações</label>
+                                                <textarea ng-model="andamentoProcesso.pautaEvento.observacaoCriacao" class="form-control mb-3" rows="2" id="eventoObservacao" ng-disabled="andamentoProcesso.pautaEvento.id" required></textarea>
+                                                <div class="invalid-feedback">
+                                                  As observações na pauta são importantes! Não deixe nada para trás.
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-finalizarEvento btn-lg btn-block" ng-show="!visualizacao && andamentoProcesso.criaEventoPauta && andamentoProcesso.id"  ng-click="salvarAndamento()" >Gravar e sair</button>
+                                            <div class="col-lg-6 mb-1" ng-show="!andamentoProcesso.id" >
+                                                <button class="btn btn-finalizarEvento btn-lg btn-block" ng-show="!visualizacao && andamentoProcesso.criaEventoPauta"  ng-click="salvarAndamento()" >Gravar e sair</button>
+                                            </div>
+                                            <div class="col-lg-6 mb-1" ng-show="!andamentoProcesso.id" >
+                                                <button class="btn btn-gravarEvento btn-lg btn-block" ng-show="!visualizacao && andamentoProcesso.criaEventoPauta"  ng-click="salvarAndamento(true)" >Gravar e criar novo evento</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal Novo Tipo Andamento -->
+<div id="adicionarTipoAndamento" class="modal fade eventoModal" role="dialog" style="z-index:2000; overflow:auto !important;">
+    <div class="modal-dialog">
+        <!-- Conteúdo -->
+        <div class="modal-content" style="padding:1rem; padding-bottom:2rem; border:none; box-shadow: 0 4px 12px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.12) !important;">
+            <div class="modal-header">
+                <div class="float-left">
+                    <h4 class="modalH4">NOVO TIPO DE ANDAMENTO</h4>
+                </div>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="col-lg-12 novoEventoDocsCol">
+                <div class="alterarEvento">
+                    <form id="salvarTipoAndamento" class="modalForm needs-validation" novalidate >
+                        <div class="row">
+                            <div class="col-lg-12 mb-3">
+                                <label for="novoTipoAndamento">Adicione um tipo de andamento:</label>
+                                <input class="form-control formCadastro" id="novoTipoAndamento" placeholder="Tipo de Andamento" type="text" ng-model="tipoAndamento.descricao" required>
+                            </div>
+                            <div class="col-lg-12">
+                                <button class="btn btn-gravar btn-lg float-right btn-block" type="button" ng-click="salvarTipoAndamento()">Adicionar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

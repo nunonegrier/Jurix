@@ -1,0 +1,342 @@
+<div class="container-fluid mb-4">
+    <form>
+        <div class="row" style="padding-top: 90px;">
+            <div class="col-md-1 mb-1">
+                <label for="clienteTratamento">Tratamento</label>
+                <input ng-model="cliente.clienteFisico.tratamento" class="form-control formCadastro" id="clienteTratamento" type="text" disabled="disabled" >
+            </div>
+            <div class="col-md-5 mb-1">
+                <label for="nomeCliente">Nome </label>
+                <input ng-model="cliente.nome" class="form-control formCadastro" id="nomeCliente" type="text" disabled="disabled" >
+            </div>
+            <div class="col-md-1 mb-1">
+                <label for="clienteDataNascimento">Nascimento </label>
+                <input ui-date ng-model="cliente.clienteFisico.dataNascimento" class="form-control formCadastro angular-datepicker-input" id="clienteDataNascimento" type="text"  disabled="disabled" >
+            </div>
+            <div class="col-md-1 mb-2">
+                <label for="clienteSexo">Sexo</label>
+                <input value="{{cliente.clienteFisico.sexo | jurixEnumFilter: 'EnumSexo'}}" class="form-control formCadastro" id="clienteSexo" type="text" disabled="disabled" >
+            </div>
+            <div class="col-md-4 mb-1">
+                <label for="clienteNomeSolteiro">Nome de solteiro</label>
+                <input ng-model="cliente.clienteFisico.nomeSolteiro"  class="form-control formCadastro" id="clienteNomeSolteiro" placeholder="Nome de solteiro completo do cliente" type="text" disabled="disabled" >
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-1">
+                <label for="clienteConjugeNome">Nome do Cônjuge</label>
+                <input ng-model="cliente.clienteFisico.nomeConjugue"  class="form-control formCadastro" id="clienteConjugeNome" placeholder="Nome do Cônjuge" type="text" disabled="disabled" >
+            </div>
+            <div class="col-md-3 mb-1">
+                <label for="conjugeId">R.G./R.N.E.</label>
+                <input ng-model="cliente.clienteFisico.rgRne"  class="form-control formCadastro" id="conjugeId" placeholder="Nº do R.G./R.N.E." type="text" disabled="disabled" >
+            </div>
+            <div class="col-md-3 mb-1">
+                <label for="conjugeCpf">CPF</label>
+                <input ng-model="cliente.clienteFisico.cpf" class="form-control formCadastro" id="conjugeCpf" placeholder="Nº do CPF." type="text" disabled="disabled" >
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-3 mb-2">
+                <label for="nomePai">Nome do Pai</label>
+                <input ng-model="cliente.clienteFisico.nomePai" class="form-control formCadastro" id="nomePai" type="text" disabled="disabled" >
+            </div>
+            <div class="col-md-3 mb-2">
+                <label for="nomeMae">Nome da Mãe</label>
+                <input ng-model="cliente.clienteFisico.nomeMae" class="form-control formCadastro" id="nomeMae"  type="text" disabled="disabled" >
+            </div>
+            <div class="col-md-6 mb-1">
+                <label for="clienteObs">Observações</label>
+                <textarea ng-model="cliente.observacoes" class="form-control mb-1" rows="2" id="clienteObs"  disabled="disabled"  ></textarea>
+            </div>
+        </div>
+
+        <div class="row" style="padding: 0rem; margin: 0rem;">
+            <div class="col-lg-2 mb-5" style="padding-left: 0rem;">
+                <label for="clienteGrupo">Grupo</label>
+                <input class="form-control formCadastro" id="clienteGrupo" ng-model="cliente.grupo.nome" disabled="disabled" />
+            </div>
+        </div>
+
+    </form>
+</div>
+
+<div class="container-fluid mb-5">
+
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading-1">
+                <h5 class="panel-title headerDocumentos headerH5">
+                    <a class="collapsed headerConsultas" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1" style="font-weight:normal;">
+                        DOCUMENTOS
+                    </a>
+                </h5>
+            </div>
+            <div id="collapse-1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-1">
+                <div class="panel-body">
+
+                    <div class="row listaTopo">
+                        <div class="col-md-2 mb-2">
+                            <label for="clienteRg">RG / RNE</label>
+                            <input ng-model="cliente.clienteFisico.rgRne"  class="form-control formCadastro" id="clienteRG" placeholder="Nº do RG/RNE" type="text"  disabled="disabled" >
+                        </div>
+                        <div class="col-md-1 mb-2">
+                            <label for="clienteOrgaoExp">Org. Exp.</label>
+                            <input ng-model="cliente.clienteFisico.orgaoExpeditor"  class="form-control formCadastro" id="clienteOrgaoExp" placeholder="Órg. expedidor" type="text" disabled="disabled" >
+                        </div>
+                        <div class="col-md-2 mb-2 bordersTudo">
+                            <label for="clienteNacionalidade">Nacionalidade</label>
+                            <input ng-model="cliente.clienteFisico.nacionalidade" class="form-control formCadastro" id="clienteNacionalidade" placeholder="Nacionalidade" type="text" disabled="disabled" >
+                        </div>
+                        <div class="col-md-2 mb-2">
+                            <label for="clienteCpf">CPF</label>
+                            <input ng-model="cliente.clienteFisico.cpf" class="form-control formCadastro" id="clienteCpf" placeholder="Nº do CPF" type="text" disabled="disabled" >
+                        </div>
+                        <div class="col-md-2 mb-2 bordersTudo">
+                            <label for="clienteTrabalhoNumero">Carteira de Trabalho</label>
+                            <input ng-model="cliente.clienteFisico.carteiraTrabalho" class="form-control formCadastro" id="clienteTrabalhoNumero" placeholder="Número" type="text" disabled="disabled" >
+                        </div>
+                        <div class="col-md-1 mb-2 bordersTudo">
+                            <label for="clienteTrabalhoSerie">Série</label>
+                            <input ng-model="cliente.clienteFisico.serie"  class="form-control formCadastro" id="clienteTrabalhoSerie" placeholder="Série" type="text" disabled="disabled" >
+                        </div>
+                        <div class="col-md-2 mb-2">
+                            <label for="clientePis">PIS</label>
+                            <input ng-model="cliente.clienteFisico.pis"  class="form-control formCadastro" id="clientePis" placeholder="Nº do PIS" type="text" disabled="disabled" >
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 mb-2 bordersTudo">
+                            <label for="estadoCivil">Estado Civil</label>
+                            <input value="{{cliente.clienteFisico.estadoCivil | jurixEnumFilter: 'EnumEstadoCivil'}}"  class="form-control formCadastro" id="estadoCivil" placeholder="Estado civil" type="text" disabled="disabled" >
+                        </div>
+                        <div class="col-md-2 mb-2 bordersTudo">
+                            <label for="estadoTipo">Tipo</label>
+                            <input value="{{cliente.clienteFisico.tipoEstadoCivil | jurixEnumFilter: 'EnumTipoEstadoCivil'}}"  class="form-control formCadastro" id="estadoTipo" placeholder="Tipo" type="text" disabled="disabled" >
+                        </div>
+                        <div class="col-md-2 mb-2">
+                            <label for="eleitorNumero">Título de eleitor</label>
+                            <input ng-model="cliente.clienteFisico.tituloEleitor" class="form-control formCadastro" id="eleitorNumero" placeholder="Número" type="text" disabled="disabled" >
+                        </div>
+                        <div class="col-md-1 mb-2">
+                            <label for="eleitorZona">Zona</label>
+                            <input ng-model="cliente.clienteFisico.zona" class="form-control formCadastro" id="eleitorZona" placeholder="Zona" type="text" disabled="disabled" >
+                        </div>
+                        <div class="col-md-1 mb-2">
+                            <label for="eleitorSecao">Seção</label>
+                            <input ng-model="cliente.clienteFisico.secao" class="form-control formCadastro" id="eleitorSecao" placeholder="Seção" type="text" disabled="disabled" >
+                        </div>
+                        <div class="col-md-4 mb-2 bordersTudo">
+                            <label for="clienteProfissao">Profissão/Ocupação</label>
+                            <input ng-model="cliente.clienteFisico.profissao" class="form-control formCadastro" id="clienteProfissao" placeholder="Profissão/Ocupação" type="text" disabled="disabled" >
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading-2">
+            <h5 class="panel-title headerContatos headerH5">
+                <a class="collapsed headerConsultas" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-2" aria-expanded="false" aria-controls="collapse-2" style="font-weight:normal;">
+                    CONTATOS
+                </a>
+            </h5>
+        </div>
+        <div id="collapse-2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-2">
+            <div class="panel-body">
+
+                <div class="row listaTopo">
+                    <div class="col-md-2 mb-2">
+                        <label for="telComercial">Telefone 01</label>
+                        <input ng-model="cliente.telefone" class="form-control formCadastro" id="telComercial" placeholder="Telefone 01" type="text" disabled="disabled" >
+                    </div>
+                    <div class="col-md-2 mb-2">
+                        <label for="telResidencial">Telefone 02</label>
+                        <input ng-model="cliente.clienteFisico.telefone2" class="form-control formCadastro" id="telResidencial" placeholder="Telefone 02" type="text" disabled="disabled" >
+                    </div>
+                    <div class="col-md-2 mb-2">
+                        <label for="telCelular">Telefone 03</label>
+                        <input ng-model="cliente.clienteFisico.telefone3" class="form-control formCadastro" id="telCelular" placeholder="Telefone 03" type="text" disabled="disabled" >
+                    </div>
+                    <div class="col-md-3 mb-2">
+                        <label for="emailProfissional">Email Profissional</label>
+                        <input ng-model="cliente.clienteFisico.emailProfissional" class="form-control formCadastro" id="emailProfissional" placeholder="Email Profissional" type="text" disabled="disabled" >
+                    </div>
+                    <div class="col-md-3 mb-2">
+                        <label for="emailPessoal">Email Pessoal</label>
+                        <input ng-model="cliente.email" class="form-control formCadastro" id="emailPessoal" placeholder="Email Pessoal" type="text" disabled="disabled" >
+                    </div>
+                    <div class="col-md-5 mb-2">
+                        <label for="clienteEndereco">Endereço</label>
+                        <input ng-model="cliente.endereco" class="form-control formCadastro" id="clienteEndereco" placeholder="Nome da Rua e Número" type="text" disabled="disabled" >
+                    </div>
+                    <div class="col-md-3 mb-2">
+                        <label for="clienteCidade">Cidade</label>
+                        <input ng-model="cliente.municipio.nome" class="form-control formCadastro" id="clienteCidade" placeholder="Cidade" type="text" disabled="disabled" >
+                    </div>
+                    <div class="col-md-2 mb-2">
+                        <label for="clienteEstado">Estado</label>
+                        <input ng-model="cliente.municipio.estado.nome" class="form-control formCadastro" id="clienteEstado" placeholder="Estado" type="text" disabled="disabled" >
+                    </div>
+                    <div class="col-md-2 mb-2">
+                        <label for="clienteCep">CEP</label>
+                        <input ng-model="cliente.cep" class="form-control formCadastro" id="clienteCep" placeholder="CEP" type="text" disabled="disabled" >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 mb-2">
+                        <label for="clienteIndicacao">Indicação</label>
+                        <input ng-model="cliente.indicacao" class="form-control formCadastro" id="clienteIndicacao" placeholder="Nome de quem indicou o cliente" required="" type="text" disabled="disabled" >
+                        <div class="invalid-feedback">
+                            Digite o nome de quem indicou o cliente.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="panel panel-default" jurix-permissoes="Cliente.Contrato.Visualizar">
+        <div class="panel-heading" role="tab" id="heading-3">
+            <h5 class="panel-title headerContratos headerH5">
+                <a class="collapsed headerConsultas" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-3" aria-expanded="false" aria-controls="collapse-3" style="font-weight:normal;">
+                    CONTRATOS
+                </a>
+            </h5>
+        </div>
+        <div id="collapse-3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-3">
+          <div class="panel-body">
+            <div class="mb-3" style="box-shadow: 0 4px 12px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.12) !important; padding-top:1rem;">
+              <table class="table-striped table-hover" style="width:100%;">
+                <tr style="text-align:center;">
+                  <th style="width:12%;">CONTRATO</th>
+                  <th style="width:12%">TIPO</th>
+                  <th>DESCRIÇÃO</th>
+                  <th style="width:10%;">INÍCIO</th>
+                  <th style="width:10%;">ESTADO</th>
+                </tr>
+                <tr ng-repeat="contrato in contratos">
+                  <td style="text-align:center;"><a ui-sref="layout.clienteContratoVisualizar({clienteId: cliente.id, id: contrato.id})">{{contrato.id}}</a></td>
+                  <td style="border-left:1px solid #CED4DA; text-align:center;"><a ui-sref="layout.clienteContratoVisualizar({clienteId: cliente.id, id: contrato.id})">{{contrato.tipoContrato}}</a></td>
+                  <td style="border-left:1px solid #CED4DA;"><a ui-sref="layout.clienteContratoVisualizar({clienteId: cliente.id, id: contrato.id})">{{contrato.descricao}}</a></td>
+                  <td style="border-left:1px solid #CED4DA; text-align:center;"><a ui-sref="layout.clienteContratoVisualizar({clienteId: cliente.id, id: contrato.id})">{{contrato.dataInicio | date: 'dd/MM/yyyy'}}</a></td>
+                  <td style="border-left:1px solid #CED4DA; text-align:center;">{{contrato.ativo ? 'ATIVO' : 'ENCERRADO'}}</td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="container-fluid mb-4" style="text-align:right;" jurix-permissoes="Cliente.Contrato.Cadastrar" >
+              <button class="btn btn-finalizarEvento btn-lg botaoGravarClientes" type="button" ng-click="irParaContrato()" >
+                <i class="fa fa-plus fa-1x"><a style="font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, sans-serif; font-weight:normal !important;"> Novo contrato</a></i>
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      
+      <div class="panel panel-default" jurix-permissoes="Processo.Visualizar" >
+        <div class="panel-heading" role="tab" id="heading-4">
+          <h5 class="panel-title headerProcessos headerH5">
+            <a class="collapsed headerConsultas" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-4" aria-expanded="false" aria-controls="collapse-4" style="font-weight:normal;">              PROCESSOS
+            </a>
+          </h5>
+        </div>
+        <div id="collapse-4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-4">
+          <div class="panel-body">
+            <form class="needs-validation" novalidate style="width:100%; padding:0rem; margin:0rem;">
+              <div class="row tabTopo" style="padding-top:2rem; max-width:90%; margin:auto;">
+                <div class="col-lg-3">
+                </div>
+                <div class="col-lg-4 mb-4">
+                  <label for="mySearch" class="required-label" style="width:100%; text-align:center;">Pesquisa de processos</label>
+                  <input class="form-control formCadastro" type="search" id="mySearch" name="search" placeholder="Faça a sua pesquisa" ng-model="campoBuscaProcesso" ng-keydown="($event.which === 13 && pesquisarProcesso())" >
+                </div>
+                <div class="col-lg-2 mb-4">
+                  <br>
+                  <button class="btn btn-gravar btn-lg" type="button" ng-click="pesquisarProcesso()" style="width:100%;"><span>Pesquisar</span></button>
+                </div>
+                <div class="col-lg-3">
+                </div>
+              </div>
+            </form>
+         
+            <div class="mb-3" style="box-shadow: 0 4px 12px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.12) !important; padding-top:1rem;">
+              <table class="table-striped table-hover" style="width:100%;">
+                  <tr style="text-align:center;">
+                      <th style="width:18%;">Nº DO PROCESSO</th>
+                      <th style="width:20%">PARTE CONTRÁRIA</th>
+                      <th>DESCRIÇÃO</th>
+                      <th style="width:16%;">DISTRIBUIÇÃO</th>
+                  </tr>
+                  <tr ng-repeat="processo in processos">
+                      <td style="text-align:center;"><a ui-sref="layout.processoVisualizar({id: processo.id, rotaVoltarPara:'layout.clienteFisicoVisualizar', paramsVoltarPara:{id: cliente.id}})">{{processo.numero}}</a></td>
+                      <td style="border-left:1px solid #CED4DA; text-align:center;">{{processo.parteProcesso.nome}}</td>
+                      <td style="border-left:1px solid #CED4DA;">{{processo.descricao}}</td>
+                      <td style="border-left:1px solid #CED4DA; text-align:center;">{{processo.dataDistribuicao | date : 'dd/MM/yyyy'}}</td>
+                  </tr>
+           </table>
+         </div>  
+       </div>
+     </div>
+   </div>
+      
+      
+
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading-5">
+          <h5 class="panel-title headerAnexos headerH5">
+            <a class="collapsed headerConsultas" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-5" aria-expanded="false" aria-controls="collapse-5" style="font-weight:normal;">
+              DOCUMENTOS ANEXADOS
+            </a>
+          </h5>
+        </div>
+        <div id="collapse-5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-5">
+          <div class="panel-body">
+            
+            <div style="box-shadow: 0 4px 12px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.12) !important; padding-top:1rem;">
+              <table class="table-striped table-hover" style="width:100%;">
+                <tr style="text-align:center;">
+                  <th style="width:7%;">DATA</th>
+                  <th style="width:20%">NOME</th>
+                  <th>DESCRIÇÃO</th>
+                  <th style="width:16%;">ORIGEM</th>
+                </tr>
+                <tr ng-repeat="arquivo in filesToShow">
+                  <td style="text-align:center;">{{arquivo.createDate | date : 'dd/MM/yyyy'}}</td>
+                  <td style="border-left:1px solid #CED4DA; text-align:center;"><a href="arquivos/download?uri={{arquivo.destFolder + '/' + arquivo.name}}">{{arquivo.name}}</a></td>
+                  <td style="border-left:1px solid #CED4DA;"><a href="arquivos/download?uri={{arquivo.destFolder + '/' + arquivo.name}}">{{arquivo.description}}</a></td>
+                  <td style="border-left:1px solid #CED4DA; text-align:center;"><a>---------</a></td>
+                </tr>
+              </table>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row container-fluid" style="width:100%; margin:0rem; padding-bottom:80px;">
+      <div class="col-lg-12" style="padding:0;" ng-hide="">
+        <div class="row">
+          <div class="col-lg-8" jurix-permissoes="Cliente.Editar" >
+            <a ui-sref="layout.clienteFisicoEditar({id: cliente.id})" class="btn btn-gravar btn-lg botaoGravarClientes btn-block" role="button" ng-click=""><i class="fa fa-pencil-alt fa-1x" aria-hidden="true"></i> Editar</a>
+          </div>
+          <div class="col-lg-4" jurix-permissoes="Processo.Cadastrar" >
+            <a ui-sref="layout.processoNovo({clienteId: cliente.id})" class="btn btn-finalizarEvento btn-lg botaoGravarClientes btn-block" role="button" ng-click=""><i class="fa fa-plus fa-1x" aria-hidden="true"></i> Novo processo</a>
+          </div>
+        </div>
+      </div>
+    </div>

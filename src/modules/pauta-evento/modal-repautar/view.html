@@ -1,0 +1,40 @@
+<!-- Modal Repautar Tarefa -->
+<div id="eventoRepautarModal" class="modal fade eventoModal" role="dialog">
+    <div class="modal-dialog modalProrrogar">
+        <!-- Conteúdo -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="float-left">
+                    <h4 class="modalH4">Repautar evento</h4>
+                </div>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="col-lg-12 novoEventoDocsCol">
+                <div class="alterarEvento">
+                    <form id="formRepautar" class="modalForm" autocomplete="off" >
+                        <div class="row">
+                            <div class="col-lg-12 mb-5">
+                                <table style="max-width:250px !important; margin:auto;">
+                                    <tr>
+                                        <td style="padding-bottom:0rem;">
+                                            <label for="dataFimFiltro" class="required-label">Nova Data Limite</label>
+                                            <input id="novaDataRepautar" ui-date="dateOptions" ng-model="novaData" class="form-control" id="repautarNovaDataLimite" placeholder="dd/mm/aaaa" type="text" required>
+                                            <div class="invalid-feedback">Insira uma data</div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="row modalGravarAlt">
+                                <div class="col-sm-12 col-lg-12">
+                                    <button class="btn btn-finalizarEvento btn-lg btn-block mb-2" type="button" ng-click="saveRepautarEvento()">Repautar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

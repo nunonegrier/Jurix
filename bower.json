@@ -1,0 +1,47 @@
+{
+  "name": "jurix",
+  "description": "jurix",
+  "private": true,
+  "moduleType": "amd",
+  "authors": [],
+  "main": [
+    "./src/index.html",
+    "./src/app.js",
+    "./src/app.css"
+  ],
+  "dependencies": {
+    "angular": "latest",
+    "requirejs": "latest",
+    "requirejs-domready": "latest",
+    "text": "^2.0.15",
+    "angular-ui-router": "^1.0.5",
+    "jquery": "^3.2.1",
+    "bootstrap": "^4.0.0",
+    "angular-resource": "^1.6.5",
+    "angular-cookies": "1.6.6",
+    "angular-i18n": "^1.6.8",
+    "popper.js": "^1.12.9",
+    "components-font-awesome": "^5.0.6",
+    "angular-bootstrap": "^2.5.0",
+    "angular-ui-date": "^1.0.1",
+    "angular-auto-complete": "^1.7.3",
+    "angular-sanitize": "1.5.5",
+    "js-xlsx": "^0.14.0",
+    "ng-currency": "^1.2.8"
+  },
+  "ignore": [
+    ".eslintrc.json",
+    ".gitignore",
+    "Gruntfile.js",
+    "karma.conf.js",
+    "package.json",
+    "README.md",
+    "CHANGELOG.md",
+    "dist",
+    "test",
+    "tasks"
+  ],
+  "resolutions": {
+    "angular": "1.6.6"
+  }
+}

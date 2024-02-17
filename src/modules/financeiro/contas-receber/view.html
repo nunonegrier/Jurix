@@ -1,0 +1,120 @@
+<div class="mb-2" style="box-shadow: 0 4px 12px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.12) !important; padding:0.5rem; border-bottom-left-radius:0.3rem; border-bottom-right-radius:0.3rem;">
+	
+	<!--  ########   Barra filtros Contas a Receber   ################# -->  
+	<div class="float-left" style="">
+		<table style="width: auto; height: 100%;margin-top: 0rem !important; margin-left: 0.5rem;">
+			<tr style="height: 100%;">
+				<td style="height: 100%; vertical-align: bottom;">
+					<a>Contas recebidas</a>
+				  	<input type="checkbox" style="margin-bottom: 0rem; padding-bottom: 0rem;" value="Mostrar" ng-model="$ctrl.filters.mostrarFinalizados">
+                </td>
+			</tr>
+		</table>    
+	</div>
+		
+	<div class="float-right" style=" background-color: #E3E3E3; padding: 0.4rem; margin-bottom: 0.2rem;">
+		<a>filtros: </a>
+	   	<a style="text-decoration:none !important;">
+    	   	<button class="btn btn-gravar" type="submit" style="line-height:0.4rem; padding:0.3rem;" ng-click="$ctrl.selecionarDiasVencimento(0)">
+            	<a style="font-size:0.9rem;"> Hoje</a>
+			</button>
+        </a>
+			
+		<a style="text-decoration:none !important;">
+           	<button class="btn btn-gravar" type="submit" style="line-height:0.4rem; padding:0.3rem;" ng-click="$ctrl.selecionarDiasVencimento(3)">
+            	<a style="font-size:0.9rem;"> 3 dias</a>
+			</button>
+        </a>
+			
+		<a style="text-decoration:none !important;">
+           	<button class="btn btn-gravar" type="submit" style="line-height:0.4rem; padding:0.3rem;" ng-click="$ctrl.selecionarDiasVencimento(7)">
+            	<a style="font-size:0.9rem;"> 7 dias</a>
+			</button>
+        </a>
+		
+		<a style="text-decoration:none !important;">
+			<input ui-date="$ctrl.dateOptionsReceber" ng-model="$ctrl.filters.dataInicio" class="form-filtros" id="filtroReceberVencimentosInicial" placeholder="dd/mm/aaaa" type="text" >
+			</a>
+			
+			<a style="text-decoration:none !important;">
+            	até
+			</a>
+			
+			<a style="text-decoration:none !important;">
+				<input ui-date="$ctrl.dateOptionsReceber" ng-model="$ctrl.filters.dataFinal" class="form-filtros" id="filtroReceberVencimentosFinal" placeholder="dd/mm/aaaa" type="text" >
+			</a>
+			
+			<a style="text-decoration:none !important;">
+            	<button class="btn btn-pagamentoAzul" type="button" style="line-height:0.4rem; padding:0.1rem !important; width: 30px !important;" ng-click="$ctrl.pesquisarDatas()">
+            	<i class="fa fa-arrow-circle-right" style="font-size:0.9rem;"></i></button>
+            </a>
+			
+		<a style="text-decoration:none !important;">
+           	<button class="btn btn-pagamentoVerde" type="submit" style="line-height:0.4rem; padding:0.1rem !important; width: 80px !important;" ng-click="$ctrl.selecionarDiasVencimento()">
+            	<i class="fa fa-undo-alt" style="font-size:0.9rem;"></i><a style="font-size:0.9rem;"> Repor</a>
+			</button>
+        </a>
+		
+		<a style="text-decoration:none !important;">
+        	<button class="btn btn-despesaAtrasada" type="button" style="line-height:0.4rem; padding:0.1rem !important; width: 30px !important;" title="gerar PDF" ng-click="$ctrl.gerarPdfXls('PDF')">
+            	<i class="fa fa-file-pdf" style="font-size:0.9rem;"></i>
+			</button>
+        </a>
+			
+		<a style="text-decoration:none !important;">
+           	<button class="btn btn-pagamentoVerde" type="submit" style="line-height:0.4rem; padding:0.1rem !important; width: 30px !important;" title="gerar EXCEL" ng-click="$ctrl.gerarPdfXls('XLS')" >
+        	   	<i class="fa fa-file-excel" style="font-size:0.9rem;"></i></button>
+        </a>
+		
+	</div>
+	<!--  #############  FIM  #####################  -->  
+	
+    <table class="table-striped table-hover mb-1" style="width:100%;">
+        <tr style="text-align:center;">
+            <th style="width:auto;">DESCRIÇÃO</th>
+            <th style="width:10%;">TIPO</th>
+            <th style="width:10%;">VENCIMENTO</th>
+            <th style="width:20%;">VALOR</th>
+            <th style="width:10%;">AÇÕES</th>
+        </tr>
+
+
+        <!-- RECEITA QUE AINDA NÃO FOI PAGA, MAS QUE NÃO VENCEU E NÃO IRÁ VENCER NOS PRÓXIMOS 3 DIAS -->
+        <tr ng-repeat="contaReceberModel in $ctrl.contasReceber" ng-show="$ctrl.exibirConta(contaReceberModel)" >
+            <td style="text-align:left;">
+				<a  href="#" ng-click="$event.preventDefault(); $ctrl.visulizarContaReceber(contaReceberModel)" title="Esta receita ainda não foi paga, clique para ver.">
+                	{{contaReceberModel.descricao + '  - ' + $ctrl.getPercentual(contaReceberModel) + '%' }}
+            	</a>
+			</td>
+            <td style="border-left:1px solid #CED4DA; text-align:center;">{{contaReceberModel.contrato ? (contaReceberModel.contrato.tipoContrato | jurixEnumFilter: 'EnumTipoContrato') : 'Extraordinária' }}</td>
+            <td style="border-left:1px solid #CED4DA; text-align:center;">{{contaReceberModel.dataReceber | date: 'dd/MM/yyyy'}}</td>
+            <td style="border-left:1px solid #CED4DA; text-align:center;"><b>{{$ctrl.getValorPercentual(contaReceberModel)| currency}}</b></td>
+            <td>
+                <div class="btn fa-pull-right" style="padding:0rem;">
+                    <contas-receber-situacao conta-receber="contaReceberModel"></contas-receber-situacao>
+                    <a>
+                        <button class="btn btn-despesaModificar" type="button" title="Apagar" ng-if="contaReceberModel.contrato === null" ng-click="$ctrl.removerConta(contaReceberModel)" >
+                            <i class="far fa-trash-alt"></i></button>
+
+                        <button class="btn btn-receitaAdicionar" style="width:24.2px;" type="button" title="Adicionar valor extraordinário" ng-if="contaReceberModel.contrato" ng-click="$ctrl.novoValorExtraordinarioReceber(contaReceberModel)" >
+                        <i class="fas fa-dollar-sign"></i></button>
+
+                    </a>
+                </div>
+            </td>
+        </tr>
+        <!-- FIM -->
+
+
+
+    </table>
+    <br>
+    <div style="width:100%;text-align:right;">
+        <button class="btn btn-gravar btn-md" type="button"  ng-click="$ctrl.novaContaReceber()" style="margin-left:auto;"><i class="fa fa-plus fa-1x" aria-hidden="true"></i> Adicionar Receita</button>
+    </div>
+</div>
+
+<contas-receber-form centros-custo="$ctrl.centrosCusto" ></contas-receber-form>
+<contas-receber-view></contas-receber-view>
+<valor-extraordinario-receber></valor-extraordinario-receber>
+<contas-receber-pagamento></contas-receber-pagamento>

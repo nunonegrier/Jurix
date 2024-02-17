@@ -1,0 +1,64 @@
+<main role="main" class="containerMain" style="padding-top: 5.5rem;">
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 well">
+                        <div class="float-left">
+                            <form class="form-inline mt-2 mt-md-0">
+                                <input ng-model="nome" class="form-control mr-sm-2" type="text" placeholder="Digite aqui"
+                                       aria-label="Digite aqui" ng-keyup="pesquisar()">
+                                <button ng-click="pesquisar()" class="btn btn-pesquisa my-2 my-sm-0" type="submit">Pesquisar</button>
+                            </form>
+                        </div>
+
+                        <div class="float-right">
+                            <form class="form-inline mt-2 mt-md-0">
+                                <a>Nível de acesso </a>
+                                <select class="custom-select" style="width: auto; min-width:200px;  margin-left: 0.5rem; color: #94989B" id="colaboradorAcesso" ng-model="perfilSelecionado.id">
+                                    <option ng-repeat="perfil in perfis" selected="selected" ng-value="perfil.id">
+                                        {{perfil.descricao}}
+                                    </option>
+                                </select>
+
+                                <button ng-click="pesquisar()" class="btn btn-pesquisa my-2 my-sm-0" type="submit">Pesquisar</button>
+                            </form>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section" style="padding-top: 0.5rem;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 table-responsive">
+                    <table class="table table-hover table-striped">
+                        <tbody>
+                        <tr ng-repeat="colaborador in colaboradores">
+                            <td>
+                              <a style=" font-size:1.3rem;"><b>{{colaborador.usuario.nome}}</b></a>
+                            </td>
+                            <td>
+                              <a>{{colaborador.emailProfissional}}</a><br>
+                              <a><b>{{colaborador.telefone1}}</b></a>
+                            </td>
+                            <td>
+                                <a class="colaboradorInativo">{{colaborador.usuario.situacao}}</a>
+                            </td>
+                            <td style="vertical-align:middle;">
+                                <div class="btn fa-pull-right">
+                                    <a ui-sref="layout.colaboradorVisualizar({id:colaborador.id})" style="text-decoration:none !important;">
+                                        <button class="btn btn-gravar" type="submit">
+                                            <i class="-alt fa  fa-eye fa-fw"></i> Ver
+                                        </button>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

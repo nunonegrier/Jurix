@@ -1,0 +1,132 @@
+<div class="mb-2" style="box-shadow: 0 4px 12px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.12) !important; padding:0.5rem; border-bottom-left-radius:0.3rem; border-bottom-right-radius:0.3rem;">
+	
+	<!--  ########   Barra filtros Contas a Pagar   ################# -->  
+	<div class="float-left" style="">
+		<table style="width: auto; height: 100%;margin-top: 0rem !important; margin-left: 0.5rem;">
+			<tr style="height: 100%;">
+				<td style="height: 100%; vertical-align: bottom;">
+					<a></i> Contas pagas</a>
+				  	<input type="checkbox" style="margin-bottom: 0rem; padding-bottom: 0rem;" value="Mostrar" ng-model="$ctrl.filters.mostrarFinalizados">
+                </td>
+			</tr>
+		</table>    
+	</div>
+		
+	<div class="float-right" style=" background-color: #E3E3E3; padding: 0.4rem; margin-bottom: 0.2rem;">
+		<a>filtros: </a>
+	    <a style="text-decoration:none !important;">
+        	<button class="btn btn-gravar" type="button" style="line-height:0.4rem; padding:0.3rem;" ng-click="$ctrl.selecionarDiasVencimento(0)">
+            	<a style="font-size:0.9rem;"> Hoje</a>
+			</button>
+        </a>
+			
+		<a style="text-decoration:none !important;">
+           	<button class="btn btn-gravar" type="contaPagarModel" style="line-height:0.4rem; padding:0.3rem;" ng-click="$ctrl.selecionarDiasVencimento(3)" >
+            	<a style="font-size:0.9rem;"> 3 dias</a>
+			</button>
+        </a>
+			
+		<a style="text-decoration:none !important;">
+           	<button class="btn btn-gravar" style="line-height:0.4rem; padding:0.3rem;"  ng-click="$ctrl.selecionarDiasVencimento(7)" >
+            	<a style="font-size:0.9rem;"> 7 dias</a>
+			</button>
+        </a>
+		
+		<a style="text-decoration:none !important;">
+            	<input ui-date="$ctrl.dateOptionsPagar" ng-model="$ctrl.filters.dataInicio" class="form-filtros" id="filtroPagarVencimentosInicial" placeholder="dd/mm/aaaa" type="text" >
+			</a>
+			
+			<a style="text-decoration:none !important;">
+            	até
+			</a>
+			
+			<a style="text-decoration:none !important;">
+            	<input ui-date="$ctrl.dateOptionsPagar" ng-model="$ctrl.filters.dataFinal" class="form-filtros" id="filtroPagarVencimentosFinal" placeholder="dd/mm/aaaa" type="text" >
+			</a>
+			
+			<a style="text-decoration:none !important;">
+            	<button class="btn btn-pagamentoAzul" type="button" style="line-height:0.4rem; padding:0.1rem !important; width: 30px !important;" ng-click="$ctrl.pesquisarDatas()">
+            	<i class="fa fa-arrow-circle-right" style="font-size:0.9rem;"></i></button>
+            </a>
+			
+		<a style="text-decoration:none !important;">
+           	<button class="btn btn-pagamentoVerde" style="line-height:0.4rem; padding:0.1rem !important; width: 80px !important;" ng-click="$ctrl.selecionarDiasVencimento()" >
+            	<i class="fa fa-undo-alt" style="font-size:0.9rem;"></i><a style="font-size:0.9rem;"> Repor</a>
+			</button>
+        </a>
+		
+		<a style="text-decoration:none !important;">
+        	<button class="btn btn-despesaAtrasada" type="submit" style="line-height:0.4rem; padding:0.1rem !important; width: 30px !important;" title="gerar PDF" ng-click="$ctrl.gerarPdfXls('PDF')">
+            	<i class="fa fa-file-pdf" style="font-size:0.9rem;"></i>
+			</button>
+        </a>
+			
+		<a style="text-decoration:none !important;">
+           	<button class="btn btn-pagamentoVerde" type="button" style="line-height:0.4rem; padding:0.1rem !important; width: 30px !important;" title="gerar EXCEL" ng-click="$ctrl.gerarPdfXls('XLS')">
+        	   	<i class="fa fa-file-excel" style="font-size:0.9rem;"></i></button>
+        </a>
+		
+	</div>
+	<!--  #############  FIM  #####################  -->	
+	
+	
+    <table class="table-striped table-hover mb-1" style="width:100%;">
+        <tr style="text-align:center;">
+            <th style="width:auto;">DESCRIÇÃO</th>
+            <th style="width:10%;">TIPO</th>
+            <th style="width:10%;">VENCIMENTO</th>
+            <th style="width:20%;">VALOR</th>
+            <th style="width:10%;">AÇÕES</th>
+        </tr>
+
+
+        <tr ng-repeat="contaPagarModel in $ctrl.contasPagar" ng-show="$ctrl.exibirConta(contaPagarModel)">
+            <td style="text-align:left;">
+                <a href="#" ng-click="$event.preventDefault(); $ctrl.visulizarContaPagar(contaPagarModel)" title="Esta despesa ainda não foi paga, clique para ver.">
+                    {{contaPagarModel.descricao + '  - ' + $ctrl.getPercentual(contaPagarModel) + '%'}}
+                </a>
+            </td>
+            <td style="border-left:1px solid #CED4DA; text-align:center;">{{contaPagarModel.tipo | jurixEnumFilter: 'EnumTipoContasPagar'}}</td>
+            <td style="border-left:1px solid #CED4DA; text-align:center;">{{contaPagarModel.dataVencimento | date: 'dd/MM/yyyy'}}</td>
+            <td ng-if="contaPagarModel.valor !== 0" style="border-left:1px solid #CED4DA; text-align:center;"><b>{{$ctrl.getValorPercentual(contaPagarModel) | currency}}</b></td>
+            <td ng-if="contaPagarModel.valor !== 0">
+                <div class="btn fa-pull-right" style="padding:0rem; text-decoration:none !important;" >
+                    <contas-pagar-situacao contas-pagar="contaPagarModel"></contas-pagar-situacao>
+                    <a>
+                        <button class="btn btn-despesaModificar" type="button" title="Apagar" ng-click="$ctrl.removerConta(contaPagarModel)" >
+                            <i class="far fa-trash-alt"></i></button>
+                    </a>
+                </div>
+            </td>
+            <td ng-if="contaPagarModel.valor === 0" style="border-left:1px solid #CED4DA; text-align:center;">
+                <input ng-model="contaPagarModel.novoValor" class="form-control mr-sm-2" type="text" placeholder="0,00" aria-label="Valor da despesa" required="" style="line-height:1rem; padding:0.2rem;">
+                <div class="invalid-feedback">
+                    Valor inválido.
+                </div>
+            </td>
+            <td ng-if="contaPagarModel.valor === 0">
+                <div class="btn fa-pull-right" style="padding:0rem; line-height:1rem !important;">
+                    <a style="text-decoration:none !important;">
+                        <button ng-click="$ctrl.salvarValor(contaPagarModel)" class="btn btn-pagamentoAzul" type="button">
+                            <i class="far fa-question-circle"></i>Gravar</button>
+                    </a>
+                    <a>
+                        <button class="btn btn-despesaModificar" type="button" style="line-height:0.4rem; padding:0.3rem;" title="Modificar ou apagar" ng-click="$ctrl.removerConta(contaPagarModel)" >
+                            <i class="far fa-trash-alt"></i></button>
+                    </a>
+                </div>
+            </td>
+        </tr>
+
+
+    </table><br>
+    <div style="width:100%;text-align:right;">
+        <button class="btn btn-gravar btn-md" type="button" style="margin-left:auto;" ng-click="$ctrl.novaContaPagar()"><i class="fa fa-plus fa-1x" aria-hidden="true"></i> Adicionar Despesa
+        </button>
+    </div>
+</div>
+
+
+<contas-pagar-form centros-custo="$ctrl.centrosCusto"></contas-pagar-form>
+<contas-pagar-view></contas-pagar-view>
+<contas-pagar-pagamento></contas-pagar-pagamento>

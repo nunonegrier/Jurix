@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="body-full-height">
+<head>
+
+    <!-- META SECTION -->
+    <title>Jurix</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!-- styles -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/jurix.css" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <!--<link href="assets/css/bootstrap.css" rel="stylesheet">-->
+
+    <!--&lt;!&ndash; Custom styles for this template &ndash;&gt;-->
+    <!--<link href="assets/css/sticky-footer-   navbar.css" rel="stylesheet">-->
+    <!--<link href="assets/css/jurix.css" rel="stylesheet">-->
+
+    <script src="es6libs/jspdf/dist/jspdf.min.js"></script>
+    <script src="es6libs/jspdf-autotable/dist/jspdf.plugin.autotable.min.js"></script>
+
+    <!-- add the shim first -->
+    <script type="text/javascript" src="vendor/js-xlsx/dist/shim.min.js"></script>
+    <!-- after the shim is referenced, add the library -->
+    <script type="text/javascript" src="vendor/js-xlsx/dist/xlsx.full.min.js"></script>
+
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+</head>
+<body>
+
+<div ui-view style="height: 100%"></div>
+
+<script src="vendor/requirejs/require.js" data-main="main.js"></script>
+
+</body>
+</html>

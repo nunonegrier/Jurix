@@ -1,0 +1,346 @@
+<div class="container-fluid" style="padding-top:90px; padding-left:0rem; padding-right:0rem; margin:0rem;">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 order-md-1 cadastrar cadastrarCol" style="padding-left:1.2rem; padding-right:1.2rem;">
+        <div class="row tabTopo">
+
+          <div class="col-lg-4 mb-2">
+              <label for="nomeCliente" class="required-label">
+                <input type="checkbox" id="nomeCliente" ng-model="colunas.nome.selecionado" > Cliente
+              </label>
+              <input class="form-control formCadastro" type="search" id="mySearch" name="search" placeholder="Digite o nome do cliente" ng-model="filtroCliente.nome">
+          </div>
+          <div class="col-md-4 mb-2">
+            <label for="clienteNomeSolteiro" class="required-label">
+              <input type="checkbox" id="solteiroNomeCliente" ng-model="colunas.nomeSolteiro.selecionado" > Nome de solteiro
+            </label>
+            <input ng-model="filtroCliente.nomeSolteiro" class="form-control formCadastro" id="clienteNomeSolteiro" placeholder="Nome de solteiro completo do cliente" type="text">
+          </div>
+          <div class="col-md-2 mb-2">
+            <label for="clienteRg" class="required-label">
+              <input type="checkbox" id="rgCliente" ng-model="colunas.rgRne.selecionado" > RG / RNE
+            </label>
+            <input ng-model="filtroCliente.rgRne" class="form-control formCadastro" id="clienteRG" placeholder="Nº do RG/RNE" type="text">
+          </div>
+          <div class="col-md-2 mb-2">
+            <table class="tabTableSexos">
+              <tr>
+                <td colspan="2" class="tabTableTitulo">
+                  <label for="sexoCliente" class="required-label">
+                    <input type="checkbox" id="sexoCliente" ng-model="colunas.sexo.selecionado" > Sexo
+                  </label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="col-md-1 mb-2 form-check">
+                    <input ng-model="filtroCliente.sexo" class="form-check-input" type="radio" name="clienteSexo" id="sexoMasculino" value="MASCULINO">
+                    <label class="form-check-label" for="sexoMasculino">Masculino</label>
+                  </div>
+                </td>
+                <td>
+                  <div class="col-md-1 mb-2 form-check">
+                    <input ng-model="filtroCliente.sexo" class="form-check-input" type="radio" name="clienteSexo" id="sexoFeminino" value="FEMININO">
+                    <label class="form-check-label" for="sexoFeminino">Feminino</label>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="col-md-4 mb-2 bordersCenter">
+            <label for="nomeFantasia" class="required-label">
+              <input type="checkbox" id="fantasiaNome" ng-model="colunas.nomeFantasia.selecionado" > Nome Fantasia
+            </label>
+            <input ng-model="filtroCliente.nomeFantasia" class="form-control formCadastro" id="nomeFantasia" placeholder="Nome Fantasia" type="text">
+          </div>
+          <div class="col-md-2 mb-2 bordersCenter">
+            <label for="empresaCnpj" class="required-label">
+              <input type="checkbox" id="cnpjEmpresa" ng-model="colunas.cnpj.selecionado" /> CNPJ
+            </label>
+            <input ng-model="filtroCliente.cnpj" class="form-control formCadastro" id="empresaCnpj" placeholder="CNPJ" type="text">
+          </div>
+          <div class="col-md-2 mb-2 bordersCenter">
+            <label for="inscrEstadual" class="required-label">
+              <input type="checkbox" id="estadualInscr" ng-model="colunas.inscricaoEstadual.selecionado"  /> Inscrição Estadual
+            </label>
+            <input ng-model="filtroCliente.inscricaoEstadual" class="form-control formCadastro" id="inscrEstadual" placeholder="Inscrição Estadual" type="text">
+          </div>
+          <div class="col-md-2 mb-2 bordersCenter">
+            <label for="inscrMunicipal" class="required-label">
+              <input type="checkbox" id="municipalInscr" ng-model="colunas.inscricaoMunicipal.selecionado"  /> Inscrição Municipal
+            </label>
+            <input ng-model="filtroCliente.inscricaoMunicipal" class="form-control formCadastro" id="inscrMunicipal" placeholder="Inscrição Municipal" type="text">
+          </div>
+          <div class="col-md-2 mb-2"></div>
+
+          <div class="col-md-4 mb-2 bordersCenter">
+            <label for="responsavelNome" class="required-label">
+              <input type="checkbox" id="nomeResponsavel" ng-model="colunas.inscricaoMunicipal.selecionado" > Nome do Responsável
+            </label>
+            <input ng-model="filtroCliente.nomeResponsavel" class="form-control formCadastro" id="responsavelNome" placeholder="Nome do responsável" type="text">
+          </div>
+          <div class="col-md-2 mb-2 bordersCenter">
+            <label for="responsavelTel" class="required-label">
+              <input type="checkbox" id="telResponsavel" ng-model="colunas.telefoneResponsavel.selecionado" > Telefone do Responsável
+            </label>
+            <input ng-model="filtroCliente.telefoneResponsavel" class="form-control formCadastro" id="responsavelTel" placeholder="Telefone do responsável" type="text">
+          </div>
+          <div class="col-md-4 mb-2 bordersCenter">
+            <label for="responsavelEmail" class="required-label">
+              <input type="checkbox" id="emailResponsavel" ng-model="colunas.emailResponsavel.selecionado" > E-mail do Responsável
+            </label>
+            <input ng-model="filtroCliente.emailResponsavel" class="form-control formCadastro" id="responsavelEmail" placeholder="Email do responsável" type="text">
+          </div>
+
+          <div class="col-md-2 mb-2"></div>
+
+          <div class="col-md-4 mb-2 bordersCenter">
+            <label for="contatoNome" class="required-label">
+              <input type="checkbox" id="nomeContato" ng-model="colunas.nomeResposavelAlternativo.selecionado" > Nome do Contato Alternativo
+            </label>
+            <input ng-model="filtroCliente.nomeResposavelAlternativo" class="form-control formCadastro" id="contatoNome" placeholder="Nome do contato alternativo" type="text">
+          </div>
+          <div class="col-md-2 mb-2 bordersCenter">
+            <label for="contatoTel" class="required-label">
+              <input type="checkbox" id="telContato" ng-model="colunas.telefoneResponsavelAlternativo.selecionado" > Telefone do Contato Alternativo
+            </label>
+            <input ng-model="filtroCliente.telefoneResponsavelAlternativo" class="form-control formCadastro" id="contatoTel" placeholder="Telefone do contato" type="text">
+          </div>
+          <div class="col-md-4 mb-2 bordersCenter">
+            <label for="contatoEmail" class="required-label">
+              <input type="checkbox" id="emailContato" ng-model="colunas.emailResponsavelAlternativo.selecionado" > Email do Contato Alternativo
+            </label>
+            <input ng-model="filtroCliente.emailResponsavelAlternativo" class="form-control formCadastro" id="contatoEmail" placeholder="Email do contato alternativo" type="text">
+          </div>
+          <div class="col-md-2 mb-2">
+
+          </div>
+
+          <div class="col-md-2 mb-2">
+            <label for="clienteDataNascimento" class="required-label">
+              <input type="checkbox" id="dataNascimentoCliente" ng-model="colunas.dataNascimento.selecionado" > Data de nascimento
+            </label>
+            <input ui-date="dateOptions"  ng-model="filtroCliente.dataNascimento" class="form-control" id="clienteDataNascimento" placeholder="dd/mm/aaaa">
+          </div>
+
+          <div class="col-md-2 mb-2">
+            <label for="clienteNacionalidade" class="required-label">
+              <input type="checkbox" id="nacionalidadeCliente" ng-model="colunas.nacionalidade.selecionado" > Nacionalidade
+            </label>
+            <input ng-model="filtroCliente.nacionalidade" class="form-control formCadastro" id="clienteNacionalidade" placeholder="Nacionalidade" type="text">
+          </div>
+
+          <div class="col-md-3 mb-2">
+            <label for="nomePai" class="required-label">
+              <input type="checkbox" id="paiNome" ng-model="colunas.nomePai.selecionado" > Nome do pai
+            </label>
+            <input ng-model="filtroCliente.nomePai" class="form-control formCadastro" id="nomePai" placeholder="Nome do pai" type="text">
+          </div>
+
+          <div class="col-md-3 mb-2">
+            <label for="nomeMae" class="required-label">
+              <input type="checkbox" id="maeNome" ng-model="colunas.nomeMae.selecionado" > Nome da mãe
+            </label>
+            <input ng-model="filtroCliente.nomeMae" class="form-control formCadastro" id="nomeMae" placeholder="Nome da Mãe" type="text">
+          </div>
+
+          <div class="col-md-2 mb-2">
+            <label for="clienteCpf" class="required-label">
+              <input type="checkbox" id="cpfCliente" ng-model="colunas.cpf.selecionado" > CPF
+            </label>
+            <input ng-model="filtroCliente.cpf" class="form-control formCadastro" id="clienteCpf" placeholder="Nº do CPF" type="text">
+          </div>
+
+
+          <div class="col-md-2 mb-2">
+            <label for="clienteTrabalhoNumero" class="required-label">
+              <input type="checkbox" id="numeroTrabalhoCliente" ng-model="colunas.carteiraTrabalho.selecionado" > Carteira de trabalho
+            </label>
+            <input ng-model="filtroCliente.carteiraTrabalho" class="form-control formCadastro" id="clienteTrabalhoNumero" placeholder="Número" type="text">
+          </div>
+
+          <div class="col-md-1 mb-2">
+            <label for="clienteTrabalhoSerie" class="required-label">
+              <input type="checkbox" id="serieTrabalhoCliente" ng-model="colunas.serie.selecionado" > Série
+            </label>
+            <input ng-model="filtroCliente.serie" class="form-control formCadastro" id="clienteTrabalhoSerie" placeholder="Série" type="text">
+          </div>
+
+          <div class="col-md-2 mb-2">
+            <label for="clientePis" class="required-label">
+              <input type="checkbox" id="pisCliente" ng-model="colunas.pis.selecionado" > PIS
+            </label>
+            <input ng-model="filtroCliente.pis" class="form-control formCadastro" id="clientePis" placeholder="Nº do PIS" type="text">
+          </div>
+
+          <div class="col-md-3 mb-2">
+            <label for="clienteProfissao" class="required-label">
+              <input type="checkbox" id="profissaoCliente" ng-model="colunas.profissao.selecionado" > Profissão/Ocupação
+            </label>
+            <input ng-model="filtroCliente.profissao" class="form-control formCadastro" id="clienteProfissao" placeholder="Profissão/Ocupação" type="text">
+          </div>
+
+          <div class="col-md-2 mb-4">
+            <label for="eleitorNumero" class="required-label">
+              <input type="checkbox" id="numeroEleitor" ng-model="colunas.tituloEleitor.selecionado" > Título de eleitor
+            </label>
+            <input ng-model="filtroCliente.tituloEleitor" class="form-control formCadastro" id="eleitorNumero" placeholder="Número" type="text">
+          </div>
+
+          <div class="col-md-1 mb-4">
+            <label for="eleitorZona" class="required-label">
+              <input type="checkbox" id="zonaEleitor" ng-model="colunas.zona.selecionado" > Zona
+            </label>
+            <input ng-model="filtroCliente.zona" class="form-control formCadastro" id="eleitorZona" placeholder="Zona" type="text">
+          </div>
+
+          <div class="col-md-1 mb-4">
+            <label for="eleitorSecao" class="required-label">
+              <input type="checkbox" id="secaoEleitor" ng-model="colunas.secao.selecionado" > Seção
+            </label>
+            <input ng-model="filtroCliente.secao" class="form-control formCadastro" id="eleitorSecao" placeholder="Seção" type="text">
+          </div>
+
+          <div class="col-md-2 mb-4">
+            <label for="estadoCivil" class="required-label">
+              <input type="checkbox" id="civilEstado" ng-model="colunas.estadoCivil.selecionado" > Estado Civil
+            </label>
+            <select ng-model="filtroCliente.estadoCivil" class="custom-select d-block w-100" id="estadoCivil">
+              <option value="" selected="selected"></option>
+              <option ng-value="estadoCivil.id" ng-repeat="estadoCivil in estadosCivil">{{estadoCivil.nome}}</option>
+            </select>
+          </div>
+
+          <div class="col-md-2 mb-4">
+            <label for="estadoTipo" class="required-label">
+              <input type="checkbox" id="tipoEstado" ng-model="colunas.tipoEstadoCivil.selecionado" > Tipo
+            </label>
+            <select ng-model="filtroCliente.tipoEstadoCivil" class="custom-select d-block w-100" id="estadoTipo">
+              <option value="" selected="selected"></option>
+              <option ng-value="tipoEstadoCivil.id" ng-repeat="tipoEstadoCivil in tiposEstadoCivil">{{tipoEstadoCivil.nome}}</option>
+            </select>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <label for="clienteConjugeNome" class="required-label">
+              <input type="checkbox" id="nomeConjugeCliente" ng-model="colunas.nomeConjugue.selecionado" > Nome do conjuge
+            </label>
+            <input ng-model="filtroCliente.nomeConjugue" class="form-control formCadastro" id="clienteConjugeNome" placeholder="Nome do conjugê" type="text">
+          </div>
+
+          <div class="col-md-2 mb-4">
+            <label for="conjugeId" class="required-label">
+              <input type="checkbox" id="idConjuge" ng-model="colunas.rgRneConjugue.selecionado" > R.G./R.N.E.
+            </label>
+            <input ng-model="filtroCliente.rgRneConjugue" class="form-control formCadastro" id="conjugeId" placeholder="Nº do R.G. ou R.N.E." type="text">
+          </div>
+
+          <div class="col-md-2 mb-4">
+            <label for="conjugeCpf" class="required-label">
+              <input type="checkbox" id="cpfConjuge" ng-model="colunas.cpfConjugue.selecionado" > CPF
+            </label>
+            <input ng-model="filtroCliente.cpfConjugue" class="form-control formCadastro" id="conjugeCpf" placeholder="Nº do CPF" type="text">
+          </div>
+
+          <div class="col-md-2 mb-2">
+            <label for="telComercial" class="required-label">
+              <input type="checkbox" id="comercialTel" ng-model="colunas.telefoneFisico1.selecionado" > Telefone 01
+            </label>
+            <input ng-model="filtroCliente.telefoneFisico1" class="form-control formCadastro" id="telComercial" placeholder="Telefone 01" type="text">
+          </div>
+
+          <div class="col-md-2 mb-2">
+            <label for="telResidencial" class="required-label">
+              <input type="checkbox" id="residencialTel" ng-model="colunas.telefoneFisico2.selecionado" >  Telefone 02
+            </label>
+            <input ng-model="filtroCliente.telefoneFisico2" class="form-control formCadastro" id="telResidencial" placeholder="Telefone 02" type="text">
+          </div>
+          <div class="col-md-4 mb-1">
+            <label for="clienteEndereco" class="required-label">
+              <input type="checkbox" id="enderecoCliente" ng-model="colunas.endereco.selecionado" > Endereço
+            </label>
+            <input ng-model="filtroCliente.endereco" class="form-control formCadastro" id="clienteEndereco" placeholder="Nome da Rua e Número" type="text">
+          </div>
+
+          <div class="col-md-2 mb-1">
+            <label for="clienteCidade" class="required-label">
+              <input type="checkbox" id="cidadeCliente" ng-model="colunas.municipio.selecionado" > Cidade
+            </label>
+            <select ng-model="filtroCliente.municipio"  class="custom-select d-block w-100" id="clienteCidade" >
+              <option value="" selected="selected">Selecione...</option>
+              <option value="{{municipio.id}}" ng-repeat="municipio in municipios" ng-value="municipio.id">{{municipio.nome}}</option>
+            </select>
+          </div>
+
+          <div class="col-md-1 mb-1">
+            <label for="clienteEstado" class="required-label">
+              <input type="checkbox" id="estadoCliente" ng-model="colunas.estado.selecionado" > Estado
+            </label>
+            <select class="custom-select d-block w-100" id="clienteEstado" required ng-model="filtroCliente.estado" ng-change="selecionarEstado()">
+              <option value="" selected="selected">Selecione...</option>
+              <option value="{{estado.id}}" ng-repeat="estado in estados" ng-value="estado.id" >{{estado.nome}}</option>
+            </select>
+          </div>
+
+          <div class="col-md-1 mb-1">
+            <label for="clienteCep" class="required-label">
+              <input type="checkbox" id="cepCliente" ng-model="colunas.cep.selecionado" > CEP
+            </label>
+            <input ng-model="filtroCliente.cep" class="form-control formCadastro" id="clienteCep" placeholder="CEP" type="text">
+          </div>
+
+          <div class="col-md-3 mb-2">
+            <label for="emailProfissional" class="required-label">
+              <input type="checkbox" id="profissionalEmail"  ng-model="colunas.emailProfissional.selecionado" > Email profissional
+            </label>
+            <input ng-model="filtroCliente.emailProfissional" class="form-control formCadastro" id="emailProfissional" placeholder="Email Profissional" type="text">
+          </div>
+
+          <div class="col-md-3 mb-2">
+            <label for="emailPessoal" class="required-label">
+              <input type="checkbox" id="pessoalEmail"  ng-model="colunas.emailPessoal.selecionado" > Email pessoal
+            </label>
+            <input ng-model="filtroCliente.emailPessoal" class="form-control formCadastro" id="emailPessoal" placeholder="Email Pessoal" type="text">
+          </div>
+
+          <div class="col-md-3 mb-2">
+            <label for="clienteIndicacao" class="required-label">
+              <input type="checkbox" id="indicacaoCliente"  ng-model="colunas.indicadoPor.selecionado" > Indicado por
+            </label>
+            <input ng-model="filtroCliente.indicadoPor" class="form-control formCadastro" id="clienteIndicacao" placeholder="Nome de quem indicou o cliente" type="text">
+          </div>
+
+          <div class="col-md-3 mb-2">
+            <label for="grupoClienteInput" class="required-label">
+              <input type="checkbox" id="grupoCliente"  ng-model="colunas.grupo.selecionado" > Grupo
+            </label>
+            <select class="custom-select" id="grupoClienteInput" ng-model="filtroCliente.grupo" >
+              <option value="" selected="selected">Selecione...</option>
+              <option ng-repeat="grupo in grupos"
+                      ng-value="grupo.id">{{grupo.nome}}
+              </option>
+            </select>
+          </div>
+
+
+        </div>
+
+        <alert-msg message="message"></alert-msg>
+
+        <div class="botaoGravarClientesDiv">
+          <div class="row" style="width: 100%; padding: 0rem !important; margin: 0rem !important;">
+            <div class="col-md-6" style="padding: 0.2rem;">
+              <button class="btn btn-gravarRelat btn-lg btn-block botaoGravarClientes" type="submit" ng-click="gerarRelatorio()">Gerar o Relatório</button>
+            </div>
+            <div class="col-md-6" style="padding: 0.2rem;">
+              <button class="btn btn-gravarRelatorio btn-lg btn-block botaoGravarClientes" type="button"  ng-click="gerarRelatorio(true)">Gravar e gerar o Relatório</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<novo-filtro-relatorio></novo-filtro-relatorio>

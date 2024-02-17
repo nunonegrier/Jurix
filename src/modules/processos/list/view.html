@@ -1,0 +1,89 @@
+<main role="main" class="containerMain" style="padding-top: 5.5rem;">
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 well">
+                    <form class="form-inline mt-2 mt-md-0">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Digite aqui" aria-label="Digite aqui" ng-model="filtros.numeroDescricao" ng-keyup="pesquisar(true)" />
+                        <button class="btn btn-pesquisa my-2 my-sm-0" ng-click="pesquisar()" >Pesquisar</button>
+                    </form>
+                </div>
+                <div class="col-md-4 well">
+                    <form class="form-inline mt-2 mt-md-0">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td style="text-align: right;">
+                                    <label for="mostrarProcessos"><a style="text-align: right;">Mostrar</a></label>
+                                </td>
+                                <td style="">
+                                    <select class="custom-select  w-100" id="mostrarProcessos" ng-model="filtros.situacao" ng-change="pesquisar(true)">
+                                        <option value="" selected="selected" >Todos</option>
+                                        <option ng-value="situacaoProcesso.id" ng-repeat="situacaoProcesso in situacoesProcesso">
+                                            {{situacaoProcesso.nome}}s
+                                        </option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section" style="padding-top: 0.5rem; padding-bottom:60px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 table-responsive">
+                    <table class="table table-hover table-striped">
+                        <tbody>
+                        <tr ng-repeat="processo in processos">
+                                <td>
+                                    <b>{{processo.contrato.cliente.nome}}</b>
+                                </td>
+                                <td>
+                                    <a style="font-size:1.2rem;"><b>{{processo.numero}} </b></a><br>
+                                    <a>{{processo.descricao}}</a><br>
+                                </td>
+                                <td>
+                                    <a>ESTADO: <a><b> {{processo.situacao}}</b></a></a>
+                                </td>
+                                <td style="vertical-align:middle;">
+                                    <div class="btn fa-pull-right">
+                                        <a ui-sref="layout.processoVisualizar({id: processo.id})" style="text-decoration:none !important;">
+                                            <button class="btn btn-gravar" type="button">
+                                                <i class="-alt fa  fa-eye fa-fw"></i> Ver</button>
+                                        </a>
+                                        <a>
+                                            <button jurix-permissoes="Processo.Andamento.Criar" class="btn btn-finalizarEvento" type="button" ng-click="novoAndamento(processo)" ng-disabled="processo.situacao !== 'ATIVO'">
+                                                <i class="-alt fa  fa-plus fa-fw"></i> Andamento</button>
+                                        </a>
+                                        <a>
+                                            <button jurix-permissoes="Processo.Finalizar" class="btn btn-finalizarProcesso" title="FINALIZAR PROCESSO" type="button" ng-click="novoAndamentoFinalizar(processo)" ng-show="processo.situacao == 'ATIVO'">
+                                                <i class="-alt fa fa-bullseye fa-2x"></i> </button>
+                                        </a>
+                                        <a>
+                                            <button jurix-permissoes="Processo.Finalizar" class="btn btn-reativarProcesso" title="REABRIR PROCESSO" type="button" ng-click="novoAndamentoReativar(processo)" ng-show="processo.situacao == 'FINALIZADO'" >
+                                                <i class="-alt fa fa-bullseye fa-2x"></i> </button>
+                                        </a>
+                                        <a>
+                                            <button jurix-permissoes="Processo.Deletar" class="btn btn-finalizarProcesso" id="masterApagarProcesso" title="APAGAR PROCESSO" type="button" ng-click="atribuirDeletarProcesso(processo)">
+                                                <i class="-alt fa fa-trash-alt fa-2x"></i></button>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <jurix-paginacao-table page-object="processosPage" pages-size="pagesSize" page-filters="filtros" update-pagination-fn="updatePagination"></jurix-paginacao-table>
+
+            </div>
+        </div>
+    </div>
+</main>
+
+<andamento-processo-form></andamento-processo-form>
+<finalizacao-processo></finalizacao-processo>
+<reativar-processo></reativar-processo>
+<confirmar-apagar-processo-modal confirmar-deletar-fn="deletarProcesso"></confirmar-apagar-processo-modal>

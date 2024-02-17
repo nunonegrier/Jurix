@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-md-12 mb-3 msgCadaCliente" id="msgCadCliente" ng-show="$ctrl.message.success">
+        <a ng-click="$ctrl.hideAlert()" ><i class="fa fa-check-circle fa-1x msgCadaCliente" aria-hidden="true"></i>
+            {{$ctrl.message.successMessage}}
+        </a>
+    </div>
+    <!--<div class="col-md-12 mb-3 alertaCadaCliente" id="alertaCadCliente">-->
+    <!--<a><i class="fa fa-exclamation-circle fa-1x alertaCadaCliente" aria-hidden="true" style="padding-right:0.5rem;"></i>Texto de alerta</a>-->
+    <!--</div>-->
+    <div class="col-md-12 mb-3 erroCadaCliente" id="erroCadCliente" ng-show="$ctrl.message.error" >
+    <a ng-click="$ctrl.hideAlert()"><i class="fa fa-times-circle fa-1x erroCadaCliente" aria-hidden="true" style="padding-right:0.5rem;"></i>
+        {{$ctrl.message.errorMessage}}
+        </a>
+    </div>
+</div>
+

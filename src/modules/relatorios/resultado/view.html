@@ -1,0 +1,41 @@
+<div class="row" style="padding: 0.2rem; margin: 0rem; padding-top: 80px;">
+    <div class="col-lg-2 col-md-3" style="padding: 0.2rem;">
+        <button class="btn btn-finalizarEvento btn-block" type="button" ng-click="printExcel()"><i
+                class="fas fa-file-excel"></i> Excel
+        </button>
+    </div>
+    <div class="col-lg-2 col-md-3" style="padding: 0.2rem;">
+        <button class="btn btn-finalizarEvento btn-block" type="button" ng-click="printPDF()"><i
+                class="fas fa-file-pdf "></i> PDF
+        </button>
+    </div>
+    <div class="col-lg-8 col-md-6 form-group float-right"
+         style="text-align: right; padding: 0.2rem; margin: 0rem; margin-bottom: 0.4rem !important;">
+        <label for="relProcessosFavoritos"><em class="fa fa-star fa-1x" aria-hidden="true"></em> Favoritos </label>
+
+        <select class="custom-select" style="width: 260px !important;" id="relProcessosFavoritos"
+                ng-model="favoritoSelecionado" ng-change="selecionaFavorito()">
+            <option value="" selected="selected">Selecione...</option>
+            <option ng-repeat="favorito in favoritos"
+                    ng-value="favorito.id">{{favorito.nome}}
+            </option>
+        </select>
+
+    </div>
+</div>
+<div class="row" style="padding: 0.2rem; margin: 0rem; padding-top: 0.1rem;">
+    <table id="jurix-result-table" class="table table-striped table-hover table-bordered">
+        <thead class="thead-dark" style="font-size: 0.8rem; font-weight: 100 !important;">
+        <tr>
+            <th scope="col" style="padding: 0.5rem;" ng-repeat="coluna in colunas track by $index">{{coluna}}</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr style="font-size: 0.8;" ng-repeat="linha in linhas">
+            <td style="padding: 0.5rem;" ng-repeat="valorLinha in linha track by $index"><span ng-bind-html="valorLinha | newlines"></span></td>
+        </tr>
+        </tbody>
+    </table>
+
+
+</div>

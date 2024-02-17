@@ -1,0 +1,225 @@
+<div class="container-fluid" style="padding-top:90px; padding-left:0rem; padding-right:0rem; margin:0rem;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 order-md-1 cadastrar cadastrarCol" style="padding-left:1.2rem; padding-right:1.2rem;">
+                <div class="row tabTopo">
+                    <div class="col-lg-4 mb-2">
+                        <label for="filtroCliente" class="required-label">
+                            <input type="checkbox" ng-model="colunas.cliente.selecionado" id="procClienteRelatorio"> Cliente
+                        </label>
+                        <input id="filtroCliente" type="text"
+                               ng-model="clienteNome"
+                               placeholder="Digite o nome do cliente"
+                               class="form-control formCadastro"
+                               auto-complete="autoCompleteOptions" />
+                        <!--<input type="submit">-->
+
+                        <div class="invalid-feedback">
+                            Digite aqui o nome do cliente.
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 mb-2">
+                        <form id="formProcesso" class="needs-validation" novalidate>
+                            <label for="processoContrato" class="required-label">
+                                <input type="checkbox" ng-model="colunas.contrato.selecionado" id="procContratoRelatorio"> Contrato
+                            </label>
+                            <select class="custom-select d-block w-100" id="processoContrato" ng-model="filtroProcesso.contratoId" ng-disabled="desabilitarContrato">
+                                <option value="" selected="selected">Selecione...</option>
+                                <option ng-repeat="contrato in contratos"
+                                        ng-value="contrato.id">{{contrato.descricao}}
+                                </option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Escolha uma opção.
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="col-lg-2 mb-2">
+                        <label for="processoTipo" class="required-label">
+                            <input type="checkbox" ng-model="colunas.processoTipo.selecionado" id="procTipoRelatorio"> Tipo
+                        </label>
+                        <select ng-model="filtroProcesso.processoTipo" class="custom-select d-block w-100" id="processoTipo" >
+                            <option value="" selected="selected">Selecione...</option>
+                            <option ng-value="tipoProcesso.id" ng-repeat="tipoProcesso in tiposProcesso">{{tipoProcesso.nome}}</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Escolha uma opção.
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 mb-2">
+                        <label for="numeroProcesso" class="required-label">
+                            <input type="checkbox" ng-model="colunas.processoNumero.selecionado" id="procNumProcessoRelatorio"> Número do processo
+                        </label>
+                        <input  class="form-control formCadastro" id="numeroProcesso" placeholder="Número do processo" type="text" ng-model="filtroProcesso.numero">
+                        <div class="invalid-feedback">
+                            Indique aqui o número do processo.
+                        </div>
+                    </div>
+                    <div class="col-lg-2 mb-2">
+                        <label for="processoArea" class="required-label">
+                            <input type="checkbox" ng-model="colunas.processoArea.selecionado" id="procAreaRelatorio"> Área
+                        </label>
+                        <select ng-model="filtroProcesso.processoArea" class="custom-select d-block w-100" id="processoArea" >
+                            <option value="" selected="selected">Selecione...</option>
+                            <option ng-value="areaProcesso.id" ng-repeat="areaProcesso in areasProcesso">{{areaProcesso.nome}}</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Escolha uma opção.
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-2">
+
+                        <label for="processoTipoAcao" class="required-label">
+                            <input type="checkbox" ng-model="colunas.processoTipoAcao.selecionado" id="procTipoAcaoRelatorio"> Tipo da ação
+                        </label>
+                        <select ng-model="filtroProcesso.processoTipoAcao" class="custom-select d-block w-100" id="processoTipoAcao" >
+                            <option value="" selected="selected">Selecione...</option>
+                            <option ng-value="tipoAcao.id" ng-repeat="tipoAcao in tiposAcao">{{tipoAcao.descricao}}</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Escolha uma opção.
+                        </div>
+                    </div>
+                    <div class="col-lg-2 mb-2">
+                        <label for="processoDistribuicao" class="required-label">
+                            <input type="checkbox" ng-model="colunas.anoDistribuicao.selecionado" id="procAnoDistribuicaoRelatorio"> Ano da distribuição
+                        </label>
+                        <input class="form-control" id="processoDistribuicao" placeholder="aaaa" type="number" ng-model="filtroProcesso.anoDistribuicao" min="1900">
+                        <div class="invalid-feedback">
+                            Indique a data da distribuição
+                        </div>
+                    </div>
+                    <div class="col-lg-2 mb-2">
+                        <label for="processoForo" class="required-label">
+                            <input type="checkbox" ng-model="colunas.foro.selecionado" id="procForoRelatorio"> Foro
+                        </label>
+                        <input  class="form-control formCadastro" id="processoForo" placeholder="Foro" type="text" ng-model="filtroProcesso.foro" >
+                        <div class="invalid-feedback">
+                            Indique o Foro.
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-2">
+                        <label for="procVaraRelatorio" class="required-label">
+                            <input type="checkbox" ng-model="colunas.vara.selecionado" id="procVaraRelatorio"> Vara
+                        </label>
+                        <input  class="form-control formCadastro" id="processoVara" placeholder="Vara" type="text" ng-model="filtroProcesso.vara">
+                    </div>
+                </div>
+
+
+                <div class="row">
+
+                    <div class="col-lg-2 mb-3">
+                        <label for="processoInstancia" class="required-label">
+                            <input type="checkbox" ng-model="colunas.processoInstancia.selecionado" id="procInstanciaRelatorio"> Instância
+                        </label>
+                        <select ng-model="filtroProcesso.processoInstancia" class="custom-select d-block w-100" id="processoInstancia" >
+                            <option value="" selected="selected">Selecione...</option>
+                            <option ng-value="instanciaProcesso.id" ng-repeat="instanciaProcesso in instanciasProcesso">{{instanciaProcesso.nome}}</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Escolha uma opção.
+                        </div>
+                    </div>
+                    <div class="col-lg-2 mb-3">
+                        <label for="procValorAcaoRelatorio" class="required-label">
+                            <input type="checkbox" ng-model="colunas.processoValor.selecionado" id="procValorAcaoRelatorio" ng-model="filtroProcesso.processoValor"> Valor da ação
+                        </label>
+                        <input  class="form-control formCadastro" id="processoValorAcao" placeholder="Valor da ação" type="text" required>
+                    </div>
+                    <div class="col-lg-2 mb-3">
+                        <label for="processoCentroCustos" class="required-label">
+                            <input type="checkbox" ng-model="colunas.centroCustoId.selecionado" id="procCentroCustosRelatorio"> Centro de custos
+                        </label>
+                        <select ng-model="filtroProcesso.centroCustoId" class="custom-select d-block w-100" id="processoCentroCustos" required>
+                            <option value="" selected="selected">Selecione...</option>
+                            <option ng-value="centroCusto.id" ng-repeat="centroCusto in centrosCusto">{{centroCusto.descricao}}</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-2 mb-1">
+                        <label for="processoEstado" class="required-label">
+                            <input type="checkbox" ng-model="colunas.estadoId.selecionado" id="procEstadoRelatorio"> Estado
+                        </label>
+                        <select class="custom-select d-block w-100" id="processoEstado" ng-model="filtroProcesso.estadoId" ng-change="selecionarEstado()">
+                            <option value="" selected="selected">Selecione...</option>
+                            <option value="{{estado.id}}" ng-repeat="estado in estados" ng-value="estado.id" >{{estado.nome}}</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Escolha uma opção.
+                        </div>
+                    </div>
+                    <div class="col-lg-2 mb-1">
+                        <label for="processoComarca" class="required-label">
+                            <input type="checkbox" ng-model="colunas.comarcaId.selecionado" id="procComarcaRelatorio"> Comarca
+                        </label>
+                        <select ng-model="filtroProcesso.comarcaId" class="custom-select d-block w-100" id="processoComarca" required>
+                            <option value="" selected="selected">Selecione...</option>
+                            <option ng-value="comarca.id" ng-repeat="comarca in comarcas" >{{comarca.descricao}}</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Escolha uma opção.
+                        </div>
+                    </div>
+                    <div class="col-lg-2 mb-1">
+                        <label for="mostrarProcessos" class="required-label">
+                            <input type="checkbox" ng-model="colunas.situacao.selecionado" id="procStatusRelatorio"> Status
+                        </label>
+                        <select class="custom-select  w-100" id="mostrarProcessos" ng-model="filtroProcesso.situacao" >
+                            <option value="" selected="selected" >Todos</option>
+                            <option ng-value="situacaoProcesso.id" ng-repeat="situacaoProcesso in situacoesProcesso">
+                                {{situacaoProcesso.nome}}s
+                            </option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Escolha uma opção.
+                        </div>
+                    </div>
+                </div>
+				
+				<div class="row">
+			    	<div class="col-lg-4 mb-2">
+                    	<label for="ultimoAndamento" class="required-label">
+							<input type="checkbox"  ng-model="colunas.ultimoAndamento.selecionado" id="andamentoUltimo"> 3 Últimos andamentos
+				  		</label>
+                  		<input class="form-control formCadastro" id="ultimoAndamento" placeholder="" type="text" disabled>
+                	</div>
+
+
+                    <div class="col-lg-4 mb-2">
+                        <label for="partesInteressadas" class="required-label">
+                            <input type="checkbox" id="interessadasPartes" ng-model="colunas.incluirParteInteressada.selecionado" > Parte interessada
+                        </label>
+                        <input class="form-control formCadastro" id="partesInteressadas" placeholder="" type="text" disabled="">
+                    </div>
+
+                    <div class="col-lg-4 mb-2">
+                        <label for="partesContrarias" class="required-label">
+                            <input type="checkbox" id="contrariasPartes" ng-model="colunas.incluirParteContraria.selecionado" > Parte contrária
+                        </label>
+                        <input class="form-control formCadastro" id="partesContrarias" placeholder="" type="text" disabled="">
+                    </div>
+
+                </div>
+
+                <alert-msg message="message"></alert-msg>
+
+                <div class="botaoGravarClientesDiv">
+                    <div class="row" style="width: 100%; padding: 0rem !important; margin: 0rem !important;">
+                        <div class="col-md-6" style="padding: 0.2rem;">
+                            <button class="btn btn-gravarRelat btn-lg btn-block botaoGravarClientes" type="submit" ng-click="gerarRelatorio()">Gerar o Relatório</button>
+                        </div>
+                        <div class="col-md-6" style="padding: 0.2rem;">
+                            <button class="btn btn-gravarRelatorio btn-lg btn-block botaoGravarClientes" type="button"  ng-click="gerarRelatorio(true)">Gravar e gerar o Relatório</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<novo-filtro-relatorio></novo-filtro-relatorio>

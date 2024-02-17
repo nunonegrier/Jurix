@@ -1,0 +1,12 @@
+<div class="nav-item" style="vertical-align:central; height:100%">
+    <a class="tituloMenu navbar-brand" style="color:#FFFFFF; height:100%; vertical-align:central; padding-top:15px;">PROCESSO</a>
+</div>
+<div class="nav-item">
+    <a class="nav-linkClientes" style="color:#FFFFFF;"><i class="fa fa-search fa-1x" aria-hidden="true"></i> Visualizar</a>
+</div>
+<li class="nav-item" jurix-permissoes="Processo.Editar" ng-show="processoDto.processo.situacao == 'ATIVO'">
+    <a class="nav-linkVoltar" ui-sref="layout.processoEditar({id: processoDto.processo.id, rotaVoltarPara: rotaVoltarPara, paramsVoltarPara:paramsVoltarPara})"><i class="fa fa-pencil-alt fa-1x" aria-hidden="true"></i> EDITAR</a>
+</li>
+<li class="nav-item">
+    <a class="nav-linkVoltar"  ui-sref="{{getStateVoltar()}}" style="height:100%;">Voltar</a>
+</li>

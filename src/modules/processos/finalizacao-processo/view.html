@@ -1,0 +1,95 @@
+<!-- Modal Finalizar processo -->
+<div id="processoAndamentoFinalizar" class="modal eventoModal" role="dialog" style=" overflow:auto !important;">
+    <div class="modal-dialog modalAlterar">
+        <!-- Conteúdo -->
+        <div class="modal-content" style="padding:1rem; padding-bottom:2rem; border:none; margin:auto;">
+            <div class="modal-header">
+                <div class="float-left">
+                    <h4 class="modalH4">ANDAMENTO - Finalizar processo</h4>
+                </div>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="col-lg-12 novoEventoDocsCol">
+                <div class="alterarEvento" style="padding:0.2rem;">
+                    <form id="processoEventoFormFinalizacao" class="modalForm needs-validation" novalidate >
+                        <div class="row">
+                            <div class="col-lg-2 col-md-12 mb-1">
+                                <label for="andamentoData" class="required-label">Data</label>
+                                <input  class="form-control" id="andamentoData" placeholder="dd/mm/aaaa" type="text" disabled style="text-align: center; padding-left:0.1rem; padding-right:0.1rem; width:60%;" value="{{andamentoProcesso.data | date : 'dd/MM/yyyy'}}">
+                            </div>
+                            <div class="col-lg-2 col-md-12 mb-1" style="text-align:center;">
+                                <label for="andamentoHora" class="required-label" style="text-align:left; width:100%"  >Hora</label>
+                                <input  class="form-control" id="andamentoHora" placeholder="hh:mm" type="text" disabled style="width:60%;" value="{{andamentoProcesso.data | date : 'HH:mm'}}" >
+                            </div>
+                            <div class="col-lg-2 mb-1">
+                                <label for="andamentoFimTipo">Tipo do encerramento*</label>
+                                <select class="custom-select d-block w-100" id="andamentoFimTipo"  required ng-model="andamentoProcesso.tipoAndamento.id" ng-disabled="visualizacao" >
+                                    <option value="" selected="selected">Selecione...</option>
+                                    <option ng-repeat="tipoAndamento in tiposAndamento"
+                                            ng-value="tipoAndamento.id">{{tipoAndamento.descricao}}
+                                    </option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Escolha ou adicione uma opção.
+                                </div>
+                            </div>
+                            <div class="col-lg-2 mb-1">
+                                <label for="andamentoFimResultado">Resultado do processo*</label>
+                                <select class="custom-select d-block w-100" id="andamentoFimResultado"  required ng-model="andamentoProcesso.resultadoProcesso.id" ng-disabled="visualizacao" >
+                                    <option value="" selected="selected">Selecione...</option>
+                                    <option ng-repeat="resultadoProcesso in resultadosProcesso"
+                                            ng-value="resultadoProcesso.id">{{resultadoProcesso.descricao}}
+                                    </option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Escolha ou adicione uma opção.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 mb-1">
+                                <label for="andamentoDescricao">Descrição*</label>
+                                <textarea ng-model="andamentoProcesso.descricao" class="form-control mb-1" rows="4" id="andamentoDescricao" required ng-disabled="visualizacao" ></textarea>
+                            </div>
+                            <div class="invalid-feedback">
+                                Descreva os detalhes do andamento.
+                            </div>
+                        </div>
+
+                        <div class="row anexarRow">
+                            <div class="col-lg-12 mb-4 anexarDiv">
+                                <label for="clienteObs">Anexar documentos</label>
+                                <br>
+                                <label class="myLabel mb-2 btn btn-gravar btn-sm btn-block anexarLabel corFisica" ng-show="!visualizacao">
+                                    <input type="file" files-input ng-model="arquivoData.file" ng-change="uploadFileAndamento()"/>
+                                    <span>Escolher arquivos</span>
+                                </label>
+                                <div class="anexarDivTable">
+                                    <table class="table-striped anexarTable">
+                                        <tr ng-repeat="fileAndamento in filesAndamento">
+                                            <th class="anexarTh1">
+                                                <a href="arquivos/download?uri={{fileAndamento.destFolder + '/' + fileAndamento.name}}">{{fileAndamento.name}}</span></a>
+                                            </th>
+                                            <th class="anexarTh2">
+                                                <input class="form-control formCadastro"
+                                                       placeholder="Descrição" multiple required="" type="text" ng-model="fileAndamento.description" ng-disabled="fileAndamento.state== 'DEFINITIVE'">
+                                            </th>
+                                            <th>
+                                                <button class="btn btn-gravarEvento btn-lg  botaoGravarClientes" type="button" ng-click="setArquivoARemover(fileAndamento.id)" title="Excluir" data-toggle="modal" data-target="#apagarArquivoModal" ng-show="!visualizacao" >
+                                                    <i class="fa fa-trash-alt fa-1x"></i>
+                                                </button>
+                                            </th>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-2 fa-pull-right" style="padding:0rem;">
+                            <button class="btn btn-gravar btn-lg btn-block botaoGravarClientes" type="button" ng-click="salvarAndamentoFinalizacao()" ng-hide="visualizacao">Gravar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

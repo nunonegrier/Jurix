@@ -1,0 +1,40 @@
+<!-- Modal Mudar Senha -->
+<div id="trocarSenha" class="modal fade eventoModal" role="dialog">
+    <div class="modal-dialog modalRecuperar">
+        <!-- Conteúdo -->
+        <div class="modal-content" style="padding:1rem; padding-bottom:2rem; border:none;">
+            <div class="modal-header">
+                <div class="float-left">
+                    <h4 class="modalH4">MUDAR A SENHA</h4>
+                </div>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="col-lg-12 novoEventoDocsCol">
+                <div class="alterarEvento">
+                    <form class="modalForm form-signin rounded loginForm" action="" method="post" name="mudarSenha_Form">
+                        <div class="row">
+                            <div class="col-lg-12 mb-3">
+                                <input type="password" class="form-control passwordTop" name="passwordAntiga" placeholder="Senha atual" required="" autofocus ng-model="dadosSenha.senhaAtual"/>
+                                <input type="password" class="form-control passwordMiddle" name="passwordNova1" placeholder="Nova senha" required="" ng-model="dadosSenha.novaSenha" />
+                                <input type="password" class="form-control" name="passwordNova2" placeholder="Repita a nova senha" required="" ng-model="dadosSenha.novaSenhaConfirmacao" />
+                            </div>
+                            <div class="col-lg-12">
+                                <button class="btn btn-gravar btn-lg float-right btn-block mb-4" type="button" ng-click="alterarSenha()">Enviar</button>
+                            </div>
+                            <div class="row width100" style="padding:0rem; margin:0rem;">
+                                <div class="col-lg-12" >
+                                    <div class="col-md-12 mb-3 msgCadaCliente float-right" id="msgMudarSenhaValida" ng-show="msgSucesso" >
+                                        <a><i class="fa fa-check-circle fa-1x msgCadaCliente" aria-hidden="true"></i>A senha foi alterada com sucesso.</a>
+                                    </div>
+                                    <div class="col-md-12 mb-3 erroCadaCliente float-right" id="msgMudarSenhaInvalida" ng-show="msgErroSenha" >
+                                        <a><i class="fa fa-exclamation-circle fa-1x erroCadaCliente" aria-hidden="true"></i>{{msgErroSenha}}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

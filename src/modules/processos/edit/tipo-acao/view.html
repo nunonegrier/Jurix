@@ -1,0 +1,32 @@
+<!--Modal Novo Tipo Ação-->
+<div id="adicionarTipoAcao" class="modal fade eventoModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Conteúdo -->
+        <div class="modal-content" style="padding:1rem; padding-bottom:2rem; border:none;">
+            <div class="modal-header">
+                <div class="float-left">
+                    <h4 class="modalH4">NOVO TIPO DE AÇÃO</h4>
+                </div>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="col-lg-12 novoEventoDocsCol">
+                <div class="alterarEvento">
+                    <form id="formTipoAcao" class="modalForm needs-validation" novalidate >
+                        <div class="row">
+                            <div class="col-lg-12 mb-3">
+                                <label for="novoTipoAcao" class="required-label" >Adicione um tipo de ação:</label>
+                                <input class="form-control formCadastro" id="novoTipoAcao" placeholder="Tipo de Ação" type="text" ng-model="tipoAcao.descricao" required="">
+                                <div class="invalid-feedback">
+                                    Indique aqui o número do processo.
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <button class="btn btn-gravar btn-lg float-right btn-block" type="button" ng-click="salvarTipoAcao()">Adicionar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

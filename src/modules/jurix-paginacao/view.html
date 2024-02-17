@@ -1,0 +1,32 @@
+<!-- ############################ divisor de páginas de resultados ##########################################-->
+
+<div class="row fluid" style="padding:0rem; padding-top:1rem; margin:0rem;" ng-show="$ctrl.pageObject.totalElements > 0">
+    <div style="width:50%; text-align:left; display:inline;">
+        <a style="padding-left:0.5rem; padding-right:0.5rem">Número de resultados por página: </a>
+        <select id="numeroResultadosPauta" ng-model="$ctrl.currentPageSize" style="padding-left:0.5rem;" ng-change="$ctrl.setPageSize()" >
+            <option ng-repeat="pageSize in $ctrl.pagesSize" ng-value="pageSize" ng-selected="pageSize==$ctrl.currentPageSize">
+                {{pageSize}}
+            </option>
+        </select>
+    </div>
+    <div style="width:50%; text-align:right; display:inline;">
+        <a>
+            <a href="" ng-click="$ctrl.irParaPrimeiro()" style="padding:0.1rem;" ng-if="$ctrl.pageObject.totalPages > 1 && $ctrl.currentPage > 1"><i class="fa fa-angle-double-left fa-1x"></i></a>
+            <a href="" ng-click="$ctrl.irParaAnterior()" style="padding:0.1rem;" ng-if="$ctrl.currentPage > 1"><i class="fa fa-angle-left fa-1x"></i></a>
+
+            <a href="" ng-click="$ctrl.irPagina(pag)" style="padding:0.5rem;" ng-style="pag==$ctrl.currentPage ? 'font-size:1.3rem; color:#007BFF;' : ''" ng-repeat="pag in $ctrl.pages">
+                <b ng-if="pag==$ctrl.currentPage">{{pag}}</b> {{pag!=$ctrl.currentPage ? pag : ''}}
+            </a>
+            <a style="padding:0.5rem; color:#007BFF;" ng-if="$ctrl.hasInterval">... </a>
+            <a href="" ng-click="$ctrl.irPagina(pag)" style="padding:0.5rem;" ng-style="pag==$ctrl.currentPage ? 'font-size:1.3rem; color:#007BFF;' : ''" ng-repeat="pag in $ctrl.pagesFinal" >
+                <b ng-if="pag==$ctrl.currentPage">{{pag}}</b> {{pag!=$ctrl.currentPage ? pag : ''}}
+            </a>
+
+
+            <a href="" ng-click="$ctrl.irParaProximo()" style="padding:0.1rem;" ng-if="$ctrl.pageObject.totalPages > 1 && $ctrl.currentPage < $ctrl.pageObject.totalPages" ><i class="fa fa-angle-right fa-1x"></i></a>
+            <a href="" ng-click="$ctrl.irParaUltimo()" style="padding:0.1rem;" ng-if="$ctrl.pageObject.totalPages > 1 && $ctrl.currentPage < $ctrl.pageObject.totalPages"><i class="fa fa-angle-double-right fa-1x"></i></a>
+        </a>
+    </div>
+</div>
+
+<!-- ######################################################################-->

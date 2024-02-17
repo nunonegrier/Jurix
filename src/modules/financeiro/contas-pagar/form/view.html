@@ -1,0 +1,215 @@
+<!-- Modal Nova Conta Pagar -->
+<div id="novaContaPagar" class="modal fade eventoModal" role="dialog">
+    <div class="modal-dialog" style="max-width:100% !important; width: 70% !important; margin:auto; padding-top:1rem;">
+        <!-- Conteúdo -->
+        <div class="modal-content" style="padding:1rem; padding-bottom:2rem; border:none; margin:auto;">
+            <div class="modal-header">
+                <div class="float-left">
+                    <h4 class="modalH4">{{$ctrl.titulo}}</h4>
+                </div>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="col-lg-12 novoEventoDocsCol">
+                <div class="alterarEvento">
+                    <form id="contasPagarForm" class="modalForm needs-validation" novalidate autocomplete="off">
+
+                        <div class="row">
+                            <div class="col-lg-12 mb-3">
+                                <div class="row" >
+                                    <div class="col-lg-2 ">
+                                        <label for="despesaTipo">Tipo:</label>
+                                        <select class="custom-select d-block w-100" id="despesaTipo"  required="required" ng-model="$ctrl.contaPagar.tipo" >
+                                            <option value="" selected="selected">Selecione...</option>
+                                            <option ng-value="tipoContaPagar.id" ng-repeat="tipoContaPagar in $ctrl.tiposContaPagar">{{tipoContaPagar.nome}}</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <label for="despesaValor">Valor:</label>
+                                        <input  class="form-control formCadastro" id="despesaValor" placeholder="Valor da despesa" type="number" min="0" step="0.01" required="required" ng-model="$ctrl.contaPagar.valor" to-precision="2" >
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <label for="despesaDescricao">Descrição:</label>
+                                        <input  class="form-control formCadastro" id="despesaDescricao" placeholder="Descrição da despesa" type="text" required="required" ng-model="$ctrl.contaPagar.descricao" >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-1" style="background-color: aliceblue; padding-top: 0.5rem; padding-bottom: 1rem;" ng-repeat="incidenciaConta in $ctrl.contaPagar.incidencias" >
+
+                            <div class="col-lg-12">
+                                <div class="row" >
+                                    <div class="col-lg-3 mb-2">
+                                        <label for="contratoCentroCustos1">Centro de Custos</label>
+                                        <select class="custom-select d-block w-100" id="contratoCentroCustos1"
+                                                required="required" ng-model="incidenciaConta.centroCusto.id">
+                                            <option value="" selected="selected">Selecione...</option>
+                                            <option ng-value="centroCusto.id"
+                                                    ng-repeat="centroCusto in $ctrl.centrosCusto">
+                                                {{centroCusto.descricao}}
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-2 mb-2">
+                                        <label for="contratoCentroCustos2">Incidência(%)</label>
+                                        <input class="form-control formCadastro" id="contratoCentroCustos2"
+                                               placeholder="100" value="100.00" type="number"  min="0" step="0.01" to-precision="2"
+                                               ng-model="incidenciaConta.incidencia" ng-change="$ctrl.onMudarIncidencia()" >
+                                    </div>
+									
+									<!--  CAMPO PARA VALOR DA INCIDÊNCIA-->
+									<div class="col-lg-2 mb-2">
+					  					<label for="valorDaPartilha">Valor</label>
+                    					<input ng-model="incidenciaConta.valor" class="form-control formCadastro" id="valorDaPartilha" type="number" to-precision="2" disabled />
+				  					</div>
+									
+									
+                                    <div class="col-lg-1 mb-2">
+                                        <table style="height: 100%;">
+                                            <tr>
+                                                <td style="border:none; vertical-align: bottom;">
+                                                    <button class="btn btn-gravar btn-sm" type="button"
+                                                            title="Dividir com outro centro de custos"
+                                                            ng-click="$ctrl.incluirCentroIncidencia()"
+                                                            style="margin: 0;">
+                                                        <i class="fa fa-plus fa-1x" aria-hidden="true"></i>
+                                                    </button>
+                                                </td>
+                                                <td style="border:none; vertical-align: bottom;">
+                                                    <button class="btn btn-gravar btn-sm" type="button"
+                                                            title="Dividir com outro centro de custos"
+                                                            ng-click="$ctrl.removerCentroIncidencia($index)"
+                                                            ng-show="$ctrl.contaPagar.incidencias.length > 1"
+                                                            style="margin: 0;">
+                                                        <i class="fa fa-minus fa-1x" aria-hidden="true"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="col-lg-4 mb-2"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 mb-3">
+                            <div class="row">
+                                <div class="col-lg-3 mb-1">
+                                    <label for="despesaFrequencia">Frequência:</label>
+                                    <select class="custom-select d-block w-100" id="despesaFrequencia"  required="required" ng-model="$ctrl.contaPagar.frequencia" >
+                                        <option value="" selected="selected">Selecione...</option>
+                                        <option ng-value="frequenciaContaPagar.id" ng-repeat="frequenciaContaPagar in $ctrl.frequenciaContasPagar">{{frequenciaContaPagar.nome}}</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 mb-1">
+                                    <label for="dataVencimentoContaPagar" class="-label">Data do vencimento</label>
+                                    <input ui-date="$ctrl.dateOptions"  class="form-control" id="dataVencimentoContaPagar" placeholder="dd/mm/aaaa" type="text" required="required" ng-model="$ctrl.contaPagar.dataVencimento"  >
+                                </div>
+
+                                <!--  DATA PAGAMENTO -->
+                                <div class="col-lg-3 mb-1" ng-show="$ctrl.contaPagar.dataPagamento">
+                                    <label for="dataPagamentoContaPagar" class="-label">Data do pagamento</label>
+                                    <input ui-date="$ctrl.dateOptions"  class="form-control" id="dataPagamentoContaPagar" placeholder="dd/mm/aaaa" type="text" ng-model="$ctrl.contaPagar.dataPagamento"  >
+                                </div>
+
+                                <!-- FIM  -->
+
+                                <div class="col-lg-3">
+                                    <label for="contaReceberParceladaS">Valor a pagar é sempre o mesmo?</label><br>
+                                    <div style="text-align:left; padding-top:0.5rem;">
+                                        <input name="contaReceberParcelada" id="contaReceberParceladaS" type="radio" value="S" ng-model="$ctrl.repetirValor" > Sim
+                                        <input name="contaReceberParcelada" id="contaReceberParceladaN" type="radio" value="N" ng-model="$ctrl.repetirValor"> Não
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <table style="width:100%;">
+                                <tr style="text-align:center;">
+                                    <td  colspan="4" style="padding-bottom:0.1rem;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width:5%; padding-left:0rem;">
+                                        Pessoa:
+                                    </td>
+                                    <td style="width:10%; text-align:right; padding-right:1rem;">
+                                        <input name="despesaPessoa" id="despesaFisica" value="FISICA" type="radio" ng-model="$ctrl.contaPagar.pessoaConta.tipoPessoa" required="required" > Física<br>
+                                    </td>
+                                    <td style="width:10%; padding-left:1rem;">
+                                        <input name="despesaPessoa" id="despesaJuridica" value="JURIDICA" type="radio" ng-model="$ctrl.contaPagar.pessoaConta.tipoPessoa" required="required" > Jurídica<br>
+                                    </td>
+                                    <td style="width:auto;"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="invalid-feedback">
+                                            Escolha uma opção
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div id="juridica" style="width:100%;">
+                            <div class="col-lg-12">
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                        <label for="despesaNomeJuridica">Nome:</label>
+                                        <input  class="form-control formCadastro"
+                                                id="despesaNomeJuridica"
+                                                placeholder="Nome do destinatário"
+                                                type="text"
+                                                required="required"
+                                                auto-complete="$ctrl.autoCompletePessoaContaOptions"
+                                                ng-model="$ctrl.pessoaContaNome" />
+
+
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <label for="despesaCnpj">CPF/CNPJ:</label>
+                                        <input  class="form-control formCadastro" id="despesaCnpj" placeholder="CPF/CNPJ" type="text" required="required" ng-model="$ctrl.contaPagar.pessoaConta.documento" >
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 mb-3">
+                                <div class="row">
+                                    <div class="col-md-5 mb-2">
+                                        <label for="empresaEndereco" class="-label">Endereço</label>
+                                        <input class="form-control formCadastro" id="empresaEndereco" placeholder="Nome da Rua e Número"  type="text" ng-model="$ctrl.contaPagar.pessoaConta.endereco">
+                                    </div>
+                                    <div class="col-md-2 mb-2">
+                                        <label for="clienteEstado" class="-label">Estado</label>
+                                        <select class="custom-select d-block w-100" id="clienteEstado"  ng-model="$ctrl.estadoSelecionadoId" ng-change="$ctrl.onSelecionarEstado()">
+                                            <option value="" selected="selected">Selecione...</option>
+                                            <option ng-repeat="estado in $ctrl.estados" ng-value="estado.id" >{{estado.nome}}</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3 mb-2">
+                                        <label for="clienteCidade" class="-label">Cidade</label>
+                                        <select ng-model="$ctrl.contaPagar.pessoaConta.municipio.id"  class="custom-select d-block w-100" id="clienteCidade"  >
+                                            <option value="" selected="selected">Selecione...</option>
+                                            <option ng-repeat="municipio in $ctrl.municipios" ng-value="municipio.id">{{municipio.nome}}</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-2 mb-2">
+                                        <label for="empresaCep" class="-label">CEP</label>
+                                        <input class="form-control formCadastro" id="empresaCep" placeholder="CEP" type="text" ng-model="$ctrl.contaPagar.pessoaConta.cep">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-12">
+                            <button class="btn btn-gravar btn-lg float-right btn-block" type="button" ng-click="$ctrl.salvar()">Adicionar</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

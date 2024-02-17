@@ -1,0 +1,204 @@
+<div id="eventoModalEdicao" class="modal fade eventoModal" role="dialog">
+    <div class="modal-dialog modalAlterar">
+        <!-- Conteúdo -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="float-left">
+                    <h4 class="modalH4">Altere ou apague um evento da pauta.</h4>
+                </div>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="col-lg-12 novoEventoDocsCol">
+                <div class="alterarEvento">
+                    <!--<form class="modalForm">-->
+                    <form id="formularioPautaEventoNovoEdit" class="needs-validation" novalidate autocomplete="off" >
+                        <div class="row">
+                            <div ng-class="$ctrl.modoVisualizacao ? 'col-lg-1 mb-1' : 'col-lg-1 mb-1 bordersTudoEvento'">
+                                <label for="tipoEventoEdicao">Tipo</label>
+                                <select ng-disabled="$ctrl.modoVisualizacao && !$ctrl.usuarioPodeAlterarFinalizado" ng-model="$ctrl.pautaEvento.tipo"
+                                        class="custom-select d-block w-100"
+                                        id="tipoEventoEdicao">
+                                    <option value="PRAZO" selected>Prazo</option>
+                                    <option value="TAREFA">Tarefa</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4 mb-1">
+                                <label for="nomeColaboradorEdicao">Responsável</label>
+                                <select ng-disabled="$ctrl.modoVisualizacao" ng-model="$ctrl.pautaEvento.colaborador.id"
+                                        class="custom-select d-block w-100"
+                                        id="nomeColaboradorEdicao">
+                                    <option ng-repeat="colaborador in $ctrl.colaboradores" ng-value="colaborador.id"
+                                            selected="selected">{{colaborador.usuario.nome}}
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="col-lg-3 mb-2">
+                                <label for="numeroProcessoAlt">Nº do processo </label><button type="button" class="btn btn-link badge" ng-click="irParaProcesso($ctrl.pautaEvento.processo.id)" style="float: right"  ng-if="$ctrl.pautaEvento.processo && $ctrl.pautaEvento.id">ir para processo</button>
+                                <input class="form-control formCadastro"
+                                       id="numeroProcessoAlt" value="{{$ctrl.pautaEvento.processo.numero}}"
+                                       type="text" disabled="disabled" >
+                            </div>
+                            <div class="col-lg-2 mb-2">
+                                <label for="dataPublicacaoEdicao" class="required-label">Publicação</label>
+                                <input ng-disabled="$ctrl.modoVisualizacao && !$ctrl.usuarioPodeAlterarFinalizado" ui-date="dateOptions"
+                                       ng-model="$ctrl.pautaEvento.dataPublicacao" class="form-control"
+                                       id="dataPublicacaoEdicao" placeholder="dd/mm/aaaa" type="text" required>
+                                <div class="invalid-feedback">
+                                    Insira a data de publicação
+                                </div>
+                            </div>
+                            <div ng-class="$ctrl.modoVisualizacao ? 'col-lg-2' : 'col-lg-2 bordersTudoEvento mb-1'">
+                                <label for="dataLimiteEdicao" class="required-label">Data limite</label>
+                                <input ng-disabled="$ctrl.modoVisualizacao && !$ctrl.usuarioPodeAlterarFinalizado" ui-date="$ctrl.dateOptions"
+                                       ng-model="$ctrl.pautaEvento.dataLimite" class="form-control"
+                                       id="dataLimiteEdicao" placeholder="dd/mm/aaaa" type="text" required>
+                                <div class="invalid-feedback">
+                                    Insira a data de limite
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 mb-1">
+                                <label for="eventoDescricaoAlt">Descrição</label>
+                                <input ng-disabled="$ctrl.modoVisualizacao && !$ctrl.usuarioPodeAlterarFinalizado" ng-model="$ctrl.pautaEvento.descricao"
+                                       class="form-control formCadastro"
+                                       id="eventoDescricaoAlt" value="Descrição do evento" type="text">
+                            </div>
+                            <div class="col-lg-6 mb-1">
+                                <label for="eventoObservacaoAlt">Observações</label>
+                                <textarea ng-disabled="$ctrl.modoVisualizacao && !$ctrl.usuarioPodeAlterarFinalizado" ng-model="$ctrl.pautaEvento.observacaoCriacao"
+                                          class="form-control mb-3" rows="2"
+                                          id="eventoObservacaoAlt"></textarea>
+                            </div>
+                            <div class="row anexarRow" style="padding-left: 1rem; padding-right: 1rem;">
+                                <jurix-arquivos repository="$ctrl.filesRespository" form-id="'formularioPautaEventoNovoEdit'" is-visualizacao="true"></jurix-arquivos>
+                            </div>
+                            <div ng-if="!$ctrl.modoVisualizacao" class="row modalGravarAlt">
+                                <div class="col-sm-8 col-lg-10">
+                                    <button ng-click="salvar()" class="btn btn-finalizarEvento btn-lg btn-block mb-2"
+                                            data-dismiss="modal"
+                                            type="submit">Gravar alterações
+                                    </button>
+                                </div>
+                                <div class="col-sm-4 col-lg-2">
+                                    <button class="btn btn-gravarEvento btn-lg btn-block mb-2" data-dismiss="modal"
+                                            type="button" ng-click="iniciarApagar()">Apagar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div ng-if="$ctrl.modoVisualizacao" class="row">
+                            <div class="modal-header modalEstadoTitulo">
+                                <div class="float-left">
+                                    <h4 class="modalH4">Estado do evento</h4>
+                                </div>
+                            </div>
+                            <div class="row modalGravarAlt mb-4">
+                                <div ng-if="!$ctrl.modoFinalizacao" class="col-lg-2 mb-1">
+                                    <label for="eventoEstadoFinalConsultar">Estado</label>
+                                    <input ng-model="$ctrl.pautaEvento.situacao" class="form-control formCadastro"
+                                           id="eventoEstadoFinalConsultar" value="Estado" type="text" disabled>
+                                </div>
+                                <div ng-if="modoFinalizacao" class="col-lg-2 mb-1">
+                                    <label for="eventoEstadoFinal">Este evento foi bem sucedido?</label>
+                                    <select ng-model="$ctrl.auxiliar.eventoBemSucedido" class="custom-select d-block w-100"
+                                            id="eventoEstadoFinal" ng-disabled="!$ctrl.usuarioPodeAlterarSituacao">
+                                        <option ng-value="'SIM'" selected>Sim</option>
+                                        <option ng-value="'NAO'">Não</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Informe o estado do evento
+                                    </div>
+                                </div>
+                                <div class="col-lg-10 mb-1">
+                                    <label for="eventoObservacaoFinalConsultar">Observações</label>
+                                    <textarea ng-disabled="!$ctrl.modoFinalizacao || !$ctrl.usuarioPodeAlterarSituacao"
+                                              ng-model="$ctrl.pautaEvento.observacaoFinalizacao" class="form-control mb-3" ng-required="$ctrl.validarDadosFinalizacao"
+                                              rows="2" id="eventoObservacaoFinalConsultar"></textarea>
+                                    <div class="invalid-feedback">
+                                        Insira uma observação
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row modalGravarAlt" >
+                                <div class="col-sm-12 col-lg-12">
+
+                                    <!--  ROW do HISTORICO -->
+                                    <div class="row mb-4" style="padding:0rem; margin:0rem;" ng-if="$ctrl.pautaEvento.usuarioCriacao.id === $ctrl.usuarioAtual.id && $ctrl.historicoPautaEvento.length > 0">
+                                        <div class="col-12" style="padding:0.5rem;box-shadow: 0 4px 12px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.12) !important; border-radius:0.25rem;">
+                                            <span style="text-align:center; width:100%">
+                                                <h5 style="padding:0rem; margin:0rem;">Histórico</h5>
+                                            </span>
+                                            <table class="table-striped table-hover"
+                                                   style="width:100%; padding:0.5rem;">
+                                                <tr>
+                                                    <th style="width:5%; text-align:left;">
+                                                        <a style="padding-left:0.8rem;">#</a>
+                                                    </th>
+                                                    <th style="width:20%; text-align:left;">
+                                                        <a style="padding-left:0.8rem;">Repautado em</a>
+                                                    </th>
+                                                    <th style="width:20%; text-align:center;">
+                                                        <a>Finalizado em</a>
+                                                    </th>
+                                                    <th style="width:20%; text-align:center;">
+                                                        <a>Estado</a>
+                                                    </th>
+                                                    <th style="width:35%; text-align:center; padding-right:1.8rem;">
+                                                        <a>Observações</a>
+                                                    </th>
+                                                </tr>
+                                            </table>
+                                            <div class="row"
+                                                 style="padding:0.5rem; margin:0rem; height:200px; max-height:200px; overflow:auto;">
+                                                <table class="table-striped table-hover" style="width:100%;">
+                                                    <tr ng-repeat="historico in $ctrl.historicoPautaEvento">
+                                                        <td style="width:5%;text-align:left; border-bottom: 0px; border-right: 2px solid white;">
+                                                            <a>{{$index + 1}}</a>
+                                                        </td>
+                                                        <td style="width:20%;text-align:left; border-bottom: 0px; border-right: 2px solid white; padding-left:1rem;">
+                                                            <a>{{historico.dataAlteracaoDataLimite | date : "dd/MM/yyyy"}}</a>
+                                                        </td>
+                                                        <td style="width:20%;text-align:center; border-bottom: 0px; border-right: 2px solid white;">
+                                                            <a>{{historico.dataFinalizacao | date : "dd/MM/yyyy"}}</a>
+                                                        </td>
+                                                        <td style="width:20%;text-align:center; border-bottom: 0px; border-right: 2px solid white;">
+                                                            <a style="padding-left:1.2rem;">{{historico.situacao}}</a>
+                                                        </td>
+                                                        <td style="width:35%;text-align:center; border-bottom: 0px; border-right: 0px;">
+                                                            <a style="padding-left:0.7rem;">{{historico.observacaoFinalizacao}}</a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- FIM da ROW do HISTORICO -->
+
+                                    <button ng-if="!$ctrl.modoFinalizacao"
+                                            ng-click="fecharModal('#eventoConsultarModal')"
+                                            class="btn btn-finalizarEvento btn-lg btn-block mb-2"
+                                            data-dismiss="modal"
+                                            type="submit">Fechar
+                                    </button>
+                                    <button ng-if="$ctrl.modoFinalizacao && !$ctrl.usuarioPodeAlterarFinalizado"
+                                            class="btn btn-finalizarEvento btn-lg btn-block mb-2"
+                                            ng-click="finalizar()"
+                                            type="submit">Finalizar
+                                    </button>
+                                    <button ng-if="$ctrl.modoFinalizacao && $ctrl.usuarioPodeAlterarFinalizado"
+                                            class="btn btn-finalizarEvento btn-lg btn-block mb-2"
+                                            ng-click="salvar(true)"
+                                            type="submit">Gravar Alterações
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

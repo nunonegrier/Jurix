@@ -1,0 +1,78 @@
+﻿
+<div class="row loginRow">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-8 loginCliente">
+      <table class="loginTableCliente">
+        <tr class="loginTrCliente">
+          <th>
+            <img src="assets/img/cliente00001_400px.png" alt="Muritiba & Niutom Jr.">
+          </th>
+        </tr>
+      </table>
+    </div>
+    <div class="col-12 col-sm-12 col-md-12 col-lg-4 loginLateral azulEscuroFundo">
+      <table class="loginTableLateral">
+        <tr style="width: 100%; text-align: center; vertical-align: top;">
+		  <th class="logoJurixLogin">
+		  	<img src="assets/img/jurixBrancoVasado.png" alt="Jurix"> 
+          </th>
+        </tr>
+        <tr class="loginTrLateral">
+          <th class="loginThLateral">
+            <div class="wrapper loginFrame float-left">
+		      <form action="/auth/j_spring_security_check" method="post" name="Login_Form" class="form-signin rounded loginForm needs-validation">
+		        <h4 class="form-signin-heading loginTitulo mb-3">LOGIN</h4>			    
+			    <input type="text2" class="form-control" name="username" placeholder="Usuário" required="" autofocus />
+			    <input type="password" class="form-control" name="password" placeholder="Senha" required=""/>     		  
+			    <button class="btn btn-lg btn-login btn-block mb-3"  name="Submit" value="Login" type="Submit">Entrar</button>
+                <div class="form-group" ng-if="hasError">
+                  <div class="col-md-12" >
+                    <div class="alert alert-danger loginError" role="alert">
+                      Ops! Usuário ou senha incorretos
+                    </div>
+                  </div>
+                </div>
+				<br>
+                <a class="loginEsqueceu">Esqueceu a sua senha? Clique<a class="recuperarSenhas" href="#" data-toggle="modal" data-target="#recuperarSenhaModal"> aqui.</a>
+		      </form>			
+	        </div>
+          </th>
+        </tr>
+        <tr>
+          <th class="loginThRodape">
+            <hr class="loginHrRodape colorgraph">
+            <footer>
+              <div class="container col-12 loginFooterDiv">
+                <span class="text-muted loginSpanRodape textoDireitosLogin">Todos os Direitos &copy; 2019 &middot; <a href="http://jurix.com/" target="_blank" style="color: #FFFFFF;">Jurix</a></span>
+              </div>
+            </footer>
+          </th>
+        </tr>
+      </table>
+    </div>  
+  </div>
+
+<!-- Modal -->
+<div class="modal fade" id="recuperarSenhaModal" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header azulEscuroFundo">
+        <div class="row">
+          <h4 class="modal-title brancoTexto textoRecuperarSenha">Recuperar senha</h4>
+        </div>
+      </div>
+      <div class="modal-body">
+        <form method="post" name="Login_Form" class="form-signin rounded loginForm">
+          <label for="userEmail">Digite o seu email</label>
+          <input type="text2" class="form-control mb-2" name="userEmail" placeholder="Email" required="" autofocus ng-model="recuperarSenha.email"/>
+          <button class="btn btn-lg btn-gravar btn-block mb-3"  name="Submit" value="Login" type="button" ng-click="enviarRecuperarSenha()">Enviar</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,92 @@
+<div id="pautaEventoProcessoModal" class="modal fade eventoModal" role="dialog">
+    <div class="modal-dialog modalAlterar">
+        <!-- Conteúdo -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="float-left">
+                    <h4 class="modalH4">Adicionar evento na pauta.</h4>
+                </div>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="col-lg-12 novoEventoDocsCol">
+                <div class="alterarEvento">
+                    <form id="formularioPautaEvento" class="needs-validation" novalidate >
+                        <div class="row">
+                            <div ng-class="modoVisualizacao ? 'col-lg-1 mb-1' : 'col-lg-1 mb-1'">
+                                <label for="tipoEventoEdicao">Tipo</label>
+                                <select ng-disabled="modoVisualizacao" ng-model="pautaEvento.tipo"
+                                        class="custom-select d-block w-100"
+                                        id="tipoEventoEdicao" required>
+                                    <option value="PRAZO" selected>Prazo</option>
+                                    <option value="TAREFA">Tarefa</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                  Escolha uma opção.
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mb-1">
+                                <label for="nomeColaboradorEdicao">Responsável</label>
+                                <select ng-disabled="modoVisualizacao" ng-model="pautaEvento.colaborador.id"
+                                        class="custom-select d-block w-100"
+                                        id="nomeColaboradorEdicao" required>
+                                    <option ng-repeat="colaborador in colaboradores" ng-value="colaborador.id" >{{colaborador.usuario.nome}}
+                                    </option>
+                                </select>
+                                <div class="invalid-feedback">
+                                  Indique o responsável.
+                                </div>
+                            </div>
+                            <div class="col-lg-3 mb-2">
+                                <label for="numeroProcessoAlt">Nº do processo</label>
+                                <input class="form-control formCadastro"
+                                       id="numeroProcessoAlt" value="{{pautaEvento.processo.numero}}" type="text" disabled >
+                            </div>
+                            <div class="col-lg-2 mb-2">
+                                <label for="dataPublicacaoEdicao" class="required-label">Publicação</label>
+                                <input ng-disabled="modoVisualizacao" ui-date="dateOptions"
+                                       ng-model="pautaEvento.dataPublicacao" class="form-control"
+                                       id="dataPublicacaoEdicao" placeholder="dd/mm/aaaa" type="text" required>
+                                <div class="invalid-feedback">
+                                    Insira a data de publicação
+                                </div>
+                            </div>
+                            <div ng-class="modoVisualizacao ? 'col-lg-2' : 'col-lg-2 bordersTudoEvento mb-1'">
+                                <label for="dataLimiteEdicao" class="required-label">Data limite</label>
+                                <input ng-disabled="modoVisualizacao" ui-date="dateOptions"
+                                       ng-model="pautaEvento.dataLimite" class="form-control"
+                                       id="dataLimiteEdicao" placeholder="dd/mm/aaaa" type="text" required>
+                                <div class="invalid-feedback">
+                                    Insira a data de limite
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 mb-1">
+                                <label for="eventoDescricaoAlt">Descrição</label>
+                                <input ng-disabled="modoVisualizacao" ng-model="pautaEvento.descricao"
+                                       class="form-control formCadastro" required
+                                       id="eventoDescricaoAlt" value="Descrição do evento" type="text">
+                                <div class="invalid-feedback">
+                                  Descreva a tarefa/evento.
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-1">
+                                <label for="eventoObservacaoAlt">Observações</label>
+                                <textarea ng-disabled="modoVisualizacao" ng-model="pautaEvento.observacaoCriacao"
+                                          class="form-control mb-3" rows="2"
+                                          id="eventoObservacaoAlt"></textarea>
+                            </div>
+                            <div class="row modalGravarAlt">
+                                <div class="col-sm-12 col-lg-12">
+                                    <button ng-click="salvarPautaEvento()" class="btn btn-gravarEvento btn-lg btn-block mb-2"
+                                            type="submit">Criar evento
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

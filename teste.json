@@ -1,0 +1,453 @@
+{
+  "dataBD": 0,
+  "dataElastic": [
+    {
+      "Fields": {},
+      "Source": {
+        "DocumentoID": 45364,
+        "Id": null,
+        "DocumentoPaiID": null,
+        "DocumentoPai": null,
+        "IndiceID": 0,
+        "Numero": "9759",
+        "Descricao": "Diário Oficial Nº 9759",
+        "NomeArquivo": "DO9759_09_10_2018.pdf",
+        "CaminhoArquivo": null,
+        "DataInicioPublicacaoArquivo": "\/Date(1539079200000)\/",
+        "DataEnvioArquivo": "\/Date(1539035647767)\/",
+        "DataCriacaoArquivo": "\/Date(1539035647767)\/",
+        "FoiIndexado": false,
+        "TamanhoArquivo": null,
+        "Texto": "Diario Oficial\n1 1 1 - - 0 1977\nEstado de Mato Grosso do Sul\nANO XL n. 9.759 CAMPO GRANDE-MS, TERCA-FEIRA, 9 DE OUTUBRO DE 2018 54 PAGINAS\nSECRETARIAS\nSECRETARIA DE ESTADO DE FAZENDA\nATO DECLARATORIO/SAT No 076, DE 08 DE OUTUBRO DE 2018.\nDispoe sobre a reativacao, suspensao e \ncancelamento de inscricoes estaduais, nos \ncasos que especifica, e da outras providencias.\nO SUPERINTENDENTE DE ADMINISTRACAO TRIBUTARIA, no uso de suas \natribuicoes e da competencia que lhe confere o art. 36 do Anexo IV ao Regulamento do \nICMS (RICMS), aprovado pelo Decreto no 9.203, de 18 de setembro de 1998, dada nova \nredacao atraves do Decreto 14.644, de 29 de dezembro de 2016,\nD E C L A R A:\nArt. 1o Ficam REATIVADAS, em virtude da regularizacao das pendencias que deram \ncausa a suspensao ou ao cancelamento, as inscricoes estaduais dos contribuintes \nrelacionados no anexo I a este Ato Declaratorio, e, consequentemente, restaurados os \nseus direitos fiscais, sem prejuizo do cumprimento das eventuais obrigacoes tributarias \nrelativas ao periodo de cancelamento ou suspensao das respectivas inscricoes estaduais \ne que estiverem pendentes de regularizacao.\nArt. 2o Ficam SUSPENSAS, com base no disposto no inciso I do art. 38  do Anexo IV ao \nRICMS, as inscricoes estaduais dos contribuintes relacionados no anexo II a este Ato \nDeclaratorio;\nArt. 3o Ficam CANCELADAS, com base no disposto na alinea \"A\", do inciso III, do art. 42 \ndo Anexo IV ao RICMS, as inscricoes estaduais dos contribuintes relacionados no anexo \nIII a este Ato Declaratorio;\nParagrafo unico. O cancelamento das inscricoes estaduais de que trata este artigo implica \na observancia do disposto nos §§ 1o, 2o, 3o e 4o do art. 42 do Anexo IV ao RICMS,\nArt. 4o Este Ato Declaratorio entra em vigor na data de sua publicacao.\nCampo Grande - MS, 08 de Outubro de 2018.\nLAURI LUIZ KENER\nSuperintendente de Administracao Tributaria\n                                                                                                                                                     \nANEXO I  AO ATO DECLARATORIO/SAT No 076/2018  08 DE OUTUBRO/2018\nAGUA CLARA\n1 GUSTAVO PAGNANI TRUJILLO 28.691.155-8\nANASTACIO\n2 CLEUZA DE OLIVEIRA PACHECO 28.725.245-0\n3 FRANCISCO ANDERSON 28.625.521-9\nAQUIDAUANA\n4 EMBALAGENS AQUIDAUANA EIRELI 28.349.316-0\n5 MARCOS AVELINO DOS SANTOS 28.763.031-5\n6 OSNALDO PEREIRA SOARES JUNIOR EIRELI 28.345.865-8\nBANDEIRANTES\n7 VALDENIR APARECIDO BORGES DE OLIVEIRA 28.780.974-9\nBATAGUASSU\n8 RODAM TRANSPORTES EIRELI 28.384.829-4\nBELA VISTA\n9 DROGARIA DROGAVISTA LTDA - ME 28.233.645-1\nBONITO\n10 DOMINGOS MANCANERA 28.789.348-0\n11 MELLIAR EMPREEND CONSULTORIA EIRELI ME 28.366.940-3\n12 RESTAURANTE DA ILHA LTDA 28.407.951-0\nCABECEIRA DO APA\n13 RONALDO FERNANDES ROMERO 28.653.051-1\nCAMAPUA\n14 SEILA RODRIGUES LIMA 28.619.807-0\nCAMPO GRANDE\n15 DINDAO CONVENIENCIA LTDA ME 28.412.256-4\n16 DOUTOR VET EIRELI - ME 28.400.791-9\n17 E R PONTES \u0026 CONSTRUCOES EIRELI 28.428.654-0\n18 FABRICIO BATISTA SILVEIRA EIRELI ME 28.419.990-7\n19 FERNANDA FROZA BONATTO ME 28.403.380-4\n20 J. E. LOCACOES EIRELI ME 28.415.831-3\n21 LAURO HENRIQUE NERY RAMOS ME 28.313.651-0\n22 MARCELE SANCHES VALLER EIRELI ME 28.416.552-2\n23 MARCELO LOPES CARVALHO 95253998187 ME 28.412.221-1\n24 MOVSTORE DISTRIB MOV ELETROD LTDA-ME 28.346.379-1\n25 PEREIRA E VIANA LTDA 28.390.883-1\n26 RIGNA COM ELEVADORES LTDA - EPP 28.336.102-6\n27 SANTOS E ZANANDREA LTDA - ME 28.361.896-5\n28 SARAIVA MODA FEMININA LTDA 28.420.492-7\n29 TAVARES E RODRIGUES LTDA ME 28.337.663-5\n30 V. W. M. MARKETING E SERVICOS LTDA 28.344.321-9\nCHAPADAO DO SUL\n31 DINAMAR SOARES DIAS 96098805172 - ME 28.395.114-1\nCORUMBA\n32 ADRIANA SILVA VELASQUES 28.406.358-4\n33 GM COMERCIO ALIMENTOS EIRELI - ME 28.426.694-9\n34 J. A. MARTINS CANDIDO ME 28.416.723-1\n35 J. FERNANDES FILHO EIRELI ME 28.396.849-4\n36 MICAF - MINERACAO CAFARNAUM LTDA 28.311.385-5\nCOSTA RICA\n37 ENG ENG PROJ EMPREEND EIRELI 28.375.072-3\nCOXIM\n38 MARIA JOSE DA SILVA 28.785.582-1\nDEODAPOLIS\n39 EDUILSON DEO DA SILVA 28.766.706-5\nDOIS IRMAOS DO BURITI\n40 PAULO MARCIO TONETTI 28.737.689-3\nDOURADOS\n41 CLAUDIO VIEIRA RAMOS 28.598.502-7\n42 COMERCIAL GALIPHE - EIRELI ME 28.409.817-5\n43 JAIR PEREIRA DE SOUZA 28.662.039-1\n44 NATALIA RUIZ B. DOS SANTOS ME 28.423.648-9\nGOVERNADOR\nREINALDO AZAMBUJA SILVA\nVice-Governadora\nROSIANE MODESTO DE OLIVEIRA   \n      \nSecretario de Estado de Governo e Gestao Estrategica\nEDUARDO CORREA RIEDEL\nControlador-Geral do Estado\nCARLOS EDUARDO GIRAO DE ARRUDA\nSecretario de Estado de Fazenda\nGUARACI LUIZ FONTANA \nSecretario de Estado de Administracao e Desburocratizacao\nEDIO DE SOUZA VIEGAS\nProcurador-Geral do Estado\nADALBERTO NEVES MIRANDA\nSecretaria de Estado de Educacao\nMARIA CECILIA AMENDOLA DA MOTTA\nSecretario de Estado de Saude\n  CARLOS ALBERTO MORAES COIMBRA\nSecretario de Estado de Justica e Seguranca Publica\n        ANTONIO CARLOS VIDEIRA \nSecretaria de Estado de Direitos Humanos, Assistencia Social e \nTrabalho \nELISA CLEIA PINHEIRO RODRIGUES NOBRE\nSecretaria de Estado de Cultura e Cidadania\nATHAYDE NERY DE FREITAS JUNIOR \nSecretaria de Estado de Meio Ambiente, Desenvolvimento \nEconomico, Producao e Agricultura Familiar\nJAIME ELIAS VERRUCK\nSecretario de Estado de Infraestrutura\nHELIANEY PAULO DA SILVA",
+        "Pagina": 1,
+        "Indice": null,
+        "Suplementos": null
+      },
+      "Index": "diariodoeproducao",
+      "InnerHits": null,
+      "Score": 0,
+      "Type": "documento",
+      "Version": null,
+      "Id": "AWZVrF9XfEVbT3xfeoFX",
+      "Sorts": [
+        1539064800000,
+        1
+      ],
+      "Highlights": {
+        "texto": {
+          "DocumentId": "AWZVrF9XfEVbT3xfeoFX",
+          "Field": "texto",
+          "Highlights": [
+            "Diario Oficial\n1 1 1 - - 0 1977\nEstado de Mato Grosso do Sul\nANO XL n. 9.759 \u003cem\u003eCAMPO\u003c/em\u003e \u003cem\u003eGRANDE\u003c/em\u003e-MS, TERCA",
+            " IV ao RICMS,\nArt. 4o Este Ato Declaratorio entra em vigor na data de sua publicacao.\n\u003cem\u003eCampo\u003c/em\u003e \u003cem\u003eGrande\u003c/em\u003e - MS",
+            "\n\u003cem\u003eCAMPO\u003c/em\u003e \u003cem\u003eGRANDE\u003c/em\u003e\n15 DINDAO CONVENIENCIA LTDA ME 28.412.256-4\n16 DOUTOR VET EIRELI - ME 28.400.791-9\n17"
+          ]
+        }
+      },
+      "Explanation": null,
+      "MatchedQueries": null
+    },
+    {
+      "Fields": {},
+      "Source": {
+        "DocumentoID": 45364,
+        "Id": null,
+        "DocumentoPaiID": null,
+        "DocumentoPai": null,
+        "IndiceID": 0,
+        "Numero": "9759",
+        "Descricao": "Diário Oficial Nº 9759",
+        "NomeArquivo": "DO9759_09_10_2018.pdf",
+        "CaminhoArquivo": null,
+        "DataInicioPublicacaoArquivo": "\/Date(1539079200000)\/",
+        "DataEnvioArquivo": "\/Date(1539035647767)\/",
+        "DataCriacaoArquivo": "\/Date(1539035647767)\/",
+        "FoiIndexado": false,
+        "TamanhoArquivo": null,
+        "Texto": "DIARIO OFICIAL n. 9.759 9 DE OUTUBRO DE 2018 PAGINA 2 \nSecretarias................................................................................................................ 01\nAdministracao Indireta................................................................................................ 06\nBoletim de Licitacoes................................................................................................... 27\nBoletim de Pessoal...................................................................................................... 31\nDefensoria Publica-Geral do Estado............................................................................... 50\nMunicipalidades..........................................................................................................  51\nPublicacoes a Pedido...................................................................................................  54\nSUMARIO\n45 TEREZINHA DE LEMOS MENDES 28.798.883-0\n46 ZUKA MOVEIS E VIAGENS EIRELI 28.339.691-1\nFATIMA DO SUL\n47 ANTONIO CESAR M RODRIGUES ME 28.274.831-8\n48 I. C. BORGES ME 28.387.036-2\nIGUATEMI\n49 JOSE MARIA DO SACRAMENTO 28.791.363-5\nIVINHEMA\n50 PAULO JOSE DA SILVA 28.768.314-1\nJARAGUARI\n51 SEBASTIAO BIBIANO VELASQUE 28.717.365-8\nJUTI\n52 NIVALDO STRADA - ME 28.310.223-3\nMARACAJU\n53 DANIELA RIBEIRO CORREA MIGLIOLI 28.789.415-0\n54 RODOLFO DA SILVA TEIXEIRA ME 28.366.429-0\nMIRANDA\n55 VALWIRES DUARTE DA SILVA 28.799.508-9\nNOVA ALVORADA DO SUL\n56 SERAFIM MENEGHEL 28.758.404-6\nNOVA ANDRADINA\n57 ASSOC APICULT REGIAO N ANDRADINA 28.398.440-6\n58 PESQUEIRA ARTIGOS DO VESTUARIO LTDA 28.369.914-0\nPARANAIBA\n59 SILVAM APARECIDO LOPES DA SILVA 28.797.908-3\nPEDRO GOMES\n60 ABEL ELIAS ANTONIO E SILVA 28.678.803-9\n61 WALFREDO NOGUEIRA JUNIOR 28.427.441-0\nPONTA PORA\n62 SEVERINO ANACLETO RUBIN 28.528.834-2\nRIBAS DO RIO PARDO\n63 LAURO HENRIQUE NERY RAMOS 28.779.856-9\n64 MARIO GERMANO BARROS WANDERLEY 28.560.747-2\nRIO BRILHANTE\n65 CAMPOS \u0026 CORTEZ LTDA ME 28.324.275-2\n66 EDIS DA SILVA ROCHA 28.530.170-5\n67 GENY RATIER PEREIRA MARTINS 28.668.680-5\n68 MH SPORTS COM ART ESPORTIVOS LTDA 28.362.959-2\n69 ROBERTO MURAOKA ME 28.348.317-2\nRIO VERDE DE MATO GROSSO\n70 SILVIO CASTRO ALVES 28.311.633-1\nSAO GABRIEL DO OESTE\n71 IVANIR RIBEIRO SILVA 28.542.855-1\nSONORA\n72 ADELAR CARMELIO TOLDO \u0026 CIA LTDA EPP 28.371.260-0\nTACURU\n73 CHRISLAYNE GIOVANA MARTINS 28.336.409-2\nTAQUARUSSU\n74 SILVANO RODRIGUES DE SOUZA 28.771.208-7\nTERENOS\n75 VANDERSON BOGUE E BORGES 28.699.806-8\nTRES LAGOAS\n76 COOPERAMS - COOP REG APIC MELIPONIC MS 28.398.827-4\n77 LAIS CRISTINA C QUIRINO 29236264867 28.402.426-0\n78 LUCIENE SANTOS LOPES DE BARROS - ME 28.398.715-4\n79 SALIM JORGE TABOX NETO ME 28.232.288-4\nANEXO II  AO ATO DECLARATORIO/SAT No 076/2018 08 DE OUTUBRO/2018\nMARACAJU\n1 MIRIA CLEUCIANE DA SILVA ME 28.419.501-4\nSANTA RITA DO PARDO\n2 LUCAS S S VITTI LIMA- EIRELI EPP 28.386.227-0\nANEXO III AO ATO DECLARATORIO/SAT No 076/2018 08 DE OUTUBRO/2018\nCAMPO GRANDE\n1 ALLINE FERNANDA RIBAS ZEDE ME 28.405.627-8\n2 BUYTENDORP \u0026 ARRUDA LTDA ME 28.365.228-4\n3 C M DE SOUZA - ME 28.405.969-2\n4 MOTO7 PECAS E ACESSORIOS - EIRELI 28.381.392-0\n5 NOVO TEMPO TRANSPORTES LTDA ME 28.416.982-0\n6 PADOVANI \u0026 PADOVANI TRANSP REPRES LTDA 28.367.294-3\n7 RICARDO GUILHERME MALFATTI 28.431.778-0\n8 RODRIGO DE SOUZA BARTOLOMEO - ME 28.395.070-6\n9 SAO BENTO COM DE MEDIC PERFUMARIA LTDA 28.363.173-2\n10 SOLANGE BEZERRA DA SILVA 93133715100 28.429.360-1\nDOURADOS\n11 MEURER MECANICA E MANUTENCAO LTDA 28.353.776-0\n12 SOLAR COMERCIO DE PISCINAS - EIRELI ME 28.419.424-7\nPARANHOS\n13 ALICE DA SILVA MOLINAS 28.367.185-8\nTRES LAGOAS\n14 GENIVALDO JOSE SOARES GONCALVES ME 28.410.582-1\n15 PAULO ANTONIO GONCALVES DE SOUZA 28.369.480-7\nSECRETARIA DE ESTADO DE ADMINISTRACAO E DESBUROCRATIZACAO\nEXTRATO DO CONVENIO DE CONSIGNACAO SAD/MS No 11/2018\nPARTES: Estado de Mato Grosso do Sul atraves da Secretaria de Estado de Administracao \ne Desburocratizacao e a Cooperativa de Credito, Poupanca e Investimento de Campo \nGrande e Regiao - SICREDI CAMPO GRANDE MS.\nFUNDAMENTO LEGAL: Lei Federal no 8.666, de 21 de junho de 1993 e ainda legislacoes \nespecificas com suas alteracoes posteriores, quais sejam: Decreto Estadual no 11.261 \nde 16 de junho de 2003 e Decreto Estadual no 12.796 de 3 de agosto de 2009, alem das \ndemais materias pertinentes ao assunto.\nOBJETO: Credenciar a CONVENENTE para permitir a averbacao de consignacoes na re-\nmuneracao de servidores publicos do Estado de Mato Grosso do Sul, processada pelo \nsistema de folha de pagamento do Estado, com o objetivo de realizar emprestimos e \nfinanciamentos pessoais aos Servidores Publicos Estaduais.\nVIGENCIA: 08 de outubro de 2018 a 08 de outubro de 2020.\nDATA DA ASSINATURA: 08 de outubro 2018.\nASSINATURAS: Edio de Souza Viegas, Fabio Jose Wolski de Almeida, Altair Goncalves.\nPROCURADORIA-GERAL DO ESTADO\nDespesas autorizadas com emissao das respectivas notas de empenho pelo Fundo \nEspecial da Procuradoria-Geral do Estado-FUNDE/PGE (Art. 147 e 149 da LC \n095/2001, com redacao dada pela LC 118/2016 c/c Art. 2o da LC 179/2003), abaixo \nrelacionadas, referente ao mes de setembro de 2018.\nAmparo legal: Art. 16 da Lei n. 8.666/93\nPROCESSO NE OBJETO DATA CREDOR VALOR\n15/000654/2014 160 Despesa com \nlocacao de \nequipamentos de \ninformatica \n05/09/2018 Print e Copy \nEquipamentos e \nServicos Ltda - \nEPP\n11.861,85\n15/000373/2018 161 Cancelamento de \nsaldo nao utilizado\n06/09/2018 Vencimentos 188,14\n15/000376/2018 162 Cancelamento de \nsaldo nao utilizado\n06/09/2018 Vencimentos 8.043,76\n15/000114/2018 163 159 divisorias \nremoviveis, 35 \nx 1202 mm e \n10 portas para \ndivisoria, 211 x 82 \ncm e 35 mm\n10/09/2018 ART Comercio \nConstrucoes e \nInformatica Ltda\n19.891,07\n15/001501/2018 164 60 cadeiras tipo \nuniversitaria \ncom prancheta \nescamoteavel \n10/09/2018 Comercial K \u0026 D \nLtda - EPP\n18.480,00\n15/003588/2018 165 5 caixas de \nenvelopes kraft \n229 x 324 mm, \n5 caixas de \nenvelopes kraft \n340 x 240 mm, \n100 caixas de \ncolchetes n. 07, \n100 caixas de \ncolchetes n. 10, \n100 caixas de \ncolchetes n. 12\n12/09/2018 Marcia Cristina \nMaciel da Silva \n- ME\n1.966,90\nOrgao Oficial destinado a publicacao dos atos do poder Executivo.\nSede: Av. Desembargador Jose Nunes da Cunha, s/n\nParque dos Poderes - SAD - Bloco I - CEP 79031-310\nTelefone: (67) 3318-1480 \n Campo Grande-MS - CNPJ 02.940.523.0001/43\nEDIO DE SOUZA VIEGAS\nSecretario de Estado de Administracao e Desburocratizacao\nwww.imprensaoficial.ms.gov.br  -   materia@sad.ms.gov.br\nPublicacao de Materia por cm linear de coluna R$ 11,40",
+        "Pagina": 2,
+        "Indice": null,
+        "Suplementos": null
+      },
+      "Index": "diariodoeproducao",
+      "InnerHits": null,
+      "Score": 0,
+      "Type": "documento",
+      "Version": null,
+      "Id": "AWZVrGBPfEVbT3xfeoFY",
+      "Sorts": [
+        1539064800000,
+        2
+      ],
+      "Highlights": {
+        "texto": {
+          "DocumentId": "AWZVrGBPfEVbT3xfeoFY",
+          "Field": "texto",
+          "Highlights": [
+            " DECLARATORIO/SAT No 076/2018 08 DE OUTUBRO/2018\n\u003cem\u003eCAMPO\u003c/em\u003e \u003cem\u003eGRANDE\u003c/em\u003e\n1 ALLINE FERNANDA RIBAS ZEDE ME 28.405.627-8",
+            " Desburocratizacao e a Cooperativa de Credito, Poupanca e Investimento de \u003cem\u003eCampo\u003c/em\u003e \n\u003cem\u003eGrande\u003c/em\u003e e Regiao",
+            " - SICREDI \u003cem\u003eCAMPO\u003c/em\u003e \u003cem\u003eGRANDE\u003c/em\u003e MS.\nFUNDAMENTO LEGAL: Lei Federal no 8.666, de 21 de junho de 1993 e ainda",
+            "/n\nParque dos Poderes - SAD - Bloco I - CEP 79031-310\nTelefone: (67) 3318-1480 \n \u003cem\u003eCampo\u003c/em\u003e \u003cem\u003eGrande\u003c/em\u003e-MS"
+          ]
+        }
+      },
+      "Explanation": null,
+      "MatchedQueries": null
+    },
+    {
+      "Fields": {},
+      "Source": {
+        "DocumentoID": 45364,
+        "Id": null,
+        "DocumentoPaiID": null,
+        "DocumentoPai": null,
+        "IndiceID": 0,
+        "Numero": "9759",
+        "Descricao": "Diário Oficial Nº 9759",
+        "NomeArquivo": "DO9759_09_10_2018.pdf",
+        "CaminhoArquivo": null,
+        "DataInicioPublicacaoArquivo": "\/Date(1539079200000)\/",
+        "DataEnvioArquivo": "\/Date(1539035647767)\/",
+        "DataCriacaoArquivo": "\/Date(1539035647767)\/",
+        "FoiIndexado": false,
+        "TamanhoArquivo": null,
+        "Texto": "DIARIO OFICIAL n. 9.759 9 DE OUTUBRO DE 2018 PAGINA 3 \n15/003588/2018 166 3 caixas de \nenvelopes kraft \n410 x 310 mm\n12/09/2018 Casa 10 Comercial \ne Servicos Ltda\n293,55\n15/003565/2018 167 300 caixas de \narquivo morto 36 \nx 25 x 13 mm\n12/09/2018 J4 Servicos e \nNegocios Multiplos \nEirelli\n996,60\n15/003565/2018 168 500 caixas de \narquivo morto 37 \nx 14 x 25 mm, \n100 caixas de \nclipes n. 4/0, 50 \ncaixas de elastico \nem latex n. 18, \n10 rolos de papel \ncontact 45 cm x \n10 m\n12/09/2018 Marcia Cristina \nMaciel da Silva \n- ME\n1.570,00\n15/002903/2018 169 Coffe break e \nrefeicao conforme \nata 004/2018 \n12/09/2018 Prime Buffet MS \nLtda\n12.010,00\n15/003455/2018 170 35 copias de \nchaves, tipo \nsimples\n12/09/2018 Sobral Chaves e \nCarimbos Ltda \n192,15\n15/000114/2018 171 31 vidros, 4 \nmm, incolor, \ndevidamente \ninstalados\n12/09/2018 ART Comercio \nConstrucoes e \nInformatica Ltda\n5.166,46\n15/000114/2018 172 Manutencao de \nbem movel \n12/09/2018 ART Comercio \nConstrucoes e \nInformatica Ltda\n11.342,47\n15/000007/2018 173 Diaria fora do \nEstado para \nparticipacao \nde Procurador \ndo Estado para \nparticipar da \nReuniao do \nColegio Nacional \nde Procuradores \nGerais dos Estados \ne do Distrito \nFederal - CONPEG, \nnos dias 23 e \n24/08/2018 no Rio \nde Janeiro - RJ\n12/09/2018 Diarias 813,18\n15/000007/2018 174 Diaria fora do \nEstado para \nparticipacao \nde Procurador-\nGeral do Estado \npara participar \nda Reuniao do \nColegio Nacional \nde Procuradores \nGerais dos Estados \ne do Distrito \nFederal - CONPEG, \nnos dias 23 e \n24/08/2018 no Rio \nde Janeiro - RJ\n12/09/2018 Diarias 699,54\n15/000007/2018 175 Diaria fora do \nEstado para \nparticipacao de \n05 Procuradores \ndo Estado para \nparticipar do \nXLIV Congresso \nNacional de \nProcuradores \ndo Estado e do \nDistrito Federal, \nnos dias 19 a \n21/09/2018 em \nSalvador - BA\n12/09/2018 Diarias 5.954,65\n15/003565/2018 176 20 cestos de lixo \nde fibra, 30 x 30 \ncm \n12/09/2018 CLR Comercial \nLtda - EPP\n810,00\n15/001156/2018 177 Cancelamento de \nsaldo nao utilizado\n13/09/2018 RPR Criacoes \nGraficas Ltda - ME\n1.200,00\n15/000654/2014 178 Despesa com \nlocacao de \nequipamentos de \ninformatica \n14/09/2018 Print e Copy \nEquipamentos e \nServicos Ltda - \nEPP\n11.861,85\n15/003805/2018 179 5.000 impressoes \npersonalizadas em \ncapa de processo \npadrao\n18/09/2018 Rezende \u0026 Diniz \nNeto Ltda\n1.700,00\n15/100005/2018 180 Suprimento de \nfundos \n24/09/2018 MS/SF/FUNDE- \nPGE/ Jaci Faustino \nda Fonseca\n12.000,00\n15/002883/2018 181 8 discos para \nservidor IBM \nx 350 M2, 600 \nGB, 6 cabos, 2,5 \npolegadas, 10.000 \nrpm\n24/09/2018 Innfo Master \nSeguranca da \nInformacao e \nComercio Eireli \n9.880,00\n15/003376/2017 182 Passagem aerea \npara Procurador \ndo Estado\n24/09/2018 Easycred Servicos \nde Credito e \nTurismo Eirelli\n5.000,00\n15/000373/2018 183 Despesa com cota \nfunde 2018\n26/09/2018 Vencimentos 326.278,84\n15/000376/2018 184 Despesa ref. \nsetembro/2018 \n- LC 095/01 e LC \n238/17\n26/09/2018 Vencimentos 74.255,16\n15/000376/2018 185 Despesa ref. \nsetembro/2018 \n- LC 095/01 e LC \n238/17\n26/09/2018 Vencimentos 319.771,60\nCampo Grande/MS, 08 de setembro de 2018\nFernando Cesar Caurim Zanele - Procurador-Geral Adjunto do Estado\nOrdenador de Despesa FUNDE/PGE\nDespesas autorizadas com emissao das respectivas notas de empenho pela \nPROCURADORIA-GERAL DO ESTADO, abaixo relacionadas, referente ao mes de setembro \nde 2018.\nAmparo legal: Art. 16 da Lei n. 8.666/93\nPROCESSO NE OBJETO DATA CREDOR VALOR\n15/000654/2014 580 Despesa com \nlocacao de \nequipamentos de \ninformatica\n04/09/2018 Print e Copy \nEquipamentos \ne Servicos Ltda \n- EPP\n57.154,73\n15/000015/2018 581 Cancelamento de \nsaldo nao utilizado\n04/09/2018 Vencimentos 413.965,79\n15/000012/2018 582 Cancelamento de \nsaldo nao utilizado\n04/09/2018 Vencimentos 12.007,30\n15/000012/2018 583 Cancelamento de \nsaldo nao utilizado\n04/09/2018 Vencimentos 968,44\n15/000015/2018\n \n584 Cancelamento de \nsaldo nao utilizado\n04/09/2018 Vencimentos 640,00\n15/000012/2018 585 Cancelamento de \nsaldo nao utilizado\n04/09/2018 Vencimentos 8.037,85\n15/000015/2018\n \n586 Cancelamento de \nsaldo nao utilizado\n04/09/2018 Vencimentos 1.390,90\n15/000015/2018\n \n587 Cancelamento de \nsaldo nao utilizado\n04/09/2018 Vencimentos 2.192,03\n15/000015/2018 588 Cancelamento de \nsaldo nao utilizado\n04/09/2018 Vencimentos 5.000,00\n15/000012/2018 589 Cancelamento de \nsaldo nao utilizado\n04/09/2018 Vencimentos 31,56\n15/000316/2018 590 Despesa Indeniz. \nTransp. aos \nOficiais de Justica \ne Avaliadores do \nTJ/MS - diligencias \nexercicio de 2018 \n04/09/2018 Tribunal Justica/\nMS \n25.000,00\n15/000588/2016 591 Despesas com \nremessas e selos \npostais \n04/09/2018 Empresa \nBrasileira de \nCorreios e \nTelegrafos\n3.800,00\n15/001912/2015 592 Contratacao \nde servicos \nde limpeza e \nconservacao \n04/09/2018\n \nVyga Prest. de \nServicos de \nConservacao e \nAsseio\n8.998,71\n15/002127/2016 593 Despesa com \nmanutencao de \ncartoes eletronicos \nde abastecimento \npara a frota PGE\n04/09/2018\n \nS.H. Informatica \nLtda\n135,00\n15/002127/2016 594 Despesa com \nlavagem e \nborracharia para a \nfrota PGE\n04/09/2018\n \nS.H. Informatica \nLtda\n250,00\n15/000869/2014 595 Prest. Serv. Nat. \nContinua Transp. \nMat. Perm. e \nConsumo \n04/09/2018 Cruzeiro do Sul \nEncomendas \nLtda\n700,00\n15/000250/2015 596 Contratacao \nde servicos de \nmanutencao e \natualizacao do \nsistema SAJ/PGE/\nNET \n04/09/2018 Softplan \nPlanejamento e \nSistemas Ltda\n101.586,85\n15/002255/2014 597 Despesa com \nlocacao de \nsoftware\n04/09/2018 Rimafer \nComercio de \nRelogio de Ponto \nEirele\n180,00\n15/002255/2014 598 Despesa com \nlocacao de relogio \nde ponto\n04/09/2018\n \nRimafer \nComercio de \nRelogio de Ponto \nEirele\n220,00\n15/002239/2016 599 Serv. mensal c/\nmenor aprendiz \npara PGE Sede, \nPRD, PRPP, PRC \n04/09/2018\n \nSeleta - Soc. \nCaritativa e \nHumanitaria\n38.889,75\n15/002127/2016 600 Despesa com \ncombustivel para \na frota PGE - \noutubro/2018\n04/09/2018 Taurus \nDistribuidora de \nPetroleo Ltda\n1.600,00\n15/000224/2017 601 Despesa \ncom locacao/ \nmanutencao de \nequipamentos \nreprograficos \n04/09/2018 Print e Copy \nEquipamentos \ne Servicos Ltda \n- EPP\n34.080,00\n15/000323/2015 602 Contratacao \nde servicos de \nmanutencao chiller \ne aparelhos de \nar condicionado \ne fancoletes, \nrateado entre PGE, \nCGE e SEDHAST\n04/09/2018 Campmaq \nComercio e \nManutencao de \nMaquinas\n2.863,00\n15/000323/2015 603 Contratacao \nde servicos de \nmanutencao chiller \ne aparelhos de \nar condicionado \ne fancoletes, \nrateado entre PGE, \nCGE e SEDHAST\n04/09/2018 Campmaq \nComercio e \nManutencao de \nMaquinas\n2.804,00",
+        "Pagina": 3,
+        "Indice": null,
+        "Suplementos": null
+      },
+      "Index": "diariodoeproducao",
+      "InnerHits": null,
+      "Score": 0,
+      "Type": "documento",
+      "Version": null,
+      "Id": "AWZVrGI6fEVbT3xfeoFZ",
+      "Sorts": [
+        1539064800000,
+        3
+      ],
+      "Highlights": {
+        "texto": {
+          "DocumentId": "AWZVrGI6fEVbT3xfeoFZ",
+          "Field": "texto",
+          "Highlights": [
+            " \n238/17\n26/09/2018 Vencimentos 319.771,60\n\u003cem\u003eCampo\u003c/em\u003e \u003cem\u003eGrande\u003c/em\u003e/MS, 08 de setembro de 2018\nFernando Cesar"
+          ]
+        }
+      },
+      "Explanation": null,
+      "MatchedQueries": null
+    },
+    {
+      "Fields": {},
+      "Source": {
+        "DocumentoID": 45364,
+        "Id": null,
+        "DocumentoPaiID": null,
+        "DocumentoPai": null,
+        "IndiceID": 0,
+        "Numero": "9759",
+        "Descricao": "Diário Oficial Nº 9759",
+        "NomeArquivo": "DO9759_09_10_2018.pdf",
+        "CaminhoArquivo": null,
+        "DataInicioPublicacaoArquivo": "\/Date(1539079200000)\/",
+        "DataEnvioArquivo": "\/Date(1539035647767)\/",
+        "DataCriacaoArquivo": "\/Date(1539035647767)\/",
+        "FoiIndexado": false,
+        "TamanhoArquivo": null,
+        "Texto": "DIARIO OFICIAL n. 9.759 9 DE OUTUBRO DE 2018 PAGINA 4 \n15/000323/2015 604 Contratacao \nde servicos de \nmanutencao chiller \ne aparelhos de \nar condicionado \ne fancoletes, \nrateado entre PGE, \nCGE e SEDHAST\n04/09/2018 Campmaq \nComercio e \nManutencao de \nMaquinas\n1.164,00\n15/000323/2015 605 Contratacao \nde servicos de \nmanutencao chiller \ne aparelhos de \nar condicionado \ne fancoletes, \nrateado entre PGE, \nCGE e SEDHAST\n04/09/2018 Campmaq \nComercio e \nManutencao de \nMaquinas\n569,00\n15/000323/2015 606 Contratacao \nde servicos de \nmanutencao chiller \ne aparelhos de \nar condicionado \ne fancoletes, \nrateado entre PGE, \nCGE e SEDHAST\n04/09/2018 Campmaq \nComercio e \nManutencao de \nMaquinas\n549,00\n15/000323/2015 607 Fornecimento \nde pecas para \nmanutencao chiller \ne aparelhos de \nar condicionado \ne fancoletes, \nrateado entre PGE, \nCGE e SEDHAST\n04/09/2018 Campmaq \nComercio e \nManutencao de \nMaquinas\n227,00\n15/000654/2014 608 Cancelamento de \nsaldo nao utilizado\n06/09/2018 Print e Copy \nEquipamentos \ne Servicos Ltda \n- EPP\n27,00\n15/000654/2014 609 Cancelamento de \nsaldo nao utilizado\n06/09/2018 Print e Copy \nEquipamentos \ne Servicos Ltda \n- EPP\n27,00\n15/000654/2014 610 Cancelamento de \nsaldo nao utilizado\n06/09/2018 Print e Copy \nEquipamentos \ne Servicos Ltda \n- EPP\n27,00\n15/000654/2014 611 Cancelamento de \nsaldo nao utilizado\n06/09/2018 Print e Copy \nEquipamentos \ne Servicos Ltda \n- EPP\n27,00\n15/000654/2014 612 Cancelamento de \nsaldo nao utilizado\n06/09/2018 Print e Copy \nEquipamentos \ne Servicos Ltda \n- EPP\n27,00\n15/002077/2018 613 Cancelamento de \nsaldo nao utilizado\n10/09/2018 S.H. \nInformatica \nLtda\n186,00\n15/001563/2014 614 Despesa com vale \ntransporte \n10/09/2018 Consorcio \nGuaicurus\n281,20\n15/001563/2014 615 Despesa com vale \ntransporte \n10/09/2018 Consorcio \nGuaicurus\n1.820,40\n15/001563/2014 616 Despesa com \nrastreamento de \ncartoes eletronicos\n10/09/2018 Consorcio \nGuaicurus\n126,10\n15/001563/2014 617 Despesa com \nrastreamento de \ncartoes eletronicos\n10/09/2018 Consorcio \nGuaicurus\n51,80\n15/000121/2017 618 Parcelamento \nMS PREV \nPatronal - Plano \nPrevidenciario\n11/09/2018 AGEPREV 3.497,37\n15/001147/2011 619 Cancelamento de \nsaldo nao utilizado\n12/09/2018 Tribunal de \nJustica/MS\n14.119.100,27\n15/001147/2011 620 Despesa com \nprecatorio EC \n99/2017 - \njunho/2018\n12/09/2018 Tribunal de \nJustica/MS\n14.119.100,27\n15/000614/2018 621 Despesa com \nregularizacao da \nconta 113810600 \n- sequestros - \nagosto/2018\n13/09/2018 Tribunal de \nJustica/MS\n89.296,93\n15/000614/2018 622 Despesa com \nregularizacao da \nconta 113810600 \n- sequestros - \nagosto/2018\n13/09/2018 TRT da 24a \nRegiao \n17.970,37\n15/000654/2014 623 Despesa com \nlocacao de \nequipamentos de \ninformatica\n14/09/2018 Print e Copy \nEquipamentos \ne Servicos Ltda \n- EPP\n57.154,72\n15/000614/2018 624 Cancelamento de \nsaldo nao utilizado\n19/09/2018\n \nTribunal de \nJustica/MS\n10.295,35\n15/000022/2018 625 Cancelamento de \nsaldo nao utilizado\n19/09/2018\n \nFGTS \nRecolhimento\n7,30\n15/000022/2018 626 Cancelamento de \nsaldo nao utilizado\n19/09/2018\n \nFGTS \nRecolhimento\n7,30\n \n15/002127/2016 627 Cancelamento de \nsaldo nao utilizado\n24/09/2018 Taurus \nDistribuidora de \nPetroleo Ltda\n52,90\n15/002127/2016 628 Cancelamento de \nsaldo nao utilizado\n24/09/2018 Taurus \nDistribuidora de \nPetroleo Ltda\n134,05\n15/000015/2018 629 Despesa Folha \nde Pagamento \nEstatutario\n24/09/2018 Vencimentos 8.500,00\n15/000015/2018 630 Despesa Folha \nde Pagamento \nEstatutario \n- janeiro a \ndezembro/\n2018\n24/09/2018 Vencimentos 411.200,00\n15/000012/2018 631 Despesa Folha \nde Pagamento \nComissionado \n- janeiro a \ndezembro/\n2018\n24/09/2018 Vencimentos 376.200,00\n15/000022/2018 632 Despesa com \nFGTS - regime \nCLT - Processo \nComissionados \n- janeiro a \ndezembro/\n2018\n24/09/2018 FGTS \nRecolhimento\n125,00\n15/000020/2018 633 Despesas INSS \nPatronal - janeiro \na outubro/2018\n24/09/2018 INSS 90.000,00\n15/000015/2018 634 Despesa Folha \nde Pagamento \nEstatutario\n24/09/2018 Vencimentos\n \n6.000,00\n15/000012/2018 635 Despesa Folha \nde Pagamento \nComissionados   - \nabril a dezembro/\n2018\n24/09/2018 Vencimentos\n \n1.000,00\n15/000015/2018 636 Despesa Folha \nde Pagamento \nEstatutario\n24/09/2018 Vencimentos\n \n1.000,00\n15/000015/2018 637 Despesa Folha \nde Pagamento \nEstatutario\n24/09/2018 Vencimentos\n \n6.000,00\n15/000015/2018 638 Despesa Folha \nde Pagamento \nEstatutario - julho \na outubro/2018\n24/09/2018 Vencimentos\n \n5.000,00\n15/000015/2018 639 Despesa Folha \nde Pagamento \nEstatutario - \nsetembro -2018\n25/09/2018 Vencimentos\n \n3.002.886,85\n15/000015/2018 640 Despesa Folha \nde Pagamento \nEstatutario \n25/09/2018 Vencimentos\n \n69.766,94\n15/000015/2018 641 Despesa Folha \nde Pagamento \nEstatutario\n25/09/2018 Vencimentos\n \n1.214,36\n15/000016/2018 642 Despesa Folha \nde Pagamento \nEstatutario\n25/09/2018 AGEPREV 798.508,82\n15/000012/2018 643 Despesa Folha \nde Pagamento \nComissionado \n25/09/2018 Vencimentos 23.500,33\n15/000012/2018 644 Despesa Folha \nde Pagamento \nComissionado \n25/09/2018 Vencimentos 1.465,39\n15/000012/2018 645 Despesa Folha \nde Pagamento \nComissionado \n25/09/2018 Vencimentos 11.678,02\n15/000012/2018 646 Despesa Folha \nde Pagamento \nComissionado \n25/09/2018 Vencimentos 1.918,04\n15/000012/2018 647 Despesa Folha \nde Pagamento \nComissionado \n25/09/2018 Vencimentos 3.378,23\n15/000020/2018 648 Despesas INSS \nPatronal\n25/09/2018 INSS 2.109,08\n15/000021/2018 649 MSPREV - Inativos \n- cota 20% - Lei \n3.150/2005, art. \n122, I \n25/09/2018 AGEPREV 163.300,84\n15/000015/2018 650 Despesa Folha \nde Pagamento \nEstatutario\n25/09/2018 Vencimentos\n \n317,60\n15/000015/2018 651 Despesa Folha \nde Pagamento \nEstatutario\n25/09/2018 Vencimentos\n \n110.024,55\n \n15/000012/2018 652 Despesa Folha \nde Pagamento \nComissionados\n25/09/2018 Vencimentos\n \n8.281,10\n \n15/000323/2015 653 Cancelamento de \nsaldo nao utilizado\n26/09/2018 Campmaq \nComercio e \nManutencao de \nMaquinas\n2,30\n15/000323/2015 654 Cancelamento de \nsaldo nao utilizado\n26/09/2018 Campmaq \nComercio e \nManutencao de \nMaquinas\n89,55\n15/000312/2018 655 Deposito Judicial \nde honorarios \npericiais - autos \n0002195-42.2012.\n8.12.0002\n27/09/2018 Tribunal de \nJustica/MS\n1.200,00\nCampo Grande/MS, 05 de outubro de 2018\nDenis Cleiber Miyashiro Castilho - Procurador do Estado\nOrdenador de Despesa PGE\nSECRETARIA DE ESTADO DE EDUCACAO\nExtrato do Termo de Convenio sob n. cadastral 28.765 de 22/6/2018\nProcesso n. 29/016.064/2018.\nPartes: Estado de Mato Grosso do Sul, por intermedio da Secretaria de Estado de \nEducacao - SED/MS, CNPJ/MF N. 02.585.924/0001-22, denominada CONCEDENTE e a \nAssociacao de Pais e Amigos dos Excepcionais, Municipio de Sidrolandia- MS, CNPJ/MS \nn. 33.153.156/0001-61, denominada CONVENENTE.\nObjeto: destinar recursos financeiros provenientes do Fundo de Manutencao e \nDesenvolvimento da Educacao Basica e de Valorizacao dos Profissionais da Educacao - \nFUNDEB, para acoes de manutencao e  desenvolvimento do ensino na modalidade de \nEducacao Especial.\nAmparo Legal: Decreto Estadual n. 11.261, de 16 de junho de 2003 e alteracoes \nposteriores; Lei Federal n. 8.666, de 21 de junho de 1993 e alteracoes posteriores; \nResolucao SEFAZ n. 2093, de 24 de outubro de 2007 e alteracoes posteriores, na \nportaria Interministerial n. 10, de 26 de dezembro de 2017, Lei Federal n. 9.394, de 20 \nde dezembro de 1996 e alteracoes posteriores; Lei Federal n. 11.494 de 20 de junho de \n2007; no Decreto Federal n. 6.253, de 13 de novembro de 2007, e alteracoes posteriores; \nDecreto Federal n. 7.611, de 17 de novembro de 2011.\nValor/Funcional Programatica: R$ 129.716,81, em parcela unica, no presente \nexercicio, por conta do Localizador: COVEN 2198, Funcional Programatica: \n10.29101.12.367.2010.2198.0002, fonte de recursos 0120, sendo:\nCusteio: R$ 129.716,81 - Natureza da Despesa 33504101, item 34101, Nota de Empenho \nn. 2018NE005355 de 31/8/2018.\nVigencia: a partir da data da sua assinatura com termino em 31 de dezembro de 2018. ",
+        "Pagina": 4,
+        "Indice": null,
+        "Suplementos": null
+      },
+      "Index": "diariodoeproducao",
+      "InnerHits": null,
+      "Score": 0,
+      "Type": "documento",
+      "Version": null,
+      "Id": "AWZVrGOLfEVbT3xfeoFa",
+      "Sorts": [
+        1539064800000,
+        4
+      ],
+      "Highlights": {
+        "texto": {
+          "DocumentId": "AWZVrGOLfEVbT3xfeoFa",
+          "Field": "texto",
+          "Highlights": [
+            "\n\u003cem\u003eCampo\u003c/em\u003e \u003cem\u003eGrande\u003c/em\u003e/MS, 05 de outubro de 2018\nDenis Cleiber Miyashiro Castilho - Procurador do Estado"
+          ]
+        }
+      },
+      "Explanation": null,
+      "MatchedQueries": null
+    },
+    {
+      "Fields": {},
+      "Source": {
+        "DocumentoID": 45364,
+        "Id": null,
+        "DocumentoPaiID": null,
+        "DocumentoPai": null,
+        "IndiceID": 0,
+        "Numero": "9759",
+        "Descricao": "Diário Oficial Nº 9759",
+        "NomeArquivo": "DO9759_09_10_2018.pdf",
+        "CaminhoArquivo": null,
+        "DataInicioPublicacaoArquivo": "\/Date(1539079200000)\/",
+        "DataEnvioArquivo": "\/Date(1539035647767)\/",
+        "DataCriacaoArquivo": "\/Date(1539035647767)\/",
+        "FoiIndexado": false,
+        "TamanhoArquivo": null,
+        "Texto": "DIARIO OFICIAL n. 9.759 9 DE OUTUBRO DE 2018 PAGINA 5 \nAssinatura: 5/10/2018.\nMARIA CECILIA AMENDOLA DA MOTTA - CPF/MF n. 724.551.958-72\nSecretaria de Estado de Educacao - CONCEDENTE.\nGLAUCIO EIDI HISATSUGU - CPF/MF N. 214.489.438-84\nPresidente da Associacao de Pais e Amigos dos Excepcionais de Sidrolandia- MS. - \nCONVENENTE. \nExtrato do Termo de Convenio sob n. cadastral 28.894 de 30/7/2018\nProcesso n. 29/023.240/2018.\nPartes: Estado de Mato Grosso do Sul, por intermedio da Secretaria de Estado de \nEducacao - SED/MS, CNPJ/MF N. 02.585.924/0001-22, denominada CONCEDENTE e a \nAssociacao de Pais e Amigos dos Excepcionais, Municipio de Chapadao do Sul- MS, CNPJ/\nMS n. 37.541.513/0001-10, denominada CONVENENTE.\nObjeto: destinar recursos financeiros provenientes do Fundo de Manutencao e \nDesenvolvimento da Educacao Basica e de Valorizacao dos Profissionais da Educacao - \nFUNDEB, para acoes de manutencao e  desenvolvimento do ensino na modalidade de \nEducacao Especial.\nAmparo Legal: Decreto Estadual n. 11.261, de 16 de junho de 2003 e alteracoes \nposteriores; Lei Federal n. 8.666, de 21 de junho de 1993 e alteracoes posteriores; \nResolucao SEFAZ n. 2093, de 24 de outubro de 2007 e alteracoes posteriores, na \nportaria Interministerial n. 10, de 26 de dezembro de 2017, Lei Federal n. 9.394, de 20 \nde dezembro de 1996 e alteracoes posteriores; Lei Federal n. 11.494 de 20 de junho de \n2007; no Decreto Federal n. 6.253, de 13 de novembro de 2007, e alteracoes posteriores; \nDecreto Federal n. 7.611, de 17 de novembro de 2011.\nValor/Funcional Programatica: R$ 107.091,79, em parcela unica, no presente \nexercicio, por conta do Localizador: COVEN 2198, Funcional Programatica: \n10.29101.12.367.2010.2198.0002, fonte de recursos 0120, sendo:\nCusteio: R$ 103.991,79 - Natureza da Despesa 33504101, item 34101, Nota de Empenho \nn. 2018NE005450 de 31/8/2018;\nCapital: R$ 3.100,00 - Natureza da Despesa 44504101, item 44101, Nota de Empenho \nn. 2018NE005446 de 31/8/2018. \nVigencia: a partir da data da sua assinatura com termino em 31 de dezembro de 2018. \nAssinatura: 5/10/2018.\nMARIA CECILIA AMENDOLA DA MOTTA - CPF/MF n. 724.551.958-72\nSecretaria de Estado de Educacao - CONCEDENTE.\nESTELA BARILI BURGEL - CPF/MF N. 732.666.800-06\nPresidente da Associacao de Pais e Amigos dos Excepcionais de Chapadao do Sul- MS. \n- CONVENENTE. \nSECRETARIA DE ESTADO DE SAUDE\nExtrato do IV Termo Aditivo ao Contrato No 0056/2015/SES\nN° Cadastral 5498\nProcesso: 27/001.163/2015\nPartes: O Estado de Mato Grosso do Sul por intermedio do(a) \nSecretaria de Estado de Saude, com recursos do Fundo \nEspecial de Saude de Mato Grosso do Sul e EMPRESA \nBRASILEIRA DE CORREIOS E TELEGRAFOS\nObjeto: O presente Termo Aditivo tem por objeto a prorrogacao \nda vigencia do Contrato original por mais 24 meses.\nOrdenador de Despesas: CARLOS ALBERTO MORAES COIMBRA\nAmparo Legal: Lei 8.666/93 e suas alteracoes.\nData da Assinatura: 26/09/2018\nAssinam: CARLOS ALBERTO MORAES COIMBRA, Rogerio Vianna \nMoreira dos Santos e Monica de Barros Nascimento\nExtrato do Contrato N° 0260/2018/SES             N° Cadastral 10976\nProcesso: 27/003.656/2018\nPartes: O Estado de Mato Grosso do Sul por intermedio do(a) \nSecretaria de Estado de Saude, com recursos do \nFundo Especial de Saude de Mato Grosso do Sul e M.S. \nDIAGNOSTICA LTDA.\nObjeto: O objeto do presente contrato e a aquisicao de \nprodutos laboratoriais com equipamentos cedidos em \nregime de comodato, por meio de registro de precos, \nem conformidade com as especificacoes constantes \nda Ordem de Utilizacao de Ata n.o 0014/2018, com o \nobjetivo de atender as necessidades do Laboratorio \nCentral de Saude Publica de Mato Grosso do Sul - LACEN.\nOrdenador de Despesas: CARLOS ALBERTO MORAES COIMBRA\nDotacao Orcamentaria: Programa de Trabalho 10302200283210012 - PT \n1033/16 EPF 20420003 Emenda Custeio LACEN, Fonte \nde Recurso 0248000058 - PT. 1033-16 - INCREMENTO \nMAC, Natureza da Despesa 33903011 - MATERIAL \nQUIMICO\nValor: R$ 242.100,00 (duzentos e quarenta e dois mil e cem \nreais)\nAmparo Legal: Lei 8.666/93 e suas alteracoes.\nDo Prazo: A vigencia do presente instrumento sera de 06 (seis) \nmeses, a contar da data de assinatura.\nData da Assinatura: 04/10/2018\nAssinam: CARLOS ALBERTO MORAES COIMBRA e Marcelo Teruo \nShiguematsu\nExtrato do Contrato N° 0264/2018/SES       N° Cadastral 10957\nProcesso: 27/003.747/2018\nPartes: O Estado de Mato Grosso do Sul por intermedio do(a) \nSecretaria de Estado de Saude, com recursos do Fundo \nEspecial de Saude de Mato Grosso do Sul e EASYCRED \nSERVICOS DE CREDITO E TURISMO EIRELI\nObjeto: O objeto do presente contrato e a contratacao de empresa \nespecializada em servicos de agenciamento de viagens, \npor meio de registro de precos, em conformidade com \nas especificacoes constantes da Ordem de Utilizacao \nde Ata n.o 0058/2018, com o objetivo de atender as \nnecessidades da Coordenadoria Estadual de Regulacao \nAssistencial - CERA/SES.\nOrdenador de Despesas: CARLOS ALBERTO MORAES COIMBRA\nDotacao Orcamentaria: Programa de Trabalho 10302200421360004 - TFD \n- Tratamento Fora de domicilio, Fonte de Recurso \n0248000001 - Apoio as acoes de media e alta \ncomplexidade, Natureza da Despesa 33903214 - \nPASSAGENS TERRESTRES, AEREAS E MARITIMAS\nValor: R$ 450.000,00 (quatrocentos e cinquenta mil reais)\nAmparo Legal: Lei 8.666/93 e suas alteracoes.\nDo Prazo: A vigencia do presente instrumento sera de 06 (seis) \nmeses a contar da data de assinatura.\nData da Assinatura: 27/09/2018\nAssinam: CARLOS ALBERTO MORAES COIMBRA e Diego Takaki \nMatsubara\nExtrato do Contrato N° 0265/2018/SES      N° Cadastral 10958\nProcesso: 27/003.746/2018\nPartes: O Estado de Mato Grosso do Sul por intermedio do(a) \nSecretaria de Estado de Saude, com recursos do Fundo \nEspecial de Saude de Mato Grosso do Sul e EASYCRED \nSERVICOS DE CREDITO E TURISMO EIRELI\nObjeto: O objeto do presente contrato e a contratacao de empresa \nespecializada em servicos de agenciamento de viagens, \npor meio de registro de precos, em conformidade com \nas especificacoes constantes da Ordem de Utilizacao \nde Ata n.o 0057/2018, com o objetivo de atender as \nnecessidades da Coordenadoria Estadual de Regulacao \nAssistencial - CERA/SES.\nOrdenador de Despesas: CARLOS ALBERTO MORAES COIMBRA\nDotacao Orcamentaria: Programa de Trabalho 10302200421360004 - TFD \n- Tratamento Fora de domicilio, Fonte de Recurso \n0248000001 - Apoio as acoes de media e alta \ncomplexidade, Natureza da Despesa 33903214 - \nPASSAGENS TERRESTRES, AEREAS E MARITIMAS\nValor: R$ 200.000,00 (duzentos mil reais)\nAmparo Legal: Lei 8.666/93 e suas alteracoes.\nDo Prazo: A vigencia do presente instrumento sera de 06 (seis) \nmeses a contar da data de assinatura.\nData da Assinatura: 27/09/2018\nAssinam: CARLOS ALBERTO MORAES COIMBRA e Diego Takaki \nMatsubara\nRepublica-se por conter incorrecao no original publicado  no DOE 9749, p. 5, de \n25/09/20148. \nExtrato do Sexto Termo Aditivo ao Termo de Contratualizacao no 26.480/2016\nProcesso no 27/003803/2016\nParticipes: Estado de Mato Grosso do Sul - CNPJ n.o 15.412.257/0001-28, atraves \nda Secretaria de Estado de Saude/Fundo Especial de Saude - CNPJ n.o \n03.517.102/0001-77;\nSociedade Integrada de Assistencia Social - SIAS - CNPJ/MF n. \n01.951.177/0001-36\nMunicipio de Fatima do Sul - CNPJ no 03.155.751/0001-75\nSecretaria Municipal de Saude Publica/Fundo Municipal de Saude \n-  CNPJ/MF n.o 11.968.869/0001-40\nObjeto: O presente Termo Aditivo tem por objeto o aporte de recursos financeiros \nestadual e municipais, conforme Termo de Cooperacao 001/2018, em parcelas \nmensais, a titulo de apoio ao custeio hospitalar, para o desenvolvimento de \nacoes de servicos de saude e assistencia ambulatorial no ambito do SUS, na \nexecucao de cirurgias eletivas a serem realizadas no hospital da Sociedade \nIntegrada de Assistencia Social - SIAS. \nRecursos: O valor para o presente termo aditivo e de R$429.760,95, sendo R$257.856,57 \noriundo dos municipios e R$171.904,38 do FESA, a ser repassado ao Hospital \nem 3 parcelas. \nDotacao Orcamentaria do FESA: Os recursos financeiros correrao a conta \nda dotacao orcamentaria consignada na funcional programatica n. \n20.27901.10.302.2002.8321.0002 localizador: Hospitais Contratualizados \nMacro DOU, Natureza da Despesa - 33504102, Nota de Empenho da fonte \n100000000: 2018NE009231, de 16/08/2018, R$143.253,65. \nRatificacao: Ficam ratificadas todas as demais Clausulas que nao foram expressamente \nalteradas por esse Termo Aditivo, as quais permanecem como boas e valiosas \ntais como se encontram redigidas.  \nData ass.: 16/08/2018\nAss:      Carlos Alberto Moraes Coimbra - CPF 615.052.691-72 - Estado\nAdair Luiz Antoniete -  CPF 029.539.001.87 - Hospital\nIlda Salgado Machado - CPF 559.007.201-87 - Municipio \n             Priscila Cristina Bodnar Witzke Gazola - CPF 954.373.801-78 - SMS/FMS \nSECRETARIA DE ESTADO DE MEIO AMBIENTE, DESENVOLVIMENTO \nECONOMICO, PRODUCAO E AGRICULTURA FAMILIAR\nRESULTADO E HOMOLOGACAO DO EDITAL CONFUNLES 001/2018 \n SELECAO DE PLANO DE TRABALHO DE ORGAOS PUBLICOS \nO Presidente do Conselho Gestor do Fundo de Defesa e de Reparacao de Interesses \nDifusos e Lesados - CONFUNLES/MS e Secretario de Estado de Meio Ambiente, \nDesenvolvimento Economico, Producao e Agricultura Familiar - SEMAGRO/MS, no uso de \nsuas atribuicoes, e diante da reuniao do CONFUNLES, realizada em 19/09/2018 as 14:30 \nhoras na SEMAGRO, RESOLVE divulgar na forma do presente instrumento, o resultado \ne homologacao da selecao de plano de trabalho de orgaos publicos, no montante de \nrecursos de ate R$ 1.000.000,00 (Um milhao de reais) provenientes do FUNLES - Fundo \nde Defesa e de Reparacao de Interesses Difusos Lesados, em conformidade ao item 2.7 \ndo EDITAL CONFUNLES 001/2018, publicado no Diario Oficial n. 9.655 de15 de maio de \n2018. \nORGAO \nPUBLICO\nCNPJ\nPLANO DE \nTRABALHO\nVALOR PONTUACAO\nPrefeitura de \nTerenos\n03.501.582/0001-88 Ampliacao do \nViveiro de Terenos \n- MS\nR$ \n163.468,11\n59,00\nPrefeitura de \nRio Brilhante\n03.681.582/0001-07 Caminhao ¾ com \ncarroceria para \ncoleta seletiva\nR$ \n190.000,00\n58,50\nPrefeitura de \nSelviria\n15.410.665/0001-40\nAdote uma nascente\nR$ \n180.000,00\n58,50\nPrefeitura \nde Gloria de \nDourados\n03.155.942/0001-37 Caminhao ¾ com \ncarroceria e gaiola \npara coleta seletiva\nR$ \n190.000,00\n57,50\nPrefeitura de \nSao Gabriel \ndo Oeste\n15.389.588/0001-94\nEstruturacao \nda brigada de \ncombate a incendios \nflorestais.\nR$ \n40.000,00\n56,10\nPrefeitura de \nSanta Rita \ndo Pardo\n01.561.372/0001-50 Aquisicao de \ntela permanente \ne conjuntos de \nparques infantis\nR$ \n150.000,00\n55,70\nPrefeitura de \nAlcinopolis\n37.226.651/0001-04\nTriturador/picador \nde galhos e troncos\nR$ \n80.250,00\n55,50\nCampo Grande - MS, 01 de outubro de 2018.\n    JAIME ELIAS VERRUCK\nPresidente do Conselho Gestor do Fundo Estadual de Defesa e de Reparacao de \nInteresses Difusos Lesados - CONFUNLES e\nSecretario de Estado de Meio Ambiente, Desenvolvimento Economico, Producao e \nAgricultura Familiar - SEMAGRO",
+        "Pagina": 5,
+        "Indice": null,
+        "Suplementos": null
+      },
+      "Index": "diariodoeproducao",
+      "InnerHits": null,
+      "Score": 0,
+      "Type": "documento",
+      "Version": null,
+      "Id": "AWZVrGULfEVbT3xfeoFb",
+      "Sorts": [
+        1539064800000,
+        5
+      ],
+      "Highlights": {
+        "texto": {
+          "DocumentId": "AWZVrGULfEVbT3xfeoFb",
+          "Field": "texto",
+          "Highlights": [
+            "\n55,50\n\u003cem\u003eCampo\u003c/em\u003e \u003cem\u003eGrande\u003c/em\u003e - MS, 01 de outubro de 2018.\n    JAIME ELIAS VERRUCK\nPresidente do Conselho Gestor"
+          ]
+        }
+      },
+      "Explanation": null,
+      "MatchedQueries": null
+    },
+    {
+      "Fields": {},
+      "Source": {
+        "DocumentoID": 45364,
+        "Id": null,
+        "DocumentoPaiID": null,
+        "DocumentoPai": null,
+        "IndiceID": 0,
+        "Numero": "9759",
+        "Descricao": "Diário Oficial Nº 9759",
+        "NomeArquivo": "DO9759_09_10_2018.pdf",
+        "CaminhoArquivo": null,
+        "DataInicioPublicacaoArquivo": "\/Date(1539079200000)\/",
+        "DataEnvioArquivo": "\/Date(1539035647767)\/",
+        "DataCriacaoArquivo": "\/Date(1539035647767)\/",
+        "FoiIndexado": false,
+        "TamanhoArquivo": null,
+        "Texto": "DIARIO OFICIAL n. 9.759 9 DE OUTUBRO DE 2018 PAGINA 6 \nSECRETARIA DE ESTADO DE JUSTICA E SEGURANCA PUBLICA\nRepublica-se por constar erro no texto original publicado no Diario Oficial no 9.724, de \n02/10/2018, p. 14.\nEXTRATO DO 1o TERMO ADITIVO AO CONVENIO N° 188/2017 - Cadastro no \n027695/17\nPROCESSO No 31/502.471/2017\nConcedente: Estado de Mato Grosso do Sul, CNPJ N° 15.412.257/0001-28, por \nintermedio da Secretaria de Estado de Justica e Seguranca Publica/MS, CNPJ No \n03.015.475/0001-40.\nConvenente: Prefeitura Municipal de Dourados-MS, CNPJ N° 03.155.926/0001-44.\nInterveniente: Corpo de Bombeiro Militar de Mato Grossos do Sul, CNPJ No \n03.227.696/0001-81.\nOBJETO: o Objeto do Presente Termo Aditivo e a prorrogacao da Vigencia do Convenio \n188/2017.\nValor: A parceira publica contribuira com a importancia total de R$ 120.000,00 (cento e \nvinte mil reais) em 12 (doze) parcelas mensais de R$ 10.000,00.\nVigencia: O prazo de vigencia deste Primeiro Termo de Convenio sera de 12 (doze) \nmeses, a contar de 17 de agosto de 2018.\nData de Assinatura: 16/08/18.\nSignatarios: \nConcedente: Delia Godoy Razuk, CPF no 480.715.441-91, Prefeita Municipal de \nDourados-MS, Carlos Fabio Selhorst dos Santos, CPF 286.434.371-15 Convenente: \nAntonio Carlos Videira, CPF No 475.533.671-68, Secretario de Estado Justica e Seguranca \nPublica. Interveniente: Joilson Alves do Amaral, CPF No 583.133.201-25.\nPORTARIA DE CANCELAMENTO No. 38/18/IIGP/CGP/SEJUSP/MS\nCancela Registro Geral de Carteira de \nIdentidade\n   DIRETOR DO INSTITUTO DE IDENTIFICACAO \"GONCALO \nPEREIRA\", Ilmo. Sr. Maurilton Ferreira de Souza, Perito Papiloscopista, Classe Especial no \nuso de suas atribuicoes que lhe sao conferidas por Lei,\n             Considerando os fatos apurados junto ao procedimento \nregistrado no Instituto de Identificacao \"Goncalo Pereira\" sob o n.o 1890/2014,\n   RESOLVE:\n            Art. 1o Cancelar o Registro Geral n.o 1.466.838 em nome de \nMATHEUS ALCANJO MIRANDA DA SILVA; \n                             Art. 2o Suspender a expedicao de Carteira de Identidade para o \nregistro citado no artigo anterior;\n      Art. 3o Esta Portaria entrara em vigor na data de sua publicacao.\n                                  Campo Grande, 04 de outubro de 2018.\n       MAURILTON FERREIRA DE SOUZA\n                                                   Perito Papiloscopista\n                                                       Diretor do IIGP/MS\n   \nPORTARIA DE CANCELAMENTO No. 39/18/IIGP/CGP/SEJUSP/MS\n \nCancela Registro Geral de Carteira de \nIdentidade\n   DIRETOR DO INSTITUTO DE IDENTIFICACAO \"GONCALO \nPEREIRA\", Ilmo. Sr. Maurilton Ferreira de Souza, Perito Papiloscopista, Classe Especial no \nuso de suas atribuicoes que lhe sao conferidas por Lei,\n             Considerando os fatos apurados junto ao procedimento \nregistrado no Instituto de Identificacao \"Goncalo Pereira\" sob o n.o 2132/2017,\n   RESOLVE:\n            Art. 1o Cancelar o Registro Geral n.o 1.541.011 em nome de \nTHOMAZ EVERTHON FRANCISCO LIMA; \n                             Art. 2o Suspender a expedicao de Carteira de Identidade para o \nregistro citado no artigo anterior;\n      Art. 3o Esta Portaria entrara em vigor na data de sua publicacao.\n                                  Campo Grande, 04 de outubro de 2018.\n       MAURILTON FERREIRA DE SOUZA\n                                                   Perito Papiloscopista\n                                                       Diretor do IIGP/MS\nADMINISTRACAO INDIRETA\nAGENCIA ESTADUAL DE GESTAO DE EMPREENDIMENTOS\nExtrato do Termo de Rescisao do Contrato No 0071/2017/AGESUL \nNo Cadastral 8322\nProcesso: 57/100.987/2017\nOrgao: Agencia Estadual de Gestao de Empreendimentos\nContratada: GUIMENEZ ENGENHARIA LTDA -EPP\nObjeto: Fica rescindido, amigavelmente, Contrato OC n.o \n071/2017, referente a obra de Construcao do \nCampo Ze Tabela - 1° Etapa, no municipio de \nDourados/MS, dando-se as partes, reciprocamente, \nquitacao plena, geral e irrevogavel, nada mais tendo a \nse cobrar em juizo ou fora dele, cabendo a contratada \nsomente o pagamento pelos servicos ja executados e o \nlevantamento da garantia contratual, se for o caso. \nFundamentacao Legal: Artigo 79, inciso II, da Lei Federal n. 8.666, de 21/06/93.\nData Extincao: 26/09/2018\nAssinam: EMERSON ANTONIO MARQUES PEREIRA e MAURO \nSERGIO DE OLIVEIRA GIMENEZ  \nDEPARTAMENTO ESTADUAL DE TRANSITO DE MATO \nGROSSO DO SUL\nEDITAL DE NOTIFICACAO DE APLICACAO DE PENALIDADE N. 184, DE 08 DE \nOUTUBRO DE 2018\nO DIRETOR-PRESIDENTE DO DEPARTAMENTO ESTADUAL DE TRANSITO DO \nESTADO DE MATO GROSSO DO SUL - DETRAN-MS, no uso de suas atribuicoes conferidas \npela Lei no 9.503/97 e alteracoes, NOTIFICA o(s) condutor(es) abaixo relacionado(s) \npara apresentacao de recurso e/ou entregar sua Carteira Nacional de Habilitacao - CNH, \nno prazo de 30 (trinta) dias, a contar da publicacao deste edital, em razao da aplicacao \nda penalidade de suspensao/cancelamento/cassacao do direito de conduzir veiculos \nautomotores, conforme infracoes especificadas:\nCondutor: ODAIR ALVES LACERDA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n165 A\nPRAZO: 12 Mes(es)\nProcesso: 016433/2017\n \nCondutor: MARCELO CAMPOS HAENDCHEN\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n191\nPRAZO: 08 Mes(es)\nProcesso: 016434/2017\n \nCondutor: MARCELO CAMPOS HAENDCHEN\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n165 A\nPRAZO: 12 Mes(es)\nProcesso: 016435/2017\n \nCondutor: JUCIANO FRANCESCO CASIMIRO\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 016436/2017\n \nCondutor: GEORGE SAVIO DE ARRUDA PEREIRA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 016440/2017\n \nCondutor: IVANI CRISTINA FUZA ROZENO\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 016441/2017\n \nCondutor: ANDERSON VIEIRA RODRIGUES\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 016442/2017\n \nCondutor: ROMULO EISTEN DE SOUSA BATISTA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 016452/2017\n \nCondutor: GEVANILDO ROCHA DA SILVA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 016462/2017\n \nCondutor: JAIR GOMES DE BRITO\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 016463/2017\n \nCondutor: KARINA MAIA RODRIGUES ALBERTINI\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 016464/2017\n \nCondutor: RAMAO LIMA FERNANDES\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n165\nPRAZO: 12 Mes(es)\nProcesso: 016465/2017\n \nCondutor: WILLIAN NUNES\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n165\nPRAZO: 12 Mes(es)",
+        "Pagina": 6,
+        "Indice": null,
+        "Suplementos": null
+      },
+      "Index": "diariodoeproducao",
+      "InnerHits": null,
+      "Score": 0,
+      "Type": "documento",
+      "Version": null,
+      "Id": "AWZVrGYifEVbT3xfeoFc",
+      "Sorts": [
+        1539064800000,
+        6
+      ],
+      "Highlights": {
+        "texto": {
+          "DocumentId": "AWZVrGYifEVbT3xfeoFc",
+          "Field": "texto",
+          "Highlights": [
+            ".\n                                  \u003cem\u003eCampo\u003c/em\u003e \u003cem\u003eGrande\u003c/em\u003e, 04 de outubro de 2018.\n       MAURILTON FERREIRA DE SOUZA",
+            ".\n                                  \u003cem\u003eCampo\u003c/em\u003e \u003cem\u003eGrande\u003c/em\u003e, 04 de outubro de 2018.\n       MAURILTON FERREIRA DE SOUZA"
+          ]
+        }
+      },
+      "Explanation": null,
+      "MatchedQueries": null
+    },
+    {
+      "Fields": {},
+      "Source": {
+        "DocumentoID": 45364,
+        "Id": null,
+        "DocumentoPaiID": null,
+        "DocumentoPai": null,
+        "IndiceID": 0,
+        "Numero": "9759",
+        "Descricao": "Diário Oficial Nº 9759",
+        "NomeArquivo": "DO9759_09_10_2018.pdf",
+        "CaminhoArquivo": null,
+        "DataInicioPublicacaoArquivo": "\/Date(1539079200000)\/",
+        "DataEnvioArquivo": "\/Date(1539035647767)\/",
+        "DataCriacaoArquivo": "\/Date(1539035647767)\/",
+        "FoiIndexado": false,
+        "TamanhoArquivo": null,
+        "Texto": "DIARIO OFICIAL n. 9.759 9 DE OUTUBRO DE 2018 PAGINA 7 \nProcesso: 016472/2017\n \nCondutor: WILLIAN NUNES\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n170\nPRAZO: 01 Mes(es)\nProcesso: 016473/2017\n \nCondutor: JOAO VITOR SOARES VALADAO\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n175\nPRAZO: 08 Mes(es)\nProcesso: 016476/2017\n \nCondutor: JOAO VITOR SOARES VALADAO\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n174\nPRAZO: 08 Mes(es)\nProcesso: 016477/2017\n \nCondutor: ELESSANDRA FERREIRA DE FARIA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 016480/2017\n \nCondutor: ELESSANDRA FERREIRA DE FARIA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 016481/2017\n \nCondutor: FRANCISCO FERREIRA MARCONDES\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n165 A\nPRAZO: 12 Mes(es)\nProcesso: 016486/2017\n \nCondutor: SOELI WOLLMANN SCHRANK\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 016489/2017\n \nCondutor: JOSE CASSIANO DA SILVA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 016492/2017\n \nCondutor: JOSE CASSIANO DA SILVA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 016493/2017\n \nCondutor: LUCAS PEREIRA DA SILVA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n175\nPRAZO: 08 Mes(es)\nProcesso: 016495/2017\n \nCondutor: ALESSANDRO COSTA DA SILVA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n244 II\nPRAZO: 01 Mes(es)\nProcesso: 016497/2017\n \nCondutor: RONALDO DA SILVA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 016498/2017\n \nCondutor: EDIVALDO DE FREITAS BOTELHO\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n165\nPRAZO: 12 Mes(es)\nProcesso: 016500/2017\n \nCondutor: ALCEMIR CARLOS GANASSINI\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 016501/2017\n \nCondutor: ALCEMIR CARLOS GANASSINI\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 016502/2017\n \nCondutor: JUNIO MARIANO DE SOUZA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n165\nPRAZO: 12 Mes(es)\nProcesso: 016507/2017\n \nCondutor: OZEBIA TEREZA DOS SANTOS SANTA TERRA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 016508/2017\nO cumprimento da penalidade iniciar-se-a na data da entrega do documento \nde habilitacao em qualquer agencia de transito do DETRAN/MS, mediante termo de \nrecebimento. \nPor forca da disposicao do artigo 268, inciso II do CTB, nos casos de aplicacao \nda penalidade de suspensao, e obrigatoria a realizacao do CURSO DE RECICLAGEM \nPARA CONDUTOR INFRATOR, para voltar a conduzir veiculos automotores, sendo o \ncurso oferecido na forma presencial e/ou on-line pelo site www.detranead.ms.gov.br. \nInformacoes sobre o curso poderao ser obtidas pela Central de Atendimento do DETRAN/\nMS, pelos telefones 67- 3368-0500 ou 154. \nO recurso a ser interposto devera ser dirigido a esta autoridade e podera ser \nprotocolizado em qualquer agencia de transito do DETRAN/MS, contendo obrigatoriamente \no numero do processo e deste edital de notificacao, alem da identificacao do recorrente.\nPara obter informacoes quanto ao andamento do processo ou para impressao, \nacessar o site www.detran.ms.gov.br , no link de \"consulta processo suspensao/cassacao\", \nna aba \"Habilitacao\".\nCampo Grande (MS), 08 de outubro de 2018\nFRANCISCO LIBORIO SILVEIRA\nDIRETOR-ADJUNTO\nEDITAL DE NOTIFICACAO DE APLICACAO DE PENALIDADE N. 185, DE 08 DE \nOUTUBRO DE 2018\nO DIRETOR-PRESIDENTE DO DEPARTAMENTO ESTADUAL DE TRANSITO DO \nESTADO DE MATO GROSSO DO SUL - DETRAN-MS, no uso de suas atribuicoes conferidas \npela Lei no 9.503/97 e alteracoes, NOTIFICA o(s) condutor(es) abaixo relacionado(s) \npara apresentacao de recurso e/ou entregar sua Carteira Nacional de Habilitacao - CNH, \nno prazo de 30 (trinta) dias, a contar da publicacao deste edital, em razao da aplicacao \nda penalidade de suspensao/cancelamento/cassacao do direito de conduzir veiculos \nautomotores, conforme infracoes especificadas:\nCondutor: DANIELLA ALVES COSTA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 016510/2017\n \nCondutor: EMERSON SILVA DE FREITAS\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 016512/2017\n \nCondutor: RODRIGO SOARES RODRIGUES\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 016514/2017\n \nCondutor: AARON MUDO VITAL DA SILVA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n244 II\nPRAZO: 01 Mes(es)\nProcesso: 016516/2017\n \nCondutor: ORIEL HIGOR RODRIGO REIS DOS SANTOS\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n244 II\nPRAZO: 01 Mes(es)\nProcesso: 016517/2017\n \nCondutor: MATHEUS DA SILVA CAMERA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n165\nPRAZO: 12 Mes(es)\nProcesso: 016525/2017\n \nCondutor: MATHEUS PALMEIRA FIGUEIREDO\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 016527/2017\n \nCondutor: RODRIGO PEREIRA MENDONCA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH",
+        "Pagina": 7,
+        "Indice": null,
+        "Suplementos": null
+      },
+      "Index": "diariodoeproducao",
+      "InnerHits": null,
+      "Score": 0,
+      "Type": "documento",
+      "Version": null,
+      "Id": "AWZVrGdYfEVbT3xfeoFd",
+      "Sorts": [
+        1539064800000,
+        7
+      ],
+      "Highlights": {
+        "texto": {
+          "DocumentId": "AWZVrGdYfEVbT3xfeoFd",
+          "Field": "texto",
+          "Highlights": [
+            " suspensao/cassacao\", \nna aba \"Habilitacao\".\n\u003cem\u003eCampo\u003c/em\u003e \u003cem\u003eGrande\u003c/em\u003e (MS), 08 de outubro de 2018\nFRANCISCO LIBORIO"
+          ]
+        }
+      },
+      "Explanation": null,
+      "MatchedQueries": null
+    },
+    {
+      "Fields": {},
+      "Source": {
+        "DocumentoID": 45364,
+        "Id": null,
+        "DocumentoPaiID": null,
+        "DocumentoPai": null,
+        "IndiceID": 0,
+        "Numero": "9759",
+        "Descricao": "Diário Oficial Nº 9759",
+        "NomeArquivo": "DO9759_09_10_2018.pdf",
+        "CaminhoArquivo": null,
+        "DataInicioPublicacaoArquivo": "\/Date(1539079200000)\/",
+        "DataEnvioArquivo": "\/Date(1539035647767)\/",
+        "DataCriacaoArquivo": "\/Date(1539035647767)\/",
+        "FoiIndexado": false,
+        "TamanhoArquivo": null,
+        "Texto": "DIARIO OFICIAL n. 9.759 9 DE OUTUBRO DE 2018 PAGINA 8 \nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 016528/2017\n \nCondutor: JOEL SCHUQUEL PEREIRA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n191\nPRAZO: 08 Mes(es)\nProcesso: 016533/2017\n \nCondutor: OSMAR HILDOR BLOCH\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n165 A\nPRAZO: 12 Mes(es)\nProcesso: 016534/2017\n \nCondutor: GUSTAVO ALVES CHALUB\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 016547/2017\n \nCondutor: GUSTAVO ALVES CHALUB\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 016548/2017\n \nCondutor: JOSE APARECIDO DA SILVA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 016557/2017\n \nCondutor: NARCISO RODRIGUES DA SILVA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n165\nPRAZO: 12 Mes(es)\nProcesso: 016558/2017\n \nCondutor: EVAN PEDRO DA SILVA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 016559/2017\n \nCondutor: EDER FRANCISCO MENANI\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 016562/2017\n \nCondutor: RAFAEL MEDEIROS ARENA DA COSTA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 016563/2017\n \nCondutor: MARCOS FERNANDO DOS SANTOS MENDES\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 016575/2017\n \nCondutor: MARCOS FERNANDO DOS SANTOS MENDES\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 016576/2017\n \nCondutor: GABRIEL ASSEF SERRANO\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 016578/2017\n \nCondutor: GABRIEL ASSEF SERRANO\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 016579/2017\n \nCondutor: FABIO MOREIRA RODRIGUES\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 016583/2017\n \nCondutor: DANIELA LEITE AMARAL\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n244 V\nPRAZO: 01 Mes(es)\nProcesso: 016584/2017\n \nCondutor: JULIANA NUNES ARDIGO\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n165 A\nPRAZO: 12 Mes(es)\nProcesso: 016585/2017\n \nCondutor: FABIANA FERREIRA DA SILVA SANTOS\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n244 II\nPRAZO: 01 Mes(es)\nProcesso: 016591/2017\n \nCondutor: RONI DE SOUZA MONTEIRO PAULA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n244 IV\nPRAZO: 01 Mes(es)\nProcesso: 016592/2017\n \nCondutor: ALTAIR SOARES DE JESUS\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 016598/2017\n \nCondutor: JOHANNES GERARDUS MARIA WILLEMSEN\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n165 A\nPRAZO: 12 Mes(es)\nProcesso: 016601/2017\n \nCondutor: BEATRIZ LORENA DE OLIVEIRA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 016602/2017\n \nCondutor: RILDO GOUVEIA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 016609/2017\nO cumprimento da penalidade iniciar-se-a na data da entrega do documento \nde habilitacao em qualquer agencia de transito do DETRAN/MS, mediante termo de \nrecebimento. \nPor forca da disposicao do artigo 268, inciso II do CTB, nos casos de aplicacao \nda penalidade de suspensao, e obrigatoria a realizacao do CURSO DE RECICLAGEM \nPARA CONDUTOR INFRATOR, para voltar a conduzir veiculos automotores, sendo o \ncurso oferecido na forma presencial e/ou on-line pelo site www.detranead.ms.gov.br. \nInformacoes sobre o curso poderao ser obtidas pela Central de Atendimento do DETRAN/\nMS, pelos telefones 67- 3368-0500 ou 154. \nO recurso a ser interposto devera ser dirigido a esta autoridade e podera ser \nprotocolizado em qualquer agencia de transito do DETRAN/MS, contendo obrigatoriamente \no numero do processo e deste edital de notificacao, alem da identificacao do recorrente.\nPara obter informacoes quanto ao andamento do processo ou para impressao, \nacessar o site www.detran.ms.gov.br , no link de \"consulta processo suspensao/cassacao\", \nna aba \"Habilitacao\".\nCampo Grande (MS), 08 de outubro de 2018\nFRANCISCO LIBORIO SILVEIRA\nDIRETOR-ADJUNTO\nEDITAL DE NOTIFICACAO DE APLICACAO DE PENALIDADE N. 186, DE 08 DE \nOUTUBRO DE 2018\nO DIRETOR-PRESIDENTE DO DEPARTAMENTO ESTADUAL DE TRANSITO DO \nESTADO DE MATO GROSSO DO SUL - DETRAN-MS, no uso de suas atribuicoes conferidas \npela Lei no 9.503/97 e alteracoes, NOTIFICA o(s) condutor(es) abaixo relacionado(s) \npara apresentacao de recurso e/ou entregar sua Carteira Nacional de Habilitacao - CNH, \nno prazo de 30 (trinta) dias, a contar da publicacao deste edital, em razao da aplicacao \nda penalidade de suspensao/cancelamento/cassacao do direito de conduzir veiculos \nautomotores, conforme infracoes especificadas:\nCondutor: RILDO GOUVEIA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 016610/2017\n \nCondutor: WILLIAM GUIMARAES DA CRUZ\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 016614/2017\n \nCondutor: CICERO APARECIDO SILVA\nOrgao de Registro: DETRAN/MS",
+        "Pagina": 8,
+        "Indice": null,
+        "Suplementos": null
+      },
+      "Index": "diariodoeproducao",
+      "InnerHits": null,
+      "Score": 0,
+      "Type": "documento",
+      "Version": null,
+      "Id": "AWZVrGkzfEVbT3xfeoFe",
+      "Sorts": [
+        1539064800000,
+        8
+      ],
+      "Highlights": {
+        "texto": {
+          "DocumentId": "AWZVrGkzfEVbT3xfeoFe",
+          "Field": "texto",
+          "Highlights": [
+            "\", \nna aba \"Habilitacao\".\n\u003cem\u003eCampo\u003c/em\u003e \u003cem\u003eGrande\u003c/em\u003e (MS), 08 de outubro de 2018\nFRANCISCO LIBORIO SILVEIRA\nDIRETOR"
+          ]
+        }
+      },
+      "Explanation": null,
+      "MatchedQueries": null
+    },
+    {
+      "Fields": {},
+      "Source": {
+        "DocumentoID": 45364,
+        "Id": null,
+        "DocumentoPaiID": null,
+        "DocumentoPai": null,
+        "IndiceID": 0,
+        "Numero": "9759",
+        "Descricao": "Diário Oficial Nº 9759",
+        "NomeArquivo": "DO9759_09_10_2018.pdf",
+        "CaminhoArquivo": null,
+        "DataInicioPublicacaoArquivo": "\/Date(1539079200000)\/",
+        "DataEnvioArquivo": "\/Date(1539035647767)\/",
+        "DataCriacaoArquivo": "\/Date(1539035647767)\/",
+        "FoiIndexado": false,
+        "TamanhoArquivo": null,
+        "Texto": "DIARIO OFICIAL n. 9.759 9 DE OUTUBRO DE 2018 PAGINA 10 \nO recurso a ser interposto devera ser dirigido a esta autoridade e podera ser \nprotocolizado em qualquer agencia de transito do DETRAN/MS, contendo obrigatoriamente \no numero do processo e deste edital de notificacao, alem da identificacao do recorrente.\nPara obter informacoes quanto ao andamento do processo ou para impressao, \nacessar o site www.detran.ms.gov.br , no link de \"consulta processo suspensao/cassacao\", \nna aba \"Habilitacao\".\nCampo Grande (MS), 08 de outubro de 2018\nFRANCISCO LIBORIO SILVEIRA\nDIRETOR-ADJUNTO\nEDITAL DE NOTIFICACAO DE APLICACAO DE PENALIDADE N. 187, DE 08 DE \nOUTUBRO DE 2018\nO DIRETOR-PRESIDENTE DO DEPARTAMENTO ESTADUAL DE TRANSITO DO \nESTADO DE MATO GROSSO DO SUL - DETRAN-MS, no uso de suas atribuicoes conferidas \npela Lei no 9.503/97 e alteracoes, NOTIFICA o(s) condutor(es) abaixo relacionado(s) \npara apresentacao de recurso e/ou entregar sua Carteira Nacional de Habilitacao - CNH, \nno prazo de 30 (trinta) dias, a contar da publicacao deste edital, em razao da aplicacao \nda penalidade de suspensao/cancelamento/cassacao do direito de conduzir veiculos \nautomotores, conforme infracoes especificadas:\nCondutor: LYSA MELINA BARRIOS CABREIRA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 017012/2017\n \nCondutor: ELIEZER ELEUTERIO DOS SANTOS\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 017020/2017\n \nCondutor: CLEBER EMIGDIO RIVEROS ROMERO\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 017028/2017\n \nCondutor: RODRIGO GARCIA GENEROSO\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 017032/2017\n \nCondutor: JORGE XIMENES CEZAR\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n165\nPRAZO: 12 Mes(es)\nProcesso: 017034/2017\n \nCondutor: ANTONINO RAIMUNDO DE ALEXANDRE\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 017035/2017\n \nCondutor: ANDRE DE LIMA MINERVINI\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 017038/2017\n \nCondutor: AMILTON SOUZA RODRIGUES\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 017042/2017\n \nCondutor: ROZINEI APARECIDA BARBOZA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 017043/2017\n \nCondutor: CICERO RODRIGUES CARAMORI\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 017047/2017\n \nCondutor: LUIZ FERNANDO PAES DE SOUZA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n244 IV\nPRAZO: 01 Mes(es)\nProcesso: 017048/2017\n \nCondutor: IBER GOMES SA NETO\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 017050/2017\n \nCondutor: MARIA IDE DE QUADROS DONADEL\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 017052/2017\n \nCondutor: MARIA APARECIDA VIGNOLI BIAZIM\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 017054/2017\n \nCondutor: DANIEL PAULINO\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 017058/2017\n \nCondutor: REGINALDO MARTINS DOS SANTOS\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 017061/2017\n \nCondutor: WILLIAM ROBERTO LUPINETTI\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 017062/2017\n \nCondutor: LEANDRO FERREIRA DE ANDRADE\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n165\nPRAZO: 12 Mes(es)\nProcesso: 017065/2017\n \nCondutor: SANDRO AGUERO DE FREITAS\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 017072/2017\n \nCondutor: HELEN PATRICIA CAMARGO\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 017075/2017\n \nCondutor: JAIME ELCO VIEIRA CAMPOS\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n165\nPRAZO: 12 Mes(es)\nProcesso: 017076/2017\n \nCondutor: EDER SANTOS DA COSTA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 017081/2017\n \nCondutor: CIRLENE LIMA TOLEDO GONCALVES\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 017084/2017\n \nCondutor: JEAN CARLOS MARIANO DE PAULA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n165\nPRAZO: 12 Mes(es)\nProcesso: 017086/2017\n \nCondutor: CLAUDIO LOPES DE PAULA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n165\nPRAZO: 12 Mes(es)\nProcesso: 017091/2017\n \nCondutor: SUELIS PATRICIA MENCHIK DA CUNHA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 017095/2017",
+        "Pagina": 10,
+        "Indice": null,
+        "Suplementos": null
+      },
+      "Index": "diariodoeproducao",
+      "InnerHits": null,
+      "Score": 0,
+      "Type": "documento",
+      "Version": null,
+      "Id": "AWZVrGyDfEVbT3xfeoFg",
+      "Sorts": [
+        1539064800000,
+        10
+      ],
+      "Highlights": {
+        "texto": {
+          "DocumentId": "AWZVrGyDfEVbT3xfeoFg",
+          "Field": "texto",
+          "Highlights": [
+            "\".\n\u003cem\u003eCampo\u003c/em\u003e \u003cem\u003eGrande\u003c/em\u003e (MS), 08 de outubro de 2018\nFRANCISCO LIBORIO SILVEIRA\nDIRETOR-ADJUNTO\nEDITAL DE"
+          ]
+        }
+      },
+      "Explanation": null,
+      "MatchedQueries": null
+    },
+    {
+      "Fields": {},
+      "Source": {
+        "DocumentoID": 45364,
+        "Id": null,
+        "DocumentoPaiID": null,
+        "DocumentoPai": null,
+        "IndiceID": 0,
+        "Numero": "9759",
+        "Descricao": "Diário Oficial Nº 9759",
+        "NomeArquivo": "DO9759_09_10_2018.pdf",
+        "CaminhoArquivo": null,
+        "DataInicioPublicacaoArquivo": "\/Date(1539079200000)\/",
+        "DataEnvioArquivo": "\/Date(1539035647767)\/",
+        "DataCriacaoArquivo": "\/Date(1539035647767)\/",
+        "FoiIndexado": false,
+        "TamanhoArquivo": null,
+        "Texto": "DIARIO OFICIAL n. 9.759 9 DE OUTUBRO DE 2018 PAGINA 11 \n \nCondutor: GIAN CARLOS GONCALVES\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n176 I\nPRAZO: 04 Mes(es)\nProcesso: 017097/2017\n \nCondutor: MARCEL D ANGELIS FERREIRA SILVA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 017099/2017\n \nCondutor: JAIR MARQUES NETO\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 017103/2017\n \nCondutor: ELIZA FABRICIO DE ALMEIDA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 017104/2017\nO cumprimento da penalidade iniciar-se-a na data da entrega do documento \nde habilitacao em qualquer agencia de transito do DETRAN/MS, mediante termo de \nrecebimento. \nPor forca da disposicao do artigo 268, inciso II do CTB, nos casos de aplicacao \nda penalidade de suspensao, e obrigatoria a realizacao do CURSO DE RECICLAGEM \nPARA CONDUTOR INFRATOR, para voltar a conduzir veiculos automotores, sendo o \ncurso oferecido na forma presencial e/ou on-line pelo site www.detranead.ms.gov.br. \nInformacoes sobre o curso poderao ser obtidas pela Central de Atendimento do DETRAN/\nMS, pelos telefones 67- 3368-0500 ou 154. \nO recurso a ser interposto devera ser dirigido a esta autoridade e podera ser \nprotocolizado em qualquer agencia de transito do DETRAN/MS, contendo obrigatoriamente \no numero do processo e deste edital de notificacao, alem da identificacao do recorrente.\nPara obter informacoes quanto ao andamento do processo ou para impressao, \nacessar o site www.detran.ms.gov.br , no link de \"consulta processo suspensao/cassacao\", \nna aba \"Habilitacao\".\nCampo Grande (MS), 08 de outubro de 2018\nFRANCISCO LIBORIO SILVEIRA\nDIRETOR-ADJUNTO\nEDITAL DE NOTIFICACAO DE APLICACAO DE PENALIDADE N. 188, DE 08 DE \nOUTUBRO DE 2018\nO DIRETOR-PRESIDENTE DO DEPARTAMENTO ESTADUAL DE TRANSITO DO \nESTADO DE MATO GROSSO DO SUL - DETRAN-MS, no uso de suas atribuicoes conferidas \npela Lei no 9.503/97 e alteracoes, NOTIFICA o(s) condutor(es) abaixo relacionado(s) \npara apresentacao de recurso e/ou entregar sua Carteira Nacional de Habilitacao - CNH, \nno prazo de 30 (trinta) dias, a contar da publicacao deste edital, em razao da aplicacao \nda penalidade de suspensao/cancelamento/cassacao do direito de conduzir veiculos \nautomotores, conforme infracoes especificadas:\nCondutor: PAULO SERGIO EGIDIO DA SILVA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n165\nPRAZO: 12 Mes(es)\nProcesso: 017109/2017\n \nCondutor: NELSON CORDEIRO DA SILVA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n165\nPRAZO: 12 Mes(es)\nProcesso: 017114/2017\n \nCondutor: PAULO HENRIQUE GARCETE CANDIA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n165\nPRAZO: 12 Mes(es)\nProcesso: 017118/2017\n \nCondutor: ALEX MONTALVAO TOSTA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n165\nPRAZO: 12 Mes(es)\nProcesso: 017121/2017\n \nCondutor: ALEXANDRE CORREA DOS SANTOS OLIVEIRA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n165\nPRAZO: 12 Mes(es)\nProcesso: 017122/2017\n \nCondutor: JOEDES DIAS MACHADO\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n165\nPRAZO: 12 Mes(es)\nProcesso: 017124/2017\n \nCondutor: JOSYANE CASTELLO BIASSI\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 017125/2017\n \nCondutor: ROSIMEIRE SOARES PEDROZO\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 017130/2017\n \nCondutor: MOISES VILHALBA DA SILVA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 017133/2017\n \nCondutor: REGINALDO PACHECO BARBOSA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n244 I\nPRAZO: 01 Mes(es)\nProcesso: 017138/2017\n \nCondutor: MOISES ELIEL GRUBERT\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 017142/2017\n \nCondutor: CESAR FLAVIANO DE SOUZA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n165\nPRAZO: 12 Mes(es)\nProcesso: 017144/2017\n \nCondutor: DANIEL ADRIANO MATOS DE ALMEIDA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 017150/2017\n \nCondutor: WILHIAM RAMOS TORRES\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n165 A\nPRAZO: 12 Mes(es)\nProcesso: 017157/2017\n \nCondutor: WILHIAM RAMOS TORRES\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n165 A\nPRAZO: 12 Mes(es)\nProcesso: 017158/2017\n \nCondutor: LUCIANA DE LIMA MARON\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 017160/2017\n \nCondutor: AIRTON JOSE SEIBERT\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n244 IV\nPRAZO: 01 Mes(es)\nProcesso: 017164/2017\n \nCondutor: OTAVIO DO CARMO ARAUJO\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)\nProcesso: 017168/2017\n \nCondutor: MAURO CESAR DE OLIVEIRA DA SILVA\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n176 I\nPRAZO: 04 Mes(es)\nProcesso: 017169/2017\n \nCondutor: SAVIO MENEZES ARCE\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n165\nPRAZO: 12 Mes(es)\nProcesso: 017170/2017\n \nCondutor: VALDECIR BENJAMIM DE LONDRES\nOrgao de Registro: DETRAN/MS\nTipo do Processo: SUSPENSAO DA CNH\nFundamento legal \n(artigo do CTB):\n218 III\nPRAZO: 02 Mes(es)",
+        "Pagina": 11,
+        "Indice": null,
+        "Suplementos": null
+      },
+      "Index": "diariodoeproducao",
+      "InnerHits": null,
+      "Score": 0,
+      "Type": "documento",
+      "Version": null,
+      "Id": "AWZVrG3ZfEVbT3xfeoFh",
+      "Sorts": [
+        1539064800000,
+        11
+      ],
+      "Highlights": {
+        "texto": {
+          "DocumentId": "AWZVrG3ZfEVbT3xfeoFh",
+          "Field": "texto",
+          "Highlights": [
+            " processo suspensao/cassacao\", \nna aba \"Habilitacao\".\n\u003cem\u003eCampo\u003c/em\u003e \u003cem\u003eGrande\u003c/em\u003e (MS), 08 de outubro de 2018\nFRANCISCO"
+          ]
+        }
+      },
+      "Explanation": null,
+      "MatchedQueries": null
+    }
+  ],
+  "from": 1,
+  "totalDataElastic": 38
+}

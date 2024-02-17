@@ -1,0 +1,51 @@
+<div class="col-lg-12 mb-4 anexarDiv">
+    <label for="arquivoInput">Anexar documentos</label>
+    <br>
+    <label class="myLabel mb-2 btn btn-gravar btn-sm btn-block anexarLabel corFisica" ng-show="!$ctrl.isVisualizacao">
+        <input id="arquivoInput" type="file" files-input ng-model="$ctrl.arquivoData.file" onchange="angular.element(this).scope().$ctrl.uploadFileCliente(this)" multiple="multiple" />
+        <span>Escolher arquivos</span>
+    </label>
+    <div class="anexarDivTable">
+        <table class="table-striped anexarTable" width="100%">
+            <tr ng-repeat="fileCliente in $ctrl.filesCliente">
+                <th class="anexarTh1">
+                    <a href="arquivos/download?uri={{fileCliente.destFolder + '/' + fileCliente.name}}">{{fileCliente.name}}</span></a>
+                </th>
+                <th class="anexarTh2">
+                    <input class="form-control formCadastro"
+                           placeholder="Descrição" multiple required="" type="text" ng-model="fileCliente.description" ng-disabled="fileCliente.state== 'DEFINITIVE'">
+                </th>
+                <th>
+                    <button class="btn btn-gravarEvento btn-lg botaoGravarClientes" type="button" ng-click="$ctrl.setArquivoARemover(fileCliente.id)" title="Excluir"  ng-show="!$ctrl.isVisualizacao" >
+                        <i class="fa fa-trash-alt fa-1x"></i>
+                    </button>
+                </th>
+            </tr>
+
+        </table>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="apagarArquivoModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header" style="background-color:#013358; border-radius:0rem;">
+                <div class="row">
+                    <h4 class="modal-title" style="padding-left:1rem; color:#FFFFFF;">Apagar</h4>
+                </div>
+            </div>
+            <div class="modal-body" style="margin:auto; padding-top:3rem; padding-bottom:3rem;">
+                <form method="post" name="Login_Form" class="form-signin rounded loginForm">
+                    <label for="userEmail">Confirme a exclusão deste arquivo</label><br>
+                    <!--<input type="text2" class="form-control mb-2" name="userEmail" placeholder="Email" required="" autofocus />-->
+                    <div style="text-align:center;">
+                        <button class="btn btn-lg btn-gravar mb-3"  type="Button" style="min-width:6rem;" ng-click="$ctrl.removerArquivo()">Sim</button>
+                        <button class="btn btn-lg btn-gravar mb-3"  type="Button" data-dismiss="modal" style="min-width:6rem;">Não</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

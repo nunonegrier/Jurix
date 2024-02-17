@@ -1,0 +1,23 @@
+<div class="modal fade" id="apagarProcessoModal" role="dialog" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header" style="background-color:#FFFFFF; border-radius:0rem; width: 100%;">
+                <div class="row" style="width: 100%; text-align: center;">
+                    <h4 class="modal-title mb-3" style="padding-left:1rem; color:#000000; width: 100%;">Apagar processo</h4>
+                    <a style="width: 100%; text-align: center;">ATENÇÃO! - esta ação é irreversível!</a>
+                </div>
+            </div>
+            <div class="modal-body" style="margin:auto; padding-top:2rem; padding-bottom:3rem;">
+                <form method="post" name="Login_Form" class="form-signin rounded loginForm">
+                    <label >Confirme a exclusão deste processo</label><br>
+                    <!--<input type="text2" class="form-control mb-2" name="userEmail" placeholder="Email" required="" autofocus />-->
+                    <div style="text-align:center;">
+                        <button class="btn btn-lg btn-gravarEvento mb-3" name="Submit" value="" type="Button" ng-click="$ctrl.deletarProcesso()" style="min-width:6rem;">Sim</button>
+                        <button class="btn btn-lg btn-gravar mb-3" name="Submit" value="" type="Button" data-dismiss="modal" style="min-width:6rem;">Não</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

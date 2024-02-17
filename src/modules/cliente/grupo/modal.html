@@ -1,0 +1,49 @@
+<!-- Modal Novo Grupo -->
+<div id="adicionarGrupoClientes" class="modal fade eventoModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Conteúdo -->
+        <div class="modal-content" style="padding:1rem; padding-bottom:2rem; border:none;">
+            <div class="modal-header">
+                <div class="float-left">
+                    <h4 class="modalH4">GRUPOS</h4>
+                </div>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="col-lg-12 novoEventoDocsCol">
+                <div class="alterarEvento">
+                    <form class="modalForm">
+                        <div class="row">
+                            <div class="col-lg-12 mb-3">
+                                <label for="novoGrupoNome">Nome do novo grupo:</label>
+                                <input class="form-control formCadastro" id="novoGrupoNome" placeholder="Nome do grupo" type="text" ng-model="$ctrl.novoGrupo.nome">
+                            </div>
+                            <div class="col-lg-12">
+                                <button class="btn btn-gravar btn-lg float-right btn-block" type="button" ng-click="$ctrl.salvarGrupo()">Criar grupo</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-12 novoEventoDocsCol">
+                <div class="alterarEvento">
+                    <form class="modalForm">
+                        <div class="row">
+                            <div class="col-lg-12 mb-3">
+                                <label for="apagarGrupo">Apagar grupo:</label>
+                                <select class="custom-select d-block w-100" id="apagarGrupo" required ng-model="$ctrl.grupoApagar.id" >
+                                    <option value="" selected="selected">Selecione...</option>
+                                    <option ng-repeat="grupo in $ctrl.grupos"
+                                            ng-value="grupo.id">{{grupo.nome}}
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="col-lg-12">
+                                <button class="btn btn-gravarEvento btn-lg float-right btn-block" type="button" ng-click="$ctrl.apagarGrupo()">Apagar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,214 @@
+<!-- Modal Filtros Avançados -->
+<div id="filtrosAvancados" class="modal fade eventoModal" role="dialog">
+    <div class="modal-dialog modal-filtros">
+        <!-- Conteúdo -->
+        <div class="modal-content" style="padding:1rem; padding-bottom:2rem; border:none;">
+            <div class="modal-header">
+                <div class="float-left">
+                    <h4 class="modalH4">FILTROS AVANÇADOS</h4>
+                </div>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="col-lg-12 novoEventoDocsCol">
+                <div class="alterarEvento">
+                    <form class="modalForm" autocomplete="off" >
+                        <div class="row">
+                            <div class="col-lg-6 mb-4" style="border-right: 1px solid #e9ecef;">
+                                <div class="row" style="padding:0rem; margin:0rem;">
+                                    <div class="col-md-4">
+                                        <br>
+                                        <input ng-model="filtrosModel.tipoData" ng-value="'DATA_CRIACAO'" class="form-check-input" type="radio" name="filtroTipoData" id="filtroDataCriacao" >
+                                        <label class="form-check-label" for="filtroRapido">Data de criação</label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <br>
+                                        <input ng-model="filtrosModel.tipoData" ng-value="'DATA_LIMITE'" class="form-check-input" type="radio" name="filtroTipoData" id="filtroDataLimite" >
+                                        <label class="form-check-label" for="filtroRapido">Data Limite</label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <br>
+                                        <input ng-model="filtrosModel.tipoData" ng-value="'DATA_FINALIZACAO'" class="form-check-input" type="radio" name="filtroTipoData" id="filtroDataFinalizado" >
+                                        <label class="form-check-label" for="filtroRapido">Data de Finalização</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 mb-3">
+                                <label for="intervaloTempoFiltro">Intervalo de tempo</label>
+                                <select class="custom-select d-block w-100" id="intervaloTempoFiltro" ng-model="filtrosModel.intervaloData" ng-disabled="!filtrosModel.tipoData">
+                                    <option ng-value="intervaloData.id" ng-repeat="intervaloData in intervalosData">
+                                        {{intervaloData.nome}}
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="col-lg-2 mb-3">
+                                <label for="dataInicioFiltro" class="required-label">Data incial</label>
+                                <input ui-date="dateOptions"  ng-model="filtrosModel.dataInicio" class="form-control" id="dataInicioFiltro" placeholder="dd/mm/aaaa" type="text" ng-disabled="!filtrosModel.tipoData || filtrosModel.intervaloData != 'FIXO'">
+                            </div>
+                            <div class="col-lg-2 mb-3">
+                                <label for="dataFimFiltro" class="required-label">Data final</label>
+                                <input ui-date="dateOptions"  ng-model="filtrosModel.dataFim" class="form-control" id="dataFimFiltro" placeholder="dd/mm/aaaa" type="text" ng-disabled="!filtrosModel.tipoData || filtrosModel.intervaloData != 'FIXO'">
+                            </div>
+                            <div class="col-12 mb-4" style="border-bottom: 1px solid #e9ecef;">
+                            </div>
+
+                            <div class="col-lg-5 mb-3">
+                                <label for="responsavelFiltro">Responsável</label>
+                                <select ng-model="filtrosModel.idResponsavel" class="custom-select d-block w-100" id="responsavelFiltro"  required>
+                                    <option ng-repeat="colaborador in colaboradoresCompauta" value="{{colaborador.id}}"
+                                            selected="selected">{{colaborador.usuario.nome}}
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="col-lg-3 mb-3">
+                                <label for="estadoFiltro">Status</label>
+                                <select ng-model="filtrosModel.situacao" class="custom-select d-block w-100" id="estadoFiltro" >
+                                    <option value="" selected="selected"></option>
+                                    <option ng-value="statusPauta.id" ng-repeat="statusPauta in listaStatusPauta">
+                                        {{statusPauta.nome}}
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="col-lg-2 mb-3">
+                                <label for="tipoFiltroAvancado">Tipo</label>
+                                <select ng-model="filtrosModel.tipo" class="custom-select d-block w-100" id="tipoFiltroAvancado" >
+                                    <option value="" selected="selected"></option>
+                                    <option ng-value="tipoPauta.id" ng-repeat="tipoPauta in tiposPauta">
+                                        {{tipoPauta.nome}}
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class="col-lg-2 mb-3">
+                                <label for="dataPublicacaoFiltro" class="required-label">Data da Publicação</label>
+                                <input ng-model="filtrosModel.dataPublicacao" ui-date="dateOptions" class="form-control" id="dataPublicacaoFiltro" placeholder="dd/mm/aaaa" type="text">
+                            </div>
+
+                            <div class="col-lg-4 mb-3">
+                                <label for="clienteFiltro">Cliente</label>
+                                <input id="clienteFiltro" type="text"
+                                       ng-model="clienteNomeFilter"
+                                       placeholder="Nome Cliente"
+                                       class="form-control formCadastro"
+                                       auto-complete="autoCompleteClienteFilterOptions" />
+                            </div>
+                            <div class="col-lg-4 mb-3">
+                                <label for="contrariaFiltro">Parte contrária</label>
+                                <select ng-model="filtrosModel.idParte" class="custom-select d-block w-100" id="contrariaFiltro"  required>
+                                    <option value="" selected="selected"></option>
+                                    <option ng-repeat="parteProcesso in partesProcesso" value="{{parteProcesso.id}}"
+                                            selected="selected">{{parteProcesso.nome}}
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4 mb-3">
+                                <label for="processoFiltro">Nº. do Processo</label>
+                                <input id="processoFiltro" type="text"
+                                       ng-model="numeroProcessoFilter"
+                                       placeholder="Número do processo"
+                                       class="form-control formCadastro"
+                                       auto-complete="autoCompleteProcessoFilterOptions" />
+                            </div>
+
+                            <div class="col-lg-6 mb-3">
+                                <label for="descricoesFiltro">Descrições</label>
+                                <input ng-model="filtrosModel.descricaoPauta" class="form-control formCadastro" id="descricoesFiltro" placeholder="" type="text">
+                            </div>
+                            <div class="col-lg-6 mb-3">
+                                <label for="observacoesFiltro">Observações</label>
+                                <input ng-model="filtrosModel.observacaoPauta" class="form-control formCadastro" id="observacoesFiltro" placeholder="" type="text">
+                            </div>
+
+                            <div class="col-12 mb-3" style="padding:0rem; padding-left:1rem; padding-right:1rem; margin:0rem;">
+                                <div class="row" style="padding:0rem; margin:0rem; background-color:#F7F7F7; border-radius:0.25rem;">
+                                    <div class="col-lg-6 mb-3" style="text-align:right;">
+                                        <br><br>
+                                        <input class="form-check-input" type="checkbox" name="nomeFiltroRapido" id="filtroRapido" ng-model="criarFiltros">
+                                        <label class="form-check-label" for="filtroRapido">Criar filtro rápido</label><br>
+                                        <input class="form-check-input" type="checkbox" name="nomeFiltroRapido" id="filtroPadrao" ng-model="filtroPadrao">
+                                        <label class="form-check-label" for="filtroPadrao">Definir como filtro Padrão</label>
+                                    </div>
+                                    <div class="col-lg-6 mb-3 float-left">
+                                        <label for="nomeFiltro">Nome do filtro</label>
+                                        <input ng-model="nomeFiltro" class="form-control formCadastro" id="nomeFiltro" placeholder="Nome do filtro" type="text" required ng-disabled="!criarFiltros" style="width:200px;" maxlength="12">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-lg-12 mb-5">
+                                <button class="btn btn-gravar btn-lg float-right btn-block" type="button" ng-click="pesquisar()" ><i class="fa fa-filter"></i> Filtrar</button>
+                            </div>
+
+                            <!-- ##################################    Filtros Rápidos     ################################# -->
+
+                            <div class="container-fluid" style="padding:0rem; margin:0rem; text-align:center;">
+                                <a href="#grelhaFiltros" class="btn btn-finalizarEvento mb-3" data-toggle="collapse" style="padding-left:1.2rem;">GERIR FILTROS RÁPIDOS</a>
+
+                                <div class="col-md-12 collapse" id="grelhaFiltros">
+
+
+                                    <!-- ##################################    Grelha de filtros rápidos cadastrados - 12 filtros no máximo (???) ################################# -->
+
+
+                                    <div class="row" style="padding:0rem; padding:0rem; margin:0rem;">
+
+
+                                        <!-- ##################################    SLOT - 1 filtro ################################# -->
+
+                                        <div class="col-md-3 col-sm-6 mb-3" style="padding:0rem; padding-left:0.4rem; padding-right:0.4rem; height:35px !important;" ng-repeat="filtroUsuario in filtrosUsuario">
+                                            <div class="row" style="background-color:#FFFFFF;height:35px; padding:0rem; margin:0rem; box-shadow: 0 2px 12px 0 rgba(0,0,0,0.24),0 4px 20px 0 rgba(0,0,0,0.24) !important; margin:auto; border-radius:0.25rem; border-color:#FF0004; border:10px;">
+                                                <div class="col-6 mb-3" style="text-align:left; padding-left:0.4rem;">
+                                                    <table style="width:100%; height:100%; border-bottom:0px !important; vertical-align:middle;">
+                                                        <tr>
+                                                            <td style="border:none !important; vertical-align:middle;">
+                                                                <a style="font-weight: normal !important;"><b>{{filtroUsuario.nome}}</b></a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <div class="col-3 mb-3" style="padding:0rem; margin:0rem;">
+                                                    <button ng-click="carregarFiltrosUsuario(filtroUsuario)" type="button" class="btn btn-consultarEvento float-right" style="height:35px; width:100%; margin:auto; padding:0rem; border-radius:0rem !important; display:inline;"><i class="-alt fas fa-eye fa-fw"></i></button>
+                                                </div>
+                                                <div class="col-3 mb-3" style="height:35px; padding:0rem; margin:0rem; background-color:#FFFFFF; border-bottom-right-radius:0.25rem !important; border-top-right-radius:0.25rem !important;">
+                                                    <button ng-click="abrirModalRemoverFiltro(filtroUsuario)" type="button" class="btn btn-finalizarProcesso float-right" style="height:100%; width:100%; margin:auto; padding:0rem; border-bottom-left-radius:0rem !important; border-top-left-radius:0rem !important; display:inline;"><i class="-alt far fa-trash-alt fa-fw" style="background-color:transparent;"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- ##################################    FIM SLOT ################################# -->
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Confirmar exclusão filtro-->
+<div class="modal fade" id="apagarFiltroPauta" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header" style="background-color:#013358; border-radius:0rem;">
+                <div class="row">
+                    <h4 class="modal-title" style="padding-left:1rem; color:#FFFFFF;">Apagar</h4>
+                </div>
+            </div>
+            <div class="modal-body" style="margin:auto; padding-top:3rem; padding-bottom:3rem;">
+                <form method="post" name="Login_Form" class="form-signin rounded loginForm">
+                    <label for="userEmail">Confirme a exclusão deste item</label><br>
+                    <div style="text-align:center;">
+                        <button ng-click="removerFiltro()"class="btn btn-lg btn-gravar mb-3"  name="Submit" value="" type="Button" data-dismiss="modal" style="min-width:6rem;">Sim</button>
+                        <button class="btn btn-lg btn-gravar mb-3"  name="Submit" value="" type="Button" data-dismiss="modal" style="min-width:6rem;">Não</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,170 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 order-md-1 cadastrar cadastrarCol">
+            <form id="formJuridico" class="needs-validation" novalidate>
+                <div class="row">
+                    <div class="col-md-3 mb-2">
+                        <label for="nomeEmpresa" class="required-label">Razão Social</label>
+                        <input ng-model="cliente.nome" class="form-control formCadastro" id="nomeEmpresa" placeholder="Razão social da empresa" required="" type="text">
+                        <div class="invalid-feedback">
+                            Indique a Razão Social da empresa.
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-2">
+                        <label for="nomeFantasia">Nome Fantasia</label>
+                        <input ng-model="cliente.clienteJuridico.nomeFantasia" class="form-control formCadastro" id="nomeFantasia" placeholder="Nome Fantasia" type="text">
+                    </div>
+                    <div class="col-md-2 mb-2 bordersLeft">
+                        <label for="empresaCnpj" class="required-label">CNPJ</label>
+                        <input ng-model="cliente.clienteJuridico.cnpj" class="form-control formCadastro" id="empresaCnpj" placeholder="CNPJ" required="" type="text">
+                        <div class="invalid-feedback">
+                            Indique o CNPJ.
+                        </div>
+                    </div>
+                    <div class="col-md-2 mb-2 bordersCenter">
+                        <label for="inscrEstadual">Inscrição Estadual</label>
+                        <input ng-model="cliente.clienteJuridico.inscricaoEstadual" class="form-control formCadastro" id="inscrEstadual" placeholder="Inscrição Estadual" type="text">
+                        <div class="invalid-feedback">
+                            Indique a Inscrição Estadual
+                        </div>
+                    </div>
+                    <div class="col-md-2 mb-2 bordersCenter">
+                        <label for="inscrMunicipal">Inscrição Municipal</label>
+                        <input ng-model="cliente.clienteJuridico.inscricaoMunicipal" class="form-control formCadastro" id="inscrMunicipal" placeholder="Inscrição Municipal" type="text">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 mb-2 bordersRight">
+                        <label for="empresaCpf">CPF</label>
+                        <input ng-model="cliente.clienteJuridico.cpf" class="form-control formCadastro" id="empresaCpf" placeholder="CPF" type="text">
+                    </div>
+                    <div class="col-md-2 mb-2">
+                        <label for="fundacaoTipo">Fundação</label>
+                        <select ng-model="cliente.clienteJuridico.tipoFundacao" class="custom-select d-block w-100" id="fundacaoTipo">
+                            <option value="" selected="selected"></option>
+                            <option ng-value="tipoFundacao.id" ng-repeat="tipoFundacao in tiposFundacao">{{tipoFundacao.nome}}</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3 mb-2">
+                        <label for="empresaSite">Website</label>
+                        <input ng-model="cliente.clienteJuridico.website" class="form-control formCadastro" id="empresaSite" placeholder="Endereço do website da empresa" type="text">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mb-2">
+                        <label for="empresaEndereco" class="required-label">Endereço</label>
+                        <input ng-model="cliente.endereco" class="form-control formCadastro" id="empresaEndereco" placeholder="Nome da Rua e Número" required="" type="text">
+                        <div class="invalid-feedback">
+                            Indique o endereço do cliente.
+                        </div>
+                    </div>
+                    <div class="col-md-1 mb-2">
+                        <label for="empresaEstado" class="required-label">Estado</label>
+                        <select class="custom-select d-block w-100" id="clienteEstado" required ng-model="estadoSelecionado" ng-change="selecionarEstado()">
+                            <option value="" selected="selected">Selecione...</option>
+                            <option ng-repeat="estado in estados" ng-value="estado.id" >{{estado.nome}}</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Escolha uma opção.
+                        </div>
+                    </div>
+                    <div class="col-md-2 mb-2">
+                        <label for="empresaCidade" class="required-label">Cidade</label>
+                        <select ng-model="cliente.municipio.id"  class="custom-select d-block w-100" id="clienteCidade" required= >
+                            <option value="" selected="selected">Selecione...</option>
+                            <option ng-repeat="municipio in municipios" ng-value="municipio.id">{{municipio.nome}}</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Indique o nome da cidade.
+                        </div>
+                    </div>
+                    <div class="col-md-1 mb-2">
+                        <label for="empresaCep" class="required-label">CEP</label>
+                        <input ng-model="cliente.cep" class="form-control formCadastro" id="empresaCep" placeholder="CEP" required="" type="text">
+                        <div class="invalid-feedback">
+                            Indique o CEP.
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 mb-2 bordersLeft">
+                        <label for="responsavelNome" class="required-label">Nome do Responsável</label>
+                        <input ng-model="cliente.clienteJuridico.nomeResponsavel" class="form-control formCadastro" id="responsavelNome" placeholder="Nome do responsável" required="" type="text">
+                    </div>
+                    <div class="col-md-2 mb-2 bordersCenter">
+                        <label for="responsavelTel" class="required-label">Telefone do Responsável</label>
+                        <input ng-model="cliente.telefone" class="form-control formCadastro" id="responsavelTel" placeholder="Telefone do responsável" required="" type="text">
+                    </div>
+                    <div class="col-md-3 mb-2 bordersRight">
+                        <label for="responsavelEmail">Email do Responsável</label>
+                        <input ng-model="cliente.email" class="form-control formCadastro" id="responsavelEmail" placeholder="Email do responsável" type="text">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 mb-2 bordersLeft">
+                        <label for="contatoNome">Nome do Contato Alternativo</label>
+                        <input ng-model="cliente.clienteJuridico.nomeResposavelAlternativo" class="form-control formCadastro" id="contatoNome" placeholder="Nome do contato alternativo" type="text">
+                    </div>
+                    <div class="col-md-2 mb-2 bordersCenter">
+                        <label for="contatoTel">Telefone do Contato</label>
+                        <input ng-model="cliente.clienteJuridico.telefoneResponsavelAlternativo" class="form-control formCadastro" id="contatoTel" placeholder="Telefone do contato" type="text">
+                    </div>
+                    <div class="col-md-3 mb-2 bordersRight">
+                        <label for="contatoEmail">Email do Contato</label>
+                        <input ng-model="cliente.clienteJuridico.emailResponsavelAlternativo" class="form-control formCadastro" id="contatoEmail" placeholder="Email do contato alternativo" type="text">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 mb-2">
+                        <label for="empresaIndicacao">Indicado por</label>
+                        <input ng-model="cliente.indicacao" class="form-control formCadastro" id="empresaIndicacao" placeholder="Nome de quem indicou o cliente" type="text">
+                        <div class="invalid-feedback">
+                            Digite o nome de quem indicou o cliente.
+                        </div>
+                    </div>
+                    <div class="col-md-9 mb-2">
+                        <label for="empresaObs">Observações</label>
+                        <textarea ng-model="cliente.observacoes" class="form-control mb-2" rows="1" id="empresaObs"></textarea>
+                    </div>
+                </div>
+
+                <div class="row" style="padding: 0rem; margin: 0rem;">
+                    <br>
+                    <div class="col-lg-2 mb-5" style="padding-left: 0rem;">
+                        <label for="clienteGrupo">Grupo</label>
+                        <select class="custom-select d-block w-100" id="clienteGrupo"  ng-model="cliente.grupo.id" >
+                            <option value="" selected="selected">Selecione...</option>
+                            <option ng-repeat="grupo in grupos"
+                                    ng-value="grupo.id">{{grupo.nome}}
+                            </option>
+                        </select>
+                    </div>
+                    <div class="col-lg-2 mb-5" >
+                        <br>
+                        <button class="btn btn-gravar btn-lg" type="button" title="Adicionar novo grupo" ng-click="adicionarGrupo()" style="width:3rem; height:3rem; padding-left:0.5rem; padding-right:0.5rem; padding-top:0.2rem; padding-bottom:0.2rem;"><i class="fa fa-plus fa-1x" aria-hidden="true"></i></button>
+                    </div>
+                    <br>
+                </div>
+
+
+                <div class="row anexarRow">
+                    <jurix-arquivos ng-if="isTabVisible('juridica')" repository="filesRespository" form-id="'formJuridico'" ></jurix-arquivos>
+                </div>
+
+                <alert-msg message="message"> </alert-msg>
+                <div class="botaoGravarClientesDiv" ng-hide="cliente.id" >
+                    <button class="btn btn-gravar btn-lg btn-block mb-2 botaoGravarClientes" type="button" ng-click="salvarJuridico()" ng-disabled="desabilitaSalvar">Gravar</button>
+                </div>
+                <div class="row botaoGravarClientesDiv" ng-show="cliente.id" >
+                    <div class="col-md-9">
+                        <button class="btn btn-gravar btn-lg btn-block botaoGravarClientes" type="button" ng-click="salvarJuridico()" ng-disabled="desabilitaSalvar" >Gravar</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn btn-gravarEvento btn-lg btn-block mb-2 botaoGravarClientes" type="button" data-toggle="modal" data-target="#apagarClienteModal">Apagar</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

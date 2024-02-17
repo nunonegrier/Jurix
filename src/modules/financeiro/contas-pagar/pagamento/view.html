@@ -1,0 +1,93 @@
+<!-- Modal Confirmar pagamento despesa-->
+<div class="modal fade" id="despesaPaga" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content" style="border:none;">
+            <div class="modal-header" style="border-radius:0rem; max-height:70px; padding:0.1rem;">
+                <div class="row" style="padding:0rem; margin:auto;">
+                    <h4 class="modal-title" style="padding-left:0.5rem; padding-bottom:0.4rem; margin:0rem;">DESPESA - Confirmar pagamento</h4>
+                </div>
+            </div>
+            <div class="modal-body" style="margin:0rem; padding:0.2rem; padding-top:1rem; padding-bottom:1rem;">
+                <form id="formPagamentoDespesa" method="post" name="Login_Form" class="form-signin rounded loginForm">
+                    <div class="row" style="padding:0rem; margin:0rem;">
+                        <div class="col-lg-12 mb-2" style="padding:0rem; margin:0rem; text-align:center;">
+                            <label for="despesaDataPagamento">Data do pagamento</label>
+                            <input ui-date="$ctrl.dateOptions" class="form-control" id="despesaDataPagamento" placeholder="dd/mm/aaaa" type="text" style="max-width:180px; margin:auto;" required="required" ng-model="$ctrl.dataPagamento">
+                        </div>
+                    </div>
+                    <div class="row anexarRow">
+                        <jurix-arquivos repository="'pagamentoContaPagar'" form-id="'formPagamentoDespesa'" ></jurix-arquivos>
+                    </div>
+
+                    <div class="row" ng-if="$ctrl.contaPagar.frequencia !== 'EXTRAORDINARIA'">
+						<div class="container" style="text-align: center;">
+							<input type="checkbox" id="despesaPagamentoFinal" title="Encerra os lançamentos futuros desta despesa após este pagamento" ng-model="$ctrl.pagamentoFinal" >
+                                <a title="Encerra os lançamentos futuros desta despesa após este pagamento"> Pagamento final </a>
+                            </input>
+						</div>
+					</div>
+
+                    <br>
+                    <div style="text-align:center;">
+                        <button class="btn btn-lg btn-block btn-gravar mb-3"  name="Submit" value="" type="Button" ng-click="$ctrl.pagarConta()" >Confirmar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Confirmar pagamento de despesa COM ATRASO-->
+<div class="modal fade" id="despesaPagaAtraso" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content" style="border:none;">
+            <div class="modal-header" style="border-radius:0rem; max-height:70px; padding:1rem;">
+                <div class="row" style="padding:0rem; margin:auto;">
+                    <h4 class="modal-title" style="padding-bottom:0.5rem; margin:0rem;">DESPESA - Confirmar pagamento</h4>
+                </div>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body" style="margin:0rem; padding:0.2rem; padding-top:1rem; padding-bottom:1rem;">
+                <form id="formPagamentoDespesaAtraso" method="post" name="Login_Form" class="form-signin rounded loginForm">
+                    <div class="row" style="padding:0rem; margin:0rem;">
+                        <div class="mb-3" style="text-align:center; width:100%;">
+                            <a><b>ATENÇÃO! Despesa paga com atraso</b></a>
+                        </div>
+                        <div class="col-lg-12 mb-2" style="padding:0rem; margin:0rem; text-align:center;">
+                            <label for="despesaDataPagamentoAtraso">Data do pagamento</label>
+                            <input ui-date="$ctrl.dateOptions" class="form-control" id="despesaDataPagamentoAtraso" placeholder="dd/mm/aaaa" type="text" style="max-width:180px; margin:auto;" required="required" ng-model="$ctrl.dataPagamento">
+                        </div>
+                        <div class="col-lg-12 mb-2" style="padding:0rem; margin:0rem; text-align:center;">
+                            <label for="despesaDataPagamentoValor">Valor incial a pagar</label>
+                            <input class="form-control" id="despesaDataPagamentoValor" placeholder="00.00" type="text" disabled style="max-width:200px; margin:auto; text-align:center;" ng-model="$ctrl.contaPagar.valor" />
+                        </div>
+                        <div class="col-lg-12 mb-2" style="padding:0rem; margin:0rem; text-align:center;">
+                            <label for="despesaDataPagamentoAtrasoJuros">Valor com juros e multas</label>
+                            <input class="form-control" id="despesaDataPagamentoAtrasoJuros" placeholder="00.00" type="text" style="max-width:200px; margin:auto; text-align:center;" ng-model="$ctrl.valorPago" required="required"/>
+                            <div class="invalid-feedback">
+                                Valor deve ser maior ou igual ao valor inicial.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" ng-if="$ctrl.contaPagar.frequencia !== 'EXTRAORDINARIA'">
+                        <div class="container" style="text-align: center;">
+                            <input type="checkbox" id="despesaPagamentoFinalAtrasado" title="Encerra os lançamentos futuros desta despesa após este pagamento" ng-model="$ctrl.pagamentoFinal" >
+                            <a title="Encerra os lançamentos futuros desta despesa após este pagamento"> Pagamento final </a>
+                            </input>
+                        </div>
+                    </div>
+                    <div class="row anexarRow">
+                        <jurix-arquivos repository="'pagamentoContaPagar'" form-id="'formPagamentoDespesa'" ></jurix-arquivos>
+                    </div>
+
+                    <br>
+                    <div style="text-align:center;">
+                        <button class="btn btn-lg btn-block btn-gravar mb-3"  name="Submit" value="" type="Button" ng-click="$ctrl.pagarConta()" >Confirmar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>  

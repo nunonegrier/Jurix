@@ -1,0 +1,292 @@
+<div class="container-fluid">
+    <div class="row" style="padding-top:90px;">
+        <div class="col-lg-1 mb-2">
+            <label for="processoDescricaoTopo">Estado</label><br>
+            <a>{{processoDto.processo.situacao}}</a>
+        </div>
+        <div class="col-lg-3 mb-2">
+            <label for="numeroProcessoTopo" class="required-label">Número</label>
+            <input ng-model="processoDto.processo.numero" class="form-control formCadastro" id="numeroProcessoTopo" placeholder="" type="text" disabled="disabled" />
+        </div>
+        <div class="col-lg-5 mb-2">
+            <label for="processoDescricaoTopo">Descrição</label>
+            <input ng-model="processoDto.processo.descricao" class="form-control formCadastro" id="processoDescricaoTopo" placeholder="" type="text" disabled="disabled" />
+        </div>
+        
+        <div class="col-lg-3 mb-2" >
+            <div class="btn fa-pull-right">
+                <br>
+                <a>
+                    <button class="btn btn-finalizarEvento btn-lg botaoGravarClientes" ng-click="novoPautaEventoProcesso()" style="width:90%;" jurix-permissoes="Pauta.Criar" >
+                    <i class="-alt fa  fa-plus fa-fw"></i> Enviar para Pauta</button>
+                </a>
+                <a>
+                    <button jurix-permissoes="Processo.Finalizar" class="btn btn-finalizarProcesso" title="FINALIZAR PROCESSO" type="button" ng-click="novoAndamentoFinalizar()" ng-show="processoDto.processo.situacao == 'ATIVO'">
+                        <i class="-alt fa fa-bullseye fa-2x"></i> </button>
+                    <button jurix-permissoes="Processo.Finalizar" class="btn btn-reativarProcesso" title="REABRIR PROCESSO" type="button" ng-click="novoAndamentoReativar()" ng-show="processoDto.processo.situacao == 'FINALIZADO'" >
+                        <i class="-alt fa fa-bullseye fa-2x"></i> </button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid">
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading-1">
+                <h5 class="panel-title headerInfoProcessos headerH5">
+                    <a class="collapsed headerConsultas" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1" style="font-weight:normal;">
+                        INFORMAÇÕES
+                    </a>
+                </h5>
+            </div>
+            <div id="collapse-1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-1">
+                <div class="panel-body">
+                    <div class="container-fluid" style="padding-top:0.8rem;">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-12 order-md-1 cadastrar cadastrarCol">
+                                    <form id="formProcesso" class="needs-validation" novalidate>
+                                        <div class="row tabTopo">
+                                            <div class="col-lg-2 mb-2">
+                                                <label for="processoTipo">Tipo</label>
+                                                <input value="{{processoDto.processo.tipo | jurixEnumFilter: 'EnumTipoProcesso'}}" class="form-control formCadastro" id="processoTipo" placeholder="" type="text" disabled="disabled" />
+                                            </div>
+                                            <div class="col-lg-3 mb-2">
+                                                <label for="numeroProcesso" class="required-label">Número</label>
+                                                <input ng-model="processoDto.processo.numero" class="form-control formCadastro" id="numeroProcesso" placeholder="" type="text" disabled="disabled" />
+                                            </div>
+                                            <div class="col-lg-7 mb-2">
+                                                <label for="processoDescricao">Descrição</label>
+                                                <input ng-model="processoDto.processo.descricao" class="form-control formCadastro" id="processoDescricao" placeholder="" type="text" disabled="disabled" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-2 mb-2">
+                                                <label for="processoArea">Área</label>
+                                                <input value="{{processoDto.processo.area | jurixEnumFilter: 'EnumAreaProcesso' }}" class="form-control formCadastro" id="processoArea" placeholder="" type="text" disabled="disabled" />
+                                            </div>
+                                            <div class="col-lg-3 mb-2">
+                                                <label for="processoTipoAcao">Tipo da Ação</label>
+                                                <input ng-model="processoDto.processo.tipoAcao.descricao" class="form-control formCadastro" id="processoTipoAcao" placeholder="" type="text" disabled="disabled" />
+                                            </div>
+                                            <div class="col-lg-2 mb-2">
+                                                <label for="processoDistribuição" class="required-label">Data da distribuição</label>
+                                                <input ui-date="dateOptions" ng-model="processoDto.processo.dataDistribuicao" class="form-control" id="processoDistribuicao" placeholder="" type="text" disabled="disabled" />
+                                            </div>
+                                            <div class="col-lg-2 mb-2">
+                                                <label for="processoForo" class="required-label">Foro</label>
+                                                <input ng-model="processoDto.processo.foro" class="form-control formCadastro" id="processoForo" placeholder="" type="text" disabled="disabled" />
+                                            </div>
+                                            <div class="col-lg-3 mb-2">
+                                                <label for="processoVara">Vara</label>
+                                                <input ng-model="processoDto.processo.vara" class="form-control formCadastro" id="processoVara" placeholder="" type="text" disabled="disabled" />
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2" style="border-bottom: 1px solid #e9ecef;">
+                                            <div class="col-lg-2 mb-1">
+                                                <label for="processoEstado" class="required-label">Estado</label>
+                                                <input ng-model="processoDto.processo.comarca.estado.nome" class="form-control formCadastro" id="processoEstado" placeholder="" type="text" disabled="disabled" />
+                                            </div>
+                                            <div class="col-lg-3 mb-3">
+                                                <label for="processoComarca">Comarca</label>
+                                                <input ng-model="processoDto.processo.comarca.descricao" class="form-control formCadastro" id="processoComarca" placeholder="" type="text" disabled="disabled" />
+                                            </div>
+                                            <div class="col-lg-2 mb-3">
+                                                <label for="processoInstancia">Instância</label>
+                                                <input value="{{processoDto.processo.instancia | jurixEnumFilter: 'EnumInstanciaProcesso'}}" class="form-control formCadastro" id="processoInstancia" placeholder="" type="text" disabled="disabled" />
+                                            </div>
+                                            <div class="col-lg-3 mb-3">
+                                                <label for="processoValorAcao">Valor da ação</label>
+                                                <input ng-model="processoDto.processo.valorAcao" class="form-control formCadastro" id="processoValorAcao" placeholder="" type="text" disabled="disabled" />
+                                            </div>
+                                            <div class="col-lg-2 mb-3">
+                                                <label for="processoCentroCustos">Centro de Custos</label>
+                                                <input ng-model="processoDto.processo.centroCusto.descricao" class="form-control formCadastro" id="processoCentroCustos" placeholder="" type="text" disabled="disabled" />
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2" style="border-bottom: 1px solid #e9ecef;">
+                                            <div class="col-lg-3 mb-4">
+                                                <label for="processoVinculoNumero">Vinculado ao processo</label>
+                                                <input class="form-control formCadastro" style="font-size:0.9rem; text-align:center;" id="processoVinculoNumero" placeholder="" type="text" disabled value="{{processoDto.processo.processoVinculado.numero}}" />
+                                            </div>
+                                            <div class="col-lg-9 mb-4">
+                                                <label for="processoVinculoDescricao">Descrição</label>
+                                                <input class="form-control formCadastro" id="processoVinculodescricao" placeholder="" type="text" disabled value="{{processoDto.processo.processoVinculado.numero}}" />
+                                            </div>
+                                        </div>
+                                        <div class="row" style="margin:0rem;">
+                                            <div class="col-md-6 mb-2" style="padding-left:0rem;">
+                                                <label for="processoResumo">Resumo da Ação</label>
+                                                <textarea ng-model="processoDto.processo.resumo" class="form-control mb-1" rows="3" id="processoResumo" disabled="disabled" ></textarea>
+                                            </div>
+                                            <div class="col-md-6 mb-2">
+                                                <div class="row">
+                                                    <label for="processoObs">Observações</label>
+                                                    <textarea ng-model="processoDto.processo.observacoes" class="form-control mb-1" rows="3" id="processoObs" disabled="disabled" ></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3" style="">
+                                            <div class="container-fluid">
+                                                <label for="processoObs" style="width:100%;">Processos descendentes</label>
+                                                <div style="width:100%; border: 1px solid #CED4DA; border-radius:0.3rem;" >
+                                                    <table class="table-striped table-hover" style="width:100%;">
+                                                        <tr ng-repeat="processoFilho in processosFilho">
+                                                            <td class="listaProcessoDescendentes" style="width:30%;">
+                                                                <a ui-sref="layout.processoVisualizar({id: processoFilho.id})">{{processoFilho.numero}}</a>
+                                                            </td>
+                                                            <td class="listaProcessoDescendentes" style="width:70%; border-left:1px solid #CED4DA;">
+                                                                <a>{{processoFilho.descricao}}</a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row" style="padding:0.2rem;">
+                                            <div class="col-lg-12"  style="width:100%; text-align:center;">
+                                                <b>PARTES</b>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 mb-2" style="padding:0.8rem; padding-top:0rem;">
+                                                <a>CLIENTE</a>
+                                                <partes-processo partes="processoDto.partesCliente" desabilitar-adicionar="true" ></partes-processo>
+                                            </div>
+                                            <div class="col-lg-6 mb-2" style="padding:0.8rem; padding-top:0rem;">
+                                                <div style="text-align:right;">
+                                                    <a>PARTE CONTRÁRIA</a>
+                                                </div>
+                                                <partes-processo partes="processoDto.partesContraria" desabilitar-adicionar="true" ></partes-processo>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading-2">
+            <h5 class="panel-title headerAndamentoProcessos headerH5">
+                <a class="collapsed headerConsultas" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-2" aria-expanded="false" aria-controls="collapse-2" style="font-weight:normal;">
+                    ANDAMENTO
+                </a>
+            </h5>
+        </div>
+        <div id="collapse-2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-2">
+            <div class="panel-body" style="padding-bottom:30px;">
+                <div class="container-fluid" style="padding-top:1rem; padding-bottom:1rem;">
+                    <div style="box-shadow: 0 4px 12px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.12) !important;">
+                        <table class="table-striped table-hover" style="width:100%;">
+                            <tr style="text-align:center;">
+                                <th style="width:8%;">DATA</th>
+                                <th style="width:6%">HORA</th>
+                                <th style="width:15%">TIPO</th>
+                                <th>ANDAMENTO</th>
+                                <th style="width:12%;">AÇÕES</th>
+                            </tr>
+                            <tr ng-repeat="andamentoProcesso in andamentos">
+                                <td>{{andamentoProcesso.data | date : "dd/MM/yyyy"}}</td>
+                                <td style="border-left:1px solid #CED4DA; text-align:center;">{{andamentoProcesso.data | date : "HH:mm"}}h</td>
+                                <td style="border-left:1px solid #CED4DA;">{{andamentoProcesso.tipoAndamento.descricao}}</td>
+                                <td style="border-left:1px solid #CED4DA;">{{andamentoProcesso.descricao}}</td>
+                                <td>
+                                    <div class="btn-group float-right">
+                                        <button type="button" class="btn btn-gravar" ng-click="visualizarAndamento(andamentoProcesso)" ng-show="andamentoProcesso.tipoAndamento.finalidade !== 'REATIVAR_PROCESSO'" ><i class="-alt fa  fa-eye fa-fw"></i> Ver</button>
+                                        <button jurix-permissoes="Processo.Andamento.Editar" type="button" class="btn btn-gravar" style="border-left:1px solid #FFFFFF;" ng-click="editarAndamento(andamentoProcesso)" ng-show="processoDto.processo.situacao == 'ATIVO' && andamentoProcesso.tipoAndamento.finalidade == 'ANDAMENTO'" ><i class="-alt fa  fa-pencil-alt fa-fw"></i> Editar</button>
+                                        <button jurix-permissoes="Processo.Andamento.Editar" type="button" class="btn btn-gravarEvento" data-toggle="modal" data-target="#apagarAndamentoModal" style="border-left:1px solid #FFFFFF;" ng-click="setArquivoAndamentoRemover(andamentoProcesso)" ng-show="processoDto.processo.situacao == 'ATIVO' && andamentoProcesso.tipoAndamento.finalidade == 'ANDAMENTO' " ><i class="-alt fa  fa-trash-alt fa-fw"></i> Excluir</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </table>
+                        <div class="container-fluid" style="margin:0rem;padding:0.5rem;" jurix-permissoes="Processo.Andamento.Criar" ng-show="processoDto.processo.situacao == 'ATIVO'" >
+                            <div class="col-lg-12 mb-1" style="padding:0rem; margin:0rem;">
+                                <button class="btn btn-finalizarEvento btn-lg botaoGravarClientes" type="button" ng-click="novoAndamento()"><i class="fa fa-plus fa-1x" aria-hidden="true"></i> Novo Andamento</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default mb-4">
+        <div class="panel-heading" role="tab" id="heading-3">
+            <h5 class="panel-title headerAnexosProcessos headerH5">
+                <a class="collapsed headerConsultas" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-3" aria-expanded="false" aria-controls="collapse-3" style="font-weight:normal;">
+                    DOCUMENTOS ANEXADOS
+                </a>
+            </h5>
+        </div>
+        <div id="collapse-3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-3">
+            <div class="panel-body">
+                <div style="box-shadow: 0 4px 12px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.12) !important; padding-top:1rem;">
+                    <table class="table-striped table-hover" style="width:100%;">
+                        <tr style="text-align:center;">
+                            <th style="width:7%;">DATA</th>
+                            <th style="width:20%">NOME</th>
+                            <th>DESCRIÇÃO</th>
+                            <th style="width:16%;">ORIGEM</th>
+                        </tr>
+                        <tr ng-repeat="arquivo in arquivos">
+                            <td style="text-align:center;">{{arquivo.data | date : 'dd/MM/yyyy'}}</td>
+                            <td style="border-left:1px solid #CED4DA; text-align:center;"><a href="{{arquivo.link}}">{{arquivo.nome}}</a></td>
+                            <td style="border-left:1px solid #CED4DA;">{{arquivo.descricao}}</td>
+                            <td style="border-left:1px solid #CED4DA; text-align:center;"><button type="button" class="btn btn-link" ng-click="arquivo.origemLink()" ng-disabled="!arquivo.origemLink">{{arquivo.origem}}</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12 mb-1" style="padding:0rem; margin:0rem; width:100%; text-align:right; padding-bottom:80px;" jurix-permissoes="Processo.Editar" ng-show="processoDto.processo.situacao == 'ATIVO'" >
+        <a ui-sref="layout.processoEditar({id: processoDto.processo.id})" class="btn btn-gravar btn-lg botaoGravarClientes" role="button" style="min-width:240px;"><i class="fa fa-pencil-alt fa-1x" aria-hidden="true"></i> Editar</a>
+        <a style="padding-left: 1rem; padding-right: 1rem;" jurix-permissoes="Processo.Deletar" >
+            <button class="btn btn-finalizarProcesso" id="masterApagarProcesso" title="APAGAR PROCESSO" type="button" ng-click="exibirAvisoDeletar()">
+                <i class="-alt fa fa-trash-alt fa-2x"></i>
+            </button>
+        </a>
+    </div>
+</div>
+
+
+
+<andamento-processo-form></andamento-processo-form>
+<pauta-evento-processo-form></pauta-evento-processo-form>
+<finalizacao-processo></finalizacao-processo>
+<reativar-processo></reativar-processo>
+<confirmar-apagar-processo-modal confirmar-deletar-fn="deletarProcesso"></confirmar-apagar-processo-modal>
+
+<!-- Modal Confirmar exclusão-->
+<div class="modal fade" id="apagarAndamentoModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header" style="border-radius:0rem;">
+                <div class="row">
+                    <h4 class="modal-title" style="padding-left:1rem;">Apagar</h4>
+                </div>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body" style="margin:auto; padding-top:3rem; padding-bottom:3rem;">
+                <form method="post" name="Login_Form" class="form-signin rounded loginForm">
+                    <label for="userEmail">Confirme a exclusão deste item</label><br>
+                    <!--<input type="text2" class="form-control mb-2" name="userEmail" placeholder="Email" required="" autofocus />-->
+                    <div style="text-align:center;">
+                        <button class="btn btn-lg btn-gravar mb-3"  name="Submit" value="" type="Button" ng-click="removerAndamento()" style="min-width:6rem;">Sim</button>
+                        <button class="btn btn-lg btn-gravar mb-3"  name="Submit" value="" type="Button" data-dismiss="modal" style="min-width:6rem;">Não</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

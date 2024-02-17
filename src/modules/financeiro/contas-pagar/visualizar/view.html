@@ -1,0 +1,161 @@
+<!-- Modal ver despesa -->
+<div id="despesaVer" class="modal fade eventoModal" role="dialog">
+    <div class="modal-dialog" style="max-width:100% !important; width: 70% !important; margin:auto; padding-top:1rem;">
+        <!-- Conteúdo -->
+        <div class="modal-content" style="padding:1rem; padding-bottom:2rem; border:none; margin:auto;">
+            <div class="modal-header">
+                <div class="float-left">
+                    <h4 class="modalH4">DESPESA</h4>
+                </div>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="col-lg-12 novoEventoDocsCol">
+                <div class="alterarEvento">
+                    <form class="modalForm">
+                        <div class="row">
+                            <div class="col-lg-12 mb-5">
+                                <div class="row">
+                                    <div class="col-lg-2 mb-3">
+                                        <label for="despesaTipoView">Tipo:</label>
+                                        <input  class="form-control formCadastro" id="despesaTipoView" placeholder="Tipo da despesa" type="text" disabled value="{{$ctrl.contaPagar.tipo | jurixEnumFilter: 'EnumTipoContasPagar'}}"/>
+                                    </div>
+                                    <div class="col-lg-2 mb-3">
+                                        <label for="despesaValor">Valor:</label>
+                                        <input  class="form-control formCadastro" id="despesaValor" placeholder="Valor da despesa" type="text" disabled value="{{$ctrl.contaPagar.valor}}" />
+                                    </div>
+                                    <div class="col-lg-6 mb-3">
+                                        <label for="despesaDescricao">Descrição:</label>
+                                        <input  class="form-control formCadastro" id="despesaDescricao" placeholder="Descrição da despesa" type="text" disabled value="{{$ctrl.contaPagar.descricao}}" />
+                                    </div>
+                                    <div class="col-lg-2 mb-3">
+                                        <label for="dataVencimentoView" class="required-label">Data do vencimento</label>
+                                        <input class="form-control" id="dataVencimentoView" placeholder="dd/mm/aaaa" type="text" disabled value="{{$ctrl.contaPagar.dataVencimento | date: 'dd/MM/yyyy'}}" />
+                                    </div>
+									<div class="col-lg-2 mb-3" ng-show="$ctrl.contaPagar.dataPagamento" >
+                                        <label for="dataPagamentoView" class="required-label">Data do pagamento</label>
+                                        <input class="form-control" id="dataPagamentoView" placeholder="dd/mm/aaaa" type="text" disabled value="{{$ctrl.contaPagar.dataPagamento | date: 'dd/MM/yyyy'}}" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 mb-3" id="informacoesPagamentoAtrasado" ng-if="$ctrl.contaPagar.valorPago !== null && $ctrl.contaPagar.valor !== $ctrl.contaPagar.valorPago">
+                                <div class="row">
+                                    <div class="col-12 mb-4">
+                                        <a style="background-color:#A40002; padding:0.5rem; color:#FFFFFF; border-radius:0.2rem;">Esta despesa foi paga com atraso!</a><br>
+                                    </div>
+                                    <div class="col-lg-3 mb-1">
+                                        <label for="despesaValorComJuroseMultas">Valor final:</label>
+                                        <input  class="form-control formCadastro" id="despesaValorComJuroseMultas" placeholder="00.00" type="text" disabled ng-model="$ctrl.contaPagar.valorPago"/>
+                                    </div>
+                                    <div class="col-lg-3 mb-1">
+                                        <label for="despesaValorDosJuroseMultas">Juros e multas:</label>
+                                        <input  class="form-control formCadastro" id="despesaValorDosJuroseMultas" placeholder="00.00" type="text" disabled ng-model="$ctrl.jurosMultas" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 mb-3" >
+                                <div class="row" ng-repeat="incidenciaConta in $ctrl.contaPagar.incidencias" >
+                                    <div class="col-lg-3 mb-1">
+                                        <label for="despesaNomeCentroDeCustos">Centro de custos:</label>
+                                        <input ng-model="incidenciaConta.centroCusto.descricao" class="form-control formCadastro" id="despesaNomeCentroDeCustos" placeholder="" type="text" disabled>
+                                    </div>
+                                    <div class="col-lg-2 mb-1">
+                                        <label for="incidenciaPorcentagemCentroDeCustos">Incidência (%):</label>
+                                        <input ng-model="incidenciaConta.incidencia" class="form-control formCadastro" id="incidenciaPorcentagemCentroDeCustos" placeholder="" type="text" disabled>
+                                    </div>
+									
+									<!-- CAMPO NOVO PARA VALOR DA INCIDENCIA -->
+									<div class="col-lg-2 mb-2">
+					  					<label for="valorDaPartilha">Valor</label>
+                    					<input ng-model="incidenciaConta.valor" class="form-control formCadastro" id="valorDaPartilha"  type="number" to-precision="2" disabled >
+				  					</div>
+									
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <table style="width:100%;">
+                                    <tr style="text-align:center;">
+                                        <td  colspan="4" style="padding-bottom:0.1rem;">
+                                            <!--Pessoa:-->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:5%; padding-left:0rem;">
+                                            Pessoa:
+                                        </td>
+                                        <td style="width:10%; text-align:right; padding-right:1rem;">
+                                            <input name="despesaPessoa" id="despesaFisica" value="FISICA" type="radio" ng-model="$ctrl.contaPagar.pessoaConta.tipoPessoa" disabled /> Física<br>
+                                        </td>
+                                        <td style="width:10%; padding-left:1rem;">
+                                            <input name="despesaPessoa" id="despesaJuridica" value="JURIDICA" type="radio" ng-model="$ctrl.contaPagar.pessoaConta.tipoPessoa" disabled /> Jurídica<br>
+                                        </td>
+                                        <td style="width:auto;"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="invalid-feedback">
+                                                Escolha uma opção
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div id="juridica" style="width:100%;">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-8">
+                                            <label for="despesaNomeJuridica">Nome:</label>
+                                            <input  class="form-control formCadastro" id="despesaNomeJuridica" placeholder="Nome do destinatário" type="text" ng-model="$ctrl.contaPagar.pessoaConta.nome" disabled />
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <label for="despesaCnpj">CNPJ:</label>
+                                            <input  class="form-control formCadastro" id="despesaCnpj" placeholder="CNPJ" type="text" ng-model="$ctrl.contaPagar.pessoaConta.documento" disabled />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 mb-3">
+                                    <div class="row">
+                                        <div class="col-md-5 mb-2">
+                                            <label for="empresaEndereco" class="required-label">Endereço</label>
+                                            <input class="form-control formCadastro" id="empresaEndereco" placeholder="Nome da Rua e Número" type="text" ng-model="$ctrl.contaPagar.pessoaConta.endereco" disabled />
+                                            <div class="invalid-feedback">
+                                                Indique o endereço do cliente.
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 mb-2">
+                                            <label for="clienteEstadoView" class="required-label">Estado</label>
+                                            <input class="form-control formCadastro" id="clienteEstadoView" placeholder="Nome da Rua e Número" type="text" ng-model="$ctrl.contaPagar.pessoaConta.municipio.estado.nome" disabled />
+                                        </div>
+                                        <div class="col-md-3 mb-2">
+                                            <label for="clienteCidadeView" class="required-label">Cidade</label>
+                                            <input class="form-control formCadastro" id="clienteCidadeView" placeholder="Nome da Rua e Número" type="text" ng-model="$ctrl.contaPagar.pessoaConta.municipio.nome" disabled />
+                                        </div>
+                                        <div class="col-md-2 mb-2">
+                                            <label for="empresaCep" class="required-label">CEP</label>
+                                            <input class="form-control formCadastro" id="empresaCep" placeholder="CEP" type="text" ng-model="$ctrl.contaPagar.pessoaConta.cep" disabled />
+                                            <div class="invalid-feedback">
+                                                Indique o CEP.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-sm-6 col-md-8 col-lg-8">
+                                <button class="btn btn-gravar btn-lg btn-block" type="button" ng-click="$ctrl.editarConta($ctrl.contaPagar)" >Editar</button>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-4">
+                                <button class="btn btn-finalizarEvento btn-lg btn-block" type="button" data-toggle="modal" data-target="#despesaVer" >Fechar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

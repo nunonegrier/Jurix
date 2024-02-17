@@ -1,0 +1,18 @@
+<li class="nav-item" jurix-permissoes="Cliente.Visualizar" >
+    <a class="nav-linkClientes menuItens" ui-sref="layout.clienteList"><i class="fa fa-address-book fa-1x" aria-hidden="true"></i> CLIENTES</a>
+</li>
+<li class="nav-item" jurix-permissoes="Processo.Visualizar" >
+    <a class="nav-linkClientes menuItens disabled" ui-sref="layout.processoList"><i class="fa fa-balance-scale fa-1x" aria-hidden="true"></i> PROCESSOS</a>
+</li>
+<li class="nav-item" jurix-permissoes="Pauta.Visualizar" >
+    <a class="nav-linkClientes menuItens disabled" ui-sref="layout.pautaEvento"><i class="fa fa-list-alt fa-1x" aria-hidden="true"></i> PAUTA</a>
+</li>
+<li class="nav-item" ng-if="exibirPautaGeral()" >
+    <a class="nav-linkClientes menuItens disabled" ui-sref="layout.pautaEventoGeral"><i class="fa fa-list-alt fa-1x" aria-hidden="true"></i> PAUTA GERAL</a>
+</li>
+<li class="nav-item" jurix-permissoes="Financeiro.Visualizar" >
+    <a class="nav-linkClientes menuItens disabled" ui-sref="layout.financeiro"><i class="fa fa-credit-card fa-1x visible-md " aria-hidden="true"></i> FINANCEIRO</a>
+</li>
+<li class="nav-item" jurix-permissoes="Relatorio.Visualizar">
+    <a class="nav-linkClientes menuItens disabled" ui-sref="layout.relatorio" ><i class="fa fa-book fa-1x visible-md " aria-hidden="true"></i> RELATÓRIOS</a>
+</li>

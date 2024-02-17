@@ -1,0 +1,29 @@
+<!-- Modal Adicionar receita extraordinária-->
+<div class="modal fade" id="receitaExtraordinariaModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content" style="border:0rem !important;">
+            <div class="modal-header" style="border-radius:0rem; padding:1rem;">
+                <div class="row">
+                    <h4 class="modal-title" style="padding-left:1rem; padding-top:0rem; margin:0rem;">Adicionar receita extraordinária</h4>
+                    <a style="padding-left:1.2rem; font-size:0.8rem;">O valor extraordinário será somado ao valor contratual devido</a>
+
+                </div>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body" style="margin:auto; padding-top:3rem; padding-bottom:3rem; width:100%;">
+                <form method="post" id="valorExtraordinarioForm" class="form-signin rounded loginForm needs-validation" novalidate autocomplete="off" >
+                    <div class="col-lg-12 mb-2" style="padding:0rem; margin:0rem; text-align:center;">
+                        <label for="receitaExtraordinaria">Descrição</label>
+                        <input class="form-control" id="receitaExtraordinariaDescrição" placeholder="Descrição" type="text" style="width:100%; margin:auto; text-align:left;" ng-model="$ctrl.contaReceber.descricaoValorExtraordinario" required="required" ><br>
+                        <label for="receitaExtraordinaria">Valor da Receita Extraordinária</label>
+                        <input class="form-control" id="receitaExtraordinaria" placeholder="00.00" type="text" style="max-width:200px; margin:auto; text-align:center;" ng-model="$ctrl.contaReceber.valorExtraordinario" required="required" ><br>
+                    </div>
+                    <div style="text-align:center;">
+                        <button class="btn btn-lg btn-finalizarEvento mb-3" type="button" ng-click="$ctrl.salvarValorExtraordinario()" style="min-width:14rem;">Gravar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

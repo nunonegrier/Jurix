@@ -1,0 +1,184 @@
+<div class="container-fluid" style="padding-top:90px; padding-left:1rem; padding-right:1.4rem; padding-bottom:70px;">  
+  <div style="padding:2rem; border-radius:1rem; background-color:#FFFFFF;box-shadow: 0 4px 12px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.12) !important;">
+    <form class="needs-validation" novalidate id="formularioColaborador">
+      <div class="row">
+        <div class="col-md-3 mb-2">
+          <label for="nomeColaborador">Nome do colaborador*</label>
+          <input ng-disabled="acao === 'visualizar'" ng-model="colaborador.usuario.nome" class="form-control formCadastro" id="nomeColaborador"
+                 placeholder="Nome do colaborador" required="" type="text">
+          <div class="invalid-feedback">
+            Indique o nome do colaborador.
+          </div>
+        </div>
+        <div class="col-md-3 mb-2 form-check bordersTudo">
+          <table style="text-align:center; align-items:center; padding:0rem; height:100%; width:100%;">
+            <tr>
+              <td style="align-items:center; border-width:0rem;">
+                <label for="colaboradorSexo">Sexo*</label><br>
+              </td>
+            </tr>
+            <tr>
+              <td style="border-width:0rem;">
+                <input ng-disabled="acao === 'visualizar'" ng-model="colaborador.sexo"
+                       class="form-check-input" type="radio"
+                       name="colaboradorSexo" id="sexoMasculino" value="MASCULINO">
+                <label class="form-check-label" for="colaboradorSexo"
+                       style="padding-top:0rem; padding-bottom:0.4rem; padding-right:4rem; padding-left:0rem;">Masculino</label>
+                <input ng-disabled="acao === 'visualizar'" ng-model="colaborador.sexo"
+                       class="form-check-input" type="radio"
+                       name="colaboradorSexo" id="sexoFeminino" value="FEMININO">
+                <label class="form-check-label" for="colaboradorSexo"
+                       style="padding-top:0rem; padding-bottom:0.4rem; padding-right:0rem; padding-left:0rem;">Feminino</label>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="col-md-2 mb-2">
+          <label for="colaboradorRg">RG / RNE*</label>
+          <input ng-disabled="acao === 'visualizar'" ng-model="colaborador.rgRne"
+                 class="form-control formCadastro" id="colaboradorRG"
+                 placeholder="Nº do RG/RNE" type="text" required>
+          <div class="invalid-feedback">
+            Indique o número de R.G.
+          </div>
+        </div>
+        <div class="col-md-2 mb-2">
+          <label for="colaboradorOrgaoExp">Org. Exp.</label>
+          <input ng-disabled="acao === 'visualizar'" ng-model="colaborador.orgaoExpedidor"
+                 class="form-control formCadastro"
+                 id="colaboradorOrgaoExp" placeholder="Órg. expedidor" type="text">
+        </div>
+        <div class="col-md-2 mb-2 bordersTudo">
+          <label for="clienteDataNascimento" class="required-label">Data de nascimento</label>
+          <input ng-disabled="acao === 'visualizar'" ui-date="dateOptions"
+                 ng-model="colaborador.dataNascimento" class="form-control"
+                 id="clienteDataNascimento" placeholder="dd/mm/aaaa" type="text" required>
+          <div class="invalid-feedback">
+            Insira a data de nascimento
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 mb-2">
+          <label for="colaboradorNacionalidade">Nacionalidade*</label>
+          <input ng-disabled="acao === 'visualizar'" ng-model="colaborador.nacionalidade"
+                 class="form-control formCadastro"
+                 id="colaboradorNacionalidade" placeholder="Nacionalidade"
+                 type="text" required>
+        </div>
+        <div class="col-md-2 mb-2 bordersTudo">
+          <label for="colaboradorCpf">CPF*</label>
+          <input ng-disabled="acao === 'visualizar'" ng-model="colaborador.cpf"
+                 class="form-control formCadastro" id="colaboradorCpf"
+                 placeholder="Nº do CPF" type="text" required>
+        </div>
+        <div class="col-md-2 mb-2">
+          <label for="colaboradorOab">OAB</label>
+          <input ng-disabled="acao === 'visualizar'" ng-model="colaborador.oab"
+                 class="form-control formCadastro" id="colaboradorOab"
+                 placeholder="Nº da OAB" type="text">
+        </div>
+        <div class="col-md-3 mb-2 bordersLeft">
+          <label for="colaboradorTrabalhoNumero">Carteira de Trabalho</label>
+          <input ng-disabled="acao === 'visualizar'" ng-model="colaborador.carteiraTrabalho"
+                 class="form-control formCadastro"
+                 id="colaboradorTrabalhoNumero" placeholder="Número" type="text">
+        </div>
+        <div class="col-md-2 mb-2 bordersRight">
+          <label for="colaboradorTrabalhoSerie">Série</label>
+          <input ng-disabled="acao === 'visualizar'" ng-model="colaborador.serie"
+                 class="form-control formCadastro" id="colaboradorTrabalhoSerie"
+                 placeholder="Série" type="text">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2 mb-4">
+          <label for="colaboradorTel1">Telefone 01*</label>
+          <input ng-disabled="acao === 'visualizar'" ng-model="colaborador.telefone1"
+                 class="form-control formCadastro" id="colaboradorTel1"
+                 placeholder="Telefone 01" type="text" required>
+        </div>
+        <div class="col-md-2 mb-4">
+          <label for="colaboradorTel2">Telefone 02</label>
+          <input ng-disabled="acao === 'visualizar'" ng-model="colaborador.telefone2"
+                 class="form-control formCadastro" id="colaboradorTel2"
+                 placeholder="Telefone 02" type="text">
+        </div>
+        <div class="col-md-3 mb-4">
+          <label for="emailProfissional">Email Profissional*</label>
+          <input ng-disabled="acao === 'visualizar'" ng-model="colaborador.emailProfissional"
+                 class="form-control formCadastro"
+                 id="emailProfissional" placeholder="Email Profissional" type="text">
+        </div>
+        <div class="col-md-3 mb-4">
+          <label for="emailPessoal">Email Pessoal</label>
+          <input ng-disabled="acao === 'visualizar'" ng-model="colaborador.emailPessoal"
+                 class="form-control formCadastro" id="emailPessoal"
+                 placeholder="Email Pessoal" type="text">
+        </div>
+        <div class="col-md-2 mb-4 bordersTudoEvento">
+          <label for="colaboradorAcesso">Nível de acesso*</label>
+          <select ng-disabled="acao === 'visualizar'" ng-model="colaborador.usuario.perfil.id"
+                  class="custom-select d-block w-100" id="colaboradorAcesso"
+                  required>
+            <option ng-repeat="perfil in perfis" selected="selected" ng-value="perfil.id">
+              {{perfil.descricao}}
+            </option>
+          </select>
+          <div class="invalid-feedback">
+            Escolha o nível de acesso para este colaborador.
+          </div>
+        </div>
+      </div>
+      <div class="row" ng-hide="colaborador.id" >
+        <div class="col-lg-3 bordersTudoSenha">
+          <label for="senhaUsuario">Senha*</label>
+          <input ng-disabled="acao !== 'novo'" ng-model="colaborador.usuario.senha"
+                 class="form-control formCadastro" id="senhaUsuario"
+                 placeholder="Digite a senha" type="password">
+        </div>
+      </div>
+      <div class="row" ng-hide="colaborador.id" >
+        <div class="col-lg-3 mb-4 bordersTudoSenha">
+          <label for="senhaConfirma">Confirme a senha*</label>
+          <input ng-disabled="acao !== 'novo'" ng-model="confirmacaoSenha"
+                 class="form-control formCadastro mb-3" id="senhaConfirma"
+                 placeholder="Digite a senha novamente" type="password">
+        </div>
+      </div>
+      <alert-msg message="message"></alert-msg>
+
+      <div class="row" ng-hide="podeAlterarSenha">
+        <div ng-class="colaborador.id ? 'col-lg-10 mb-10' : 'col-lg-12 mb-12'" ng-show="acao=='editar' || acao=='novo'">
+          <button ng-click="salvar()" class="btn btn-gravar btn-lg btn-block"
+                  type="submit">Gravar
+          </button>
+        </div>
+        <div class="col-sm-2" id="colaboradorBtnDesativar" ng-show="acao=='editar'">
+          <button class="btn btn-atrasoEvento btn-lg btn-block" type="button" ng-click="desativar()" ng-if="colaborador.usuario.situacao == 'ATIVO'"><i class="fa fa-toggle-off fa-1x" aria-hidden="true"></i> Desativar</button>
+          <button class="btn btn-finalizarEvento btn-lg btn-block" type="button" ng-click="ativar()" ng-if="colaborador.usuario.situacao == 'INATIVO'"><i class="fa fa-toggle-on fa-1x" aria-hidden="true"></i> Ativar</button>
+        </div>
+      </div>
+
+      <div class="row" ng-show="podeAlterarSenha" >
+        <div class="col-lg-9 mb-9" ng-show="acao=='editar' || acao=='novo'">
+          <button ng-click="salvar()" class="btn btn-gravar btn-lg btn-block"
+                  type="submit">Gravar
+          </button>
+        </div>
+        <div class="col-lg-3 mb-3" ng-show="acao=='editar'" >
+          <button ng-click="alterarSenha()" class="btn btn-success btn-lg btn-block" type="button">
+            Alterar Senha
+          </button>
+        </div>
+        <div class="col-lg-12 mb-12" ng-show="acao=='visualizar'" >
+          <button ng-click="alterarSenha()" class="btn btn-success btn-lg btn-block" type="button">
+            Alterar Senha
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<trocar-senha-usuario></trocar-senha-usuario>

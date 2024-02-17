@@ -1,0 +1,318 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 order-md-1 cadastrar cadastrarCol">
+            <form id="formFisico" class="needs-validation" novalidate>
+                <div class="row tabTopo">
+                    <div class="col-md-1 mb-2">
+                        <label for="clienteTratamento">Tratamento</label>
+                        <select class="custom-select d-block w-100" id="clienteTratamento"
+                                ng-model="cliente.clienteFisico.tratamento">
+                            <option value="" selected="selected"></option>
+                            <option>Sr.</option>
+                            <option>Sra.</option>
+                            <option>Dr.</option>
+                            <option>Dra.</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Escolha uma opção.
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-2">
+                        <label for="nomeCliente" class="required-label">Nome</label>
+                        <input ng-model="cliente.nome" class="form-control formCadastro" id="nomeCliente"
+                               placeholder="Nome completo do cliente" required="" type="text">
+                        <div class="invalid-feedback">
+                            Digite aqui o nome do cliente.
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-2">
+                        <label for="clienteNomeSolteiro">Nome de solteiro</label>
+                        <input ng-model="cliente.clienteFisico.nomeSolteiro" class="form-control formCadastro"
+                               id="clienteNomeSolteiro" placeholder="Nome de solteiro completo do cliente" type="text">
+                    </div>
+                    <div class="col-md-2 mb-2 bordersLeft">
+                        <label for="clienteRg" class="required-label">RG / RNE</label>
+                        <input ng-model="cliente.clienteFisico.rgRne" class="form-control formCadastro" id="clienteRG"
+                               placeholder="Nº do RG/RNE" type="text">
+                        <div class="invalid-feedback">
+                            Digite o número de R.G.
+                        </div>
+                    </div>
+                    <div class="col-md-1 mb-2 bordersRight">
+                        <label for="clienteOrgaoExp" class="required-label">Org. Exp.</label>
+                        <input ng-model="cliente.clienteFisico.orgaoExpeditor" class="form-control formCadastro"
+                               id="clienteOrgaoExp" placeholder="Órg. exp." type="text">
+                        <div class="invalid-feedback">
+                            Indique o Órgão Expedidor
+                        </div>
+                    </div>
+                    <div class="col-md-2 mb-2">
+                        <table class="tabTableSexos">
+                            <tr>
+                                <td colspan="2" class="tabTableTitulo">
+                                    <label for="clienteSexo">Sexo</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="col-md-1 mb-2 form-check">
+                                        <input ng-model="cliente.clienteFisico.sexo" class="form-check-input"
+                                               type="radio" name="clienteSexo" id="sexoMasculino" value="MASCULINO"
+                                               required>
+                                        <label class="form-check-label" for="sexoMasculino">Masculino</label>
+                                        <div class="invalid-feedback">
+                                            Escolha uma opção
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="col-md-1 mb-2 form-check">
+                                        <input ng-model="cliente.clienteFisico.sexo" class="form-check-input"
+                                               type="radio" name="clienteSexo" id="sexoFeminino" value="FEMININO"
+                                               required>
+                                        <label class="form-check-label" for="sexoFeminino">Feminino</label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 mb-2">
+                        <label for="clienteDataNascimento" class="required-label">Data de nascimento</label>
+                        <input ui-date="dateOptions" ng-model="cliente.clienteFisico.dataNascimento"
+                               class="form-control" id="clienteDataNascimento" placeholder="dd/mm/aaaa" type="text" />
+                        <div class="invalid-feedback">
+                            Insira a data de nascimento
+                        </div>
+                    </div>
+                    <div class="col-md-2 mb-2">
+                        <label for="clienteNacionalidade" class="required-label">Nacionalidade</label>
+                        <input ng-model="cliente.clienteFisico.nacionalidade" class="form-control formCadastro"
+                               id="clienteNacionalidade" placeholder="Nacionalidade" required="" type="text">
+                        <div class="invalid-feedback">
+                            Indique a nacionalidade do cliente
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-2">
+                        <label for="nomePai">Nome do Pai</label>
+                        <input ng-model="cliente.clienteFisico.nomePai" class="form-control formCadastro" id="nomePai"
+                               placeholder="Nome do pai" type="text">
+                    </div>
+                    <div class="col-md-3 mb-2">
+                        <label for="nomeMae">Nome da Mãe</label>
+                        <input ng-model="cliente.clienteFisico.nomeMae" class="form-control formCadastro" id="nomeMae"
+                               placeholder="Nome da Mãe" type="text">
+                    </div>
+                    <div class="col-md-2 mb-2">
+                        <label for="clienteCpf" class="required-label">CPF</label>
+                        <input ng-model="cliente.clienteFisico.cpf" class="form-control formCadastro" id="clienteCpf"
+                               placeholder="Nº do CPF" required="" type="text">
+                        <div class="invalid-feedback">
+                            Digite o número de CPF
+                        </div>
+                    </div>
+                    <div class="col-md-2 mb-2 bordersLeft">
+                        <label for="clienteTrabalhoNumero">Carteira de Trabalho</label>
+                        <input ng-model="cliente.clienteFisico.carteiraTrabalho" class="form-control formCadastro"
+                               id="clienteTrabalhoNumero" placeholder="Número" type="text">
+                    </div>
+                    <div class="col-md-1 mb-2 bordersRight">
+                        <label for="clienteTrabalhoSerie">Série</label>
+                        <input ng-model="cliente.clienteFisico.serie" class="form-control formCadastro"
+                               id="clienteTrabalhoSerie" placeholder="Série" type="text">
+                    </div>
+                    <div class="col-md-2 mb-2">
+                        <label for="clientePis">PIS</label>
+                        <input ng-model="cliente.clienteFisico.pis" class="form-control formCadastro" id="clientePis"
+                               placeholder="Nº do PIS" type="text">
+                    </div>
+                    <div class="col-md-3 mb-2">
+                        <label for="clienteProfissao">Profissão/Ocupação</label>
+                        <input ng-model="cliente.clienteFisico.profissao" class="form-control formCadastro"
+                               id="clienteProfissao" placeholder="Profissão/Ocupação" type="text">
+                    </div>
+                    <div class="col-md-2 mb-4 bordersLeft">
+                        <label for="eleitorNumero">Título de eleitor</label>
+                        <input ng-model="cliente.clienteFisico.tituloEleitor" class="form-control formCadastro"
+                               id="eleitorNumero" placeholder="Número" type="text">
+                    </div>
+                    <div class="col-md-1 mb-4 bordersCenter">
+                        <label for="eleitorZona">Zona</label>
+                        <input ng-model="cliente.clienteFisico.zona" class="form-control formCadastro" id="eleitorZona"
+                               placeholder="Zona" type="text">
+                    </div>
+                    <div class="col-md-1 mb-4 bordersRight">
+                        <label for="eleitorSecao">Seção</label>
+                        <input ng-model="cliente.clienteFisico.secao" class="form-control formCadastro"
+                               id="eleitorSecao" placeholder="Seção" type="text">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-1 mb-4">
+                        <label for="estadoCivil" class="required-label">Estado Civil</label>
+                        <select ng-model="cliente.clienteFisico.estadoCivil" ng-change="selecionarEstadoCivil()"
+                                class="custom-select d-block w-100" id="estadoCivil" required>
+                            <option value="" selected="selected"></option>
+                            <option ng-value="estadoCivil.id" ng-repeat="estadoCivil in estadosCivil">
+                                {{estadoCivil.nome}}
+                            </option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Indique o Estado Civil do cliente.
+                        </div>
+                    </div>
+                    <div class="col-md-2 mb-4">
+                        <label for="estadoTipo" class="required-label">Tipo</label>
+                        <select ng-model="cliente.clienteFisico.tipoEstadoCivil" ng-disabled="tipoEstadoCivilDisabled"
+                                class="custom-select d-block w-100" id="estadoTipo" required>
+                            <option value="" selected="selected"></option>
+                            <option ng-value="tipoEstadoCivil.id" ng-repeat="tipoEstadoCivil in tiposEstadoCivil">
+                                {{tipoEstadoCivil.nome}}
+                            </option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Escolha uma opção.
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <label for="clienteConjugeNome">Nome do conjuge</label>
+                        <input ng-model="cliente.clienteFisico.nomeConjugue" class="form-control formCadastro" ng-disabled="tipoEstadoCivilDisabled"
+                               id="clienteConjugeNome" placeholder="Nome do conjugê" type="text">
+                    </div>
+                    <div class="col-md-2 mb-4">
+                        <label for="conjugeId">R.G./R.N.E.</label>
+                        <input ng-model="cliente.clienteFisico.rgRneConjugue" class="form-control formCadastro" ng-disabled="tipoEstadoCivilDisabled"
+                               id="conjugeId" placeholder="Nº do R.G. ou R.N.E." type="text">
+                    </div>
+                    <div class="col-md-2 mb-4">
+                        <label for="conjugeCpf">CPF</label>
+                        <input ng-model="cliente.clienteFisico.cpfConjugue" class="form-control formCadastro" ng-disabled="tipoEstadoCivilDisabled"
+                               id="conjugeCpf" placeholder="Nº do CPF" type="text">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 mb-2">
+                        <label for="telComercial" class="required-label">Telefone 01</label>
+                        <input ng-model="cliente.telefone" class="form-control formCadastro" id="telComercial"
+                               placeholder="Telefone 01" required="" type="text">
+                        <div class="invalid-feedback">
+                            Indique um número de telefone
+                        </div>
+                    </div>
+                    <div class="col-md-2 mb-2">
+                        <label for="telResidencial">Telefone 02</label>
+                        <input ng-model="cliente.clienteFisico.telefone2" class="form-control formCadastro"
+                               id="telResidencial" placeholder="Telefone 02" type="text">
+                    </div>
+                    <div class="col-md-4 mb-1">
+                        <label for="clienteEndereco" class="required-label">Endereço</label>
+                        <input ng-model="cliente.endereco" class="form-control formCadastro" id="clienteEndereco"
+                               placeholder="Nome da Rua e Número" required="" type="text">
+                        <div class="invalid-feedback">
+                            Indique o endereço do cliente.
+                        </div>
+                    </div>
+                    <div class="col-md-1 mb-1">
+                        <label for="clienteEstado" class="required-label">Estado</label>
+                        <select class="custom-select d-block w-100" id="clienteEstado" required
+                                ng-model="estadoSelecionado" ng-change="selecionarEstado()">
+                            <option value="" selected="selected">Selecione...</option>
+                            <option value="{{estado.id}}" ng-repeat="estado in estados" ng-value="estado.id">
+                                {{estado.nome}}
+                            </option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Escolha uma opção.
+                        </div>
+                    </div>
+                    <div class="col-md-2 mb-1">
+                        <label for="clienteCidade" class="required-label">Cidade</label>
+                        <select ng-model="cliente.municipio.id" class="custom-select d-block w-100" id="clienteCidade"
+                                required=>
+                            <option value="" selected="selected">Selecione...</option>
+                            <option value="{{municipio.id}}" ng-repeat="municipio in municipios"
+                                    ng-value="municipio.id">{{municipio.nome}}
+                            </option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Indique o nome da cidade.
+                        </div>
+                    </div>
+                    <div class="col-md-1 mb-1">
+                        <label for="clienteCep" class="required-label">CEP</label>
+                        <input ng-model="cliente.cep" class="form-control formCadastro" id="clienteCep"
+                               placeholder="CEP" required="" type="text">
+                        <div class="invalid-feedback">
+                            Indique o CEP.
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-2">
+                        <label for="emailProfissional">Email Profissional</label>
+                        <input ng-model="cliente.clienteFisico.emailProfissional" class="form-control formCadastro"
+                               id="emailProfissional" placeholder="Email Profissional" type="text">
+                    </div>
+                    <div class="col-md-3 mb-2">
+                        <label for="emailPessoal">Email Pessoal</label>
+                        <input ng-model="cliente.email" class="form-control formCadastro" id="emailPessoal"
+                               placeholder="Email Pessoal" type="text">
+                    </div>
+                    <div class="col-md-2 mb-2">
+                        <label for="clienteIndicacao">Indicado por</label>
+                        <input ng-model="cliente.indicacao" class="form-control formCadastro" id="clienteIndicacao"
+                               placeholder="Nome de quem indicou o cliente" type="text">
+                        <div class="invalid-feedback">
+                            Digite o nome de quem indicou o cliente.
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-1">
+                        <label for="clienteObs">Observações</label>
+                        <textarea ng-model="cliente.observacoes" class="form-control mb-1" rows="2"
+                                  id="clienteObs"></textarea>
+                    </div>
+                </div>
+				
+				<div class="row" style="padding: 0rem; margin: 0rem;">
+					<br>
+                    <div class="col-lg-2 mb-5" style="padding-left: 0rem;">
+						<label for="clienteGrupo">Grupo</label>
+						<select class="custom-select d-block w-100" id="clienteGrupo"  ng-model="cliente.grupo.id" >
+                            <option value="" selected="selected">Selecione...</option>
+                            <option ng-repeat="grupo in grupos"
+                                    ng-value="grupo.id">{{grupo.nome}}
+                            </option>
+                        </select>
+					</div>	
+					<div class="col-lg-2 mb-5" >
+                      <br>
+                      <button class="btn btn-gravar btn-lg" type="button" title="Adicionar novo grupo" ng-click="adicionarGrupo()" style="width:3rem; height:3rem; padding-left:0.5rem; padding-right:0.5rem; padding-top:0.2rem; padding-bottom:0.2rem;"><i class="fa fa-plus fa-1x" aria-hidden="true"></i></button>
+                    </div>
+					<br>
+				</div>
+
+                <div class="row anexarRow">
+                    <jurix-arquivos ng-if="isTabVisible('fisica')" repository="filesRespository" form-id="'formFisico'" ></jurix-arquivos>
+                </div>
+
+                <alert-msg message="message"></alert-msg>
+                <div class="botaoGravarClientesDiv" ng-hide="cliente.id">
+                    <button class="btn btn-gravar btn-lg btn-block botaoGravarClientes" type="button"
+                            ng-click="salvarFisico()" ng-disabled="desabilitaSalvar">Gravar
+                    </button>
+                </div>
+                <div class="row botaoGravarClientesDiv" ng-show="cliente.id">
+                    <div class="col-md-9">
+                        <button class="btn btn-gravar btn-lg btn-block botaoGravarClientes" type="button"
+                                ng-click="salvarFisico()" ng-disabled="desabilitaSalvar">Gravar
+                        </button>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn btn-gravarEvento btn-lg btn-block mb-2 botaoGravarClientes" type="button" data-toggle="modal" data-target="#apagarClienteModal">Apagar</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+

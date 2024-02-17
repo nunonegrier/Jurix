@@ -1,0 +1,84 @@
+<!-- Tabela de Clientes -->
+<main role="main" class="containerMain" style="padding-top: 90px;">
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 well">
+                    <form class="form-inline mt-2 mt-md-0">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Digite aqui" aria-label="Digite aqui" ng-model="filtros.nomeDescricao" ng-keyup="pesquisar()" />
+                        <button class="btn btn-pesquisa my-2 my-sm-0" ng-click="pesquisar()" >Pesquisar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" style="padding-top: 0.5rem; padding-bottom:60px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 table-responsive">
+                    <table class="table table-hover table-striped">
+                        <tbody>
+                            <tr ng-repeat="filtroUsuario in filtroUsuarioPage.content">
+                                <td style="vertical-align:middle; padding: 0.1rem; padding-left: 0.5rem;">
+                                    <a ng-href="{{getUrlResultado(filtroUsuario)}}" >
+                                        <b>{{filtroUsuario.nome}}</b>
+                                    </a>
+                                </td>
+                                <td style="vertical-align:middle; padding: 0.1rem;">
+                                    <a ng-href="{{getUrlResultado(filtroUsuario)}}"  >
+                                        {{filtroUsuario.descricao}}
+                                    </a>
+                                </td>
+                                <td style="vertical-align:middle; padding: 0.1rem;">
+                                    <div class="btn fa-pull-right">
+                                        <a style="text-decoration:none !important;">
+                                            <button class="btn btn-gravarEvento" type="button" ng-click="abrirModalDeletar(filtroUsuario)">
+                                                <i class="fas fa-trash-alt" style="padding-right: 0.3rem;"></i> Apagar
+                                            </button>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <jurix-paginacao-table page-object="filtroUsuarioPage" pages-size="pagesSize" page-filters="filtros" update-pagination-fn="updatePagination"></jurix-paginacao-table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div id="apagarRelatorioFavorito" class="modal eventoModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Conteúdo -->
+        <div class="modal-content" style="padding:1rem; padding-bottom:2rem; border:none;">
+            <div class="modal-header">
+                <div class="float-left">
+                    <h4 class="modalH4">Apagar Favorito</h4>
+                </div>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="col-lg-12 novoEventoDocsCol">
+                <div class="alterarEvento">
+                    <form class="modalForm">
+                        <div class="row">
+                            <div class="col-lg-12 mb-4">
+                                <a>Apagar o favorito: </a>
+                                <a><b> {{filtroUsuarioDeletar.nome}}</b></a>
+                            </div>
+                            <div class="col-lg-6">
+                                <button class="btn btn-finalizarEvento btn-lg float-right btn-block" type="button" ng-click="confirmApagar()">Sim</button>
+                            </div>
+                            <div class="col-lg-6">
+                                <button class="btn btn-gravarEvento btn-lg float-right btn-block" type="button" data-toggle="modal" data-target="#apagarRelatorioFavorito" >Cancelar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

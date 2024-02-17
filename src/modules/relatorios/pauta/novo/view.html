@@ -1,0 +1,114 @@
+<div class="novoEvento" style="padding-top: 80px;">
+  <form id="formularioPautaEvento" class="needs-validation ng-invalid ng-invalid-required ng-dirty ng-valid-parse ng-valid-ui-date-validator" novalidate>
+    <div class="row">
+      <div class="col-lg-1 mb-1 bordersTudoEvento">
+
+        <label for="tipoRelatorioPauta" class="required-label">
+          <input type="checkbox" id="tipoRelPauta" ng-model="colunas.tipo.selecionado" > Tipo
+        </label>
+        <select class="custom-select d-block w-100" id="tipoRelatorioPauta" ng-model="filtroPauta.tipo" >
+          <option value="" selected="selected"></option>
+          <option value="PRAZO">Prazo</option>
+          <option value="TAREFA">Tarefa</option>
+        </select>
+        <div class="invalid-feedback">
+          Escolha uma opção.
+        </div>
+      </div>
+
+      <div class="col-lg-4 mb-1">
+        <label for="nomeColaborador" class="required-label">
+          <input type="checkbox" id="tipoNomeColaborador" ng-model="colunas.idResponsavel.selecionado" > Responsável
+        </label>
+        <select ng-model="filtroPauta.idResponsavel" class="custom-select d-block w-100" id="nomeColaborador" required >
+          <option ng-repeat="colaborador in colaboradores" value="{{colaborador.id}}" >
+            {{colaborador.usuario.nome}}
+          </option>
+        </select>
+      </div>
+
+      <div class="col-lg-3 mb-2">
+        <label for="numeroProcesso" class="required-label">
+          <input type="checkbox" id="numeroProcesso"  ng-model="colunas.idProcesso.selecionado" > Nº Processo
+        </label>
+        <input id="vincularNumeroProcesso" type="text"
+               ng-model="numeroProcessoBusca"
+               placeholder="Número do processo"
+               class="form-control formCadastro"
+               auto-complete="autoCompleteProcessoOptions" />
+      </div>
+
+      <div class="col-lg-4 mb-2">
+        <label for="tipoDataPublicação" class="required-label">
+          <input type="checkbox" id="tipoDataPublicação" ng-model="colunas.dataPublicacao.selecionado" > Publicação
+        </label>
+        <div class="row">
+          <div class="col-lg-6 mb-2">
+            <input ui-date="dateOptions" ng-model="filtroPauta.dataInicio" class="form-control"
+                   id="deDataPublicacao" placeholder="dd/mm/aaaa" type="text" >
+          </div>
+          <div class="col-lg-6 mb-2">
+            <input ui-date="dateOptions" ng-model="filtroPauta.dataFim" class="form-control"
+                   id="ateDataPublicacao" placeholder="dd/mm/aaaa" type="text" >
+          </div>
+          <div class="invalid-feedback">
+            Insira a data de publicação
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-end" style="width: 100%; padding: 0rem; margin: 0rem;">
+      <div class="col-lg-4 bordersTudoEvento mb-1">
+        <label for="tipoDataLimite" class="required-label">
+          <input type="checkbox" id="tipoDataLimite" ng-model="colunas.dataLimite.selecionado" > Data limite
+        </label>
+        <div class="row">
+          <div class="col-lg-6 bordersTudoEvento mb-1">
+            <input ui-date="dateOptions" ng-model="filtroPauta.dataLimiteInit" class="form-control"
+                   id="deDataLimite" placeholder="dd/mm/aaaa" type="text" >
+          </div>
+          <div class="col-lg-6 bordersTudoEvento mb-1">
+            <input ui-date="dateOptions" ng-model="filtroPauta.dataLimiteFim" class="form-control"
+                   id="ateDataLimite" placeholder="dd/mm/aaaa" type="text" >
+          </div>
+          <div class="invalid-feedback">
+            Insira a data de limite
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-6 mb-1">
+        <label for="eventoDescricao" class="required-label">
+          <input type="checkbox" id="tipoeventoDescricao" ng-model="colunas.descricao.selecionado" > Descrição
+        </label>
+        <textarea class="form-control mb-3" rows="2" id="eventoDescricao" ng-model="filtroPauta.descricaoPauta" type="text"></textarea>
+      </div>
+      <div class="col-lg-6 mb-1">
+        <label for="eventoObservacao" class="required-label">
+          <input type="checkbox" id="tipoeventoObservacao" ng-model="colunas.observacao.selecionado" > Observações
+        </label>
+        <textarea class="form-control mb-3" ng-model="filtroPauta.observacaoPauta" rows="2" id="eventoObservacao"></textarea>
+      </div>
+
+    </div>
+
+  </form>
+
+  <alert-msg message="message"></alert-msg>
+
+  <div class="botaoGravarClientesDiv">
+    <div class="row" style="width: 100%; padding: 0rem !important; margin: 0rem !important;">
+      <div class="col-md-6" style="padding: 0.2rem;">
+        <button class="btn btn-gravarRelat btn-lg btn-block botaoGravarClientes" type="submit" ng-click="gerarRelatorio()">Gerar o Relatório</button>
+      </div>
+      <div class="col-md-6" style="padding: 0.2rem;">
+        <button class="btn btn-gravarRelatorio btn-lg btn-block botaoGravarClientes" type="button"  ng-click="gerarRelatorio(true)">Gravar e gerar o Relatório</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+<novo-filtro-relatorio></novo-filtro-relatorio>

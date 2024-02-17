@@ -1,0 +1,122 @@
+@charset "utf-8";
+/* CSS Document */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #455a64;
+  font-weight: 400;
+}
+h1 {
+  line-height: 40px;
+  font-size: 36px;
+}
+h2 {
+  line-height: 36px;
+  font-size: 24px;
+}
+h3 {
+  line-height: 30px;
+  font-size: 21px;
+}
+h4 {
+  line-height: 22px;
+  font-size: 18px;
+}
+h5 {
+  line-height: 18px;
+  font-size: 16px;
+  font-weight: 400;
+}
+h6 {
+  line-height: 16px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.media-text-right {
+  text-align: right;
+}
+.media-text-left {
+  text-align: left;
+}
+.progress-bar {
+  background-color: #4680ff;
+}
+.progress-bar-primary {
+  background-color: #4680ff;
+}
+.progress-bar-success {
+  background-color: #26dad2;
+}
+.progress-bar-info {
+  background-color: #62d1f3;
+}
+.progress-bar-danger {
+  background-color: #fc6180;
+}
+.progress-bar-warning {
+  background-color: #ffb64d;
+}
+.progress-bar-pink {
+  background-color: #e6a1f2;
+}
+.progress {
+  height: 6px;
+}
+.progress-bar.active,
+.progress.active .progress-bar {
+  animation: 2s linear 0s normal none infinite running progress-bar-stripes;
+}
+.progress-vertical {
+  display: inline-block;
+  height: 250px;
+  margin-bottom: 0;
+  margin-right: 20px;
+  min-height: 250px;
+  position: relative;
+}
+.progress-vertical-bottom {
+  display: inline-block;
+  height: 250px;
+  margin-bottom: 0;
+  margin-right: 20px;
+  min-height: 250px;
+  position: relative;
+  transform: rotate(180deg);
+}
+.progress-animated {
+  animation-duration: 5s;
+  animation-name: myanimation;
+  transition: all 5s ease 0s;
+}
+@keyframes myanimation {
+  0% {
+    width: 0;
+  }
+}
+@keyframes myanimation {
+  0% {
+    width: 0;
+  }
+}
+.browser .progress {
+  height: 8px;
+}
+.fa-rotate-45 {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.card-body {
+  padding: 0;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #3671AF;
+  color:#FFFFFF !important;
+}

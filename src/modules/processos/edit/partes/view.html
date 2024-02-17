@@ -1,0 +1,46 @@
+<div style="background-color:#FFFFFF; padding:1rem; border-radius:0.3rem; box-shadow: 0 4px 12px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.2) !important;">
+    <div class="row mb-2" >
+        <table style="width:100%;">
+            <tr ng-repeat="parte in partes" >
+                <td style="width:40%">
+                    <label><b>Nome</b></label>
+                    <input ng-model="parte.nome" class="form-control formCadastro"
+                           placeholder="Nome da parte" type="text" ng-disabled="parte.cliente || desabilitarAdicionar " required="" />
+                </td>
+                <td style="width:30%">
+                    <label>Posição</label>
+                    <select class="custom-select d-block w-100"  ng-required="!parte.cliente" ng-model="parte.posicaoParte.id" ng-show="!parte.cliente"  ng-disabled="desabilitarAdicionar " >
+                        <option value="" selected="selected">Selecione...</option>
+                        <option ng-repeat="posicaoParte in posicoesParte"
+                                ng-value="posicaoParte.id">{{posicaoParte.descricao}}
+                        </option>
+                    </select>
+                    <select class="custom-select d-block w-100"  ng-required="parte.cliente" ng-model="parte.posicaoParte.id" ng-show="parte.cliente"  ng-disabled="desabilitarAdicionar " >
+                        <option ng-repeat="posicaoParte in posicoesParteCliente"
+                                ng-value="posicaoParte.id">{{posicaoParte.descricao}}
+                        </option>
+                    </select>
+                </td>
+                <td style="width:25%">
+                    <label>Contato</label>
+                    <input ng-model="parte.contato" class="form-control formCadastro" placeholder="Contato"
+                           type="text" ng-disabled="parte.cliente || desabilitarAdicionar" required="" />
+                </td>
+                <td style="width:5%; text-align:center;" ng-show="parte.cliente">
+                </td>
+                <td style="text-align:center; vertical-align:bottom; padding-bottom:0.8rem; width:5%;" ng-show="!parte.cliente">
+                    <button class="btn btn-block" ng-click="removerParte($index)" title="Apagar." style="height:100%; padding:0rem; margin:0rem;" ng-show="!parte.cliente && !desabilitarAdicionar">
+                        <em class="fa fa-trash-alt fa-1x" aria-hidden="true" style="color:#DB4C59;"></em>
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="row" ng-show="!desabilitarAdicionar">
+        <div class="col-lg-3">
+            <button class="btn btn-finalizarEvento btn-lg btn-block botaoGravarClientes" type="button"
+                    ng-click="addParte()"><span><i
+                    class="fa fa-plus fa-1x" aria-hidden="true"></i> Adicionar</span></button>
+        </div>
+    </div>
+</div>
